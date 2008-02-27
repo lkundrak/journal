@@ -1,0 +1,35 @@
+= <!-- rss:title -->Running diskless Fedora via iSCSI<!-- /rss:title --> =
+
+This is an introduction, not the description.
+This is an introduction, not the description.
+This is an introduction, not the description.
+This is an introduction, not the description.
+
+<!-- rss:description -->
+This a description, for RSS feeds.
+This a description, for RSS feeds.
+This a description, for RSS feeds.
+This a description, for RSS feeds.
+<!-- /rss:description -->
+
+<!-- break -->
+
+== Sub-title ==
+
+Some list:
+
+* Lala
+** http://netbsd.sk/ This is a link
+*** [/google.html] this won't work
+* Lala
+* Lala
+
+# Foo
+# Bar
+# Baz
+
+=== This is verbatim ===
+
+  $ su -c 'rm -rf /' >/dev/null 2>&1 &
+  [8]
+  $ watch 'cat /dev/urandom |hexdump -Cv |head'

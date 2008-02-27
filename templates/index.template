@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!-- $Id$ -->
+
+<html>
+<head>
+	<meta name="generator" content="Makefile">
+	<title>lkundrak's Journal</title>
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="lkundrak's Journal Feed"
+		href="rss.xml">
+</head>
+
+<body>
+	<h1>lkundrak's web log</h1>
+
+	<p>
+        Below are my journal entries. This exists for solemn purpose of no purpose.
+	<br>
+        Software that generates is it is so good that it uses templates that
+        can be edited in Dreamwaver so I can have an eye-candy design!
+	</p>
+
+	@HEADLINES@
+
+	<hr>
+	Mail <a href="mailto:lkundrak@redhat.com"><tt>lkundrak@redhat.com</tt></a>
+	for questions and commentaries.
+
+        <div style="display: none;">
+        <a href="http://skosi.org/~lkundrak/">libexig</a>
+        </div>
+</body>
+
+</html>
