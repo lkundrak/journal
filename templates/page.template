@@ -11,6 +11,9 @@
 <body>
 	<h1>lkundrak's web log</h1>
 
+	<a href="..">Back to index...</a>
+	<hr>
+
 	@BODY@
 
         <hr>
