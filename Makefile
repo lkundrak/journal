@@ -9,7 +9,7 @@ TIDY?=tidy
 SOURCES=$(shell ls -t */*.cocot)
 BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
 
-TARGETS=${BLOGS} index.html rss.xml images/mozchomp.gif
+TARGETS=${BLOGS} index.html rss.xml
 
 all: build
 
@@ -48,4 +48,4 @@ clean:
 	rm -f ${TARGETS}
 
 upload: build
-	tar cf - ${TARGETS} |ssh ovecka.be "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
