@@ -9,7 +9,7 @@ TIDY?=tidy
 SOURCES=$(shell ls -t */*.cocot)
 BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
 
-TARGETS=${BLOGS} index.html rss.xml
+TARGETS=${BLOGS} index.html rss.xml images/mozchomp.gif
 
 all: build
 
