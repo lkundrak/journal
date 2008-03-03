@@ -39,13 +39,44 @@ index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
 	${TIDY} -qim $@ || rm -f $@
 
 ###
+### OpenGrok blog
+###
+
+SHADOW=montage -background none -geometry +5+5 -shadow
+TN=convert -resample 50%
+BLOG3+=images/opengrok-shot1.png
+BLOG3+=images/opengrok-shot2.png
+BLOG3+=images/opengrok-shot1-tn.png
+BLOG3+=images/opengrok-shot2-tn.png
+
+JUNK+=$(BLOG3)
+JUNK+=images/opengrok-shot1.xwd-tn
+JUNK+=images/opengrok-shot2.xwd-tn
+
+images/opengrok-shot1.png: images/opengrok-shot1.xwd
+	${SHADOW} $< $@
+
+images/opengrok-shot2.png: images/opengrok-shot2.xwd
+	${SHADOW} $< $@
+
+images/opengrok-shot1-tn.png: images/opengrok-shot1.xwd
+	${TN} $< $<-tn
+	${SHADOW} $<-tn $@
+
+images/opengrok-shot2-tn.png: images/opengrok-shot2.xwd
+	${TN} $< $<-tn
+	${SHADOW} $<-tn $@
+
+blog3: ${BLOG3}
+
+###
 ### Meta...
 ###
 
 build: ${TARGETS}
 
 clean:
-	rm -f ${TARGETS}
+	rm -f ${TARGETS} ${JUNK}
 
 upload: build
-	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} ${BLOG3} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
