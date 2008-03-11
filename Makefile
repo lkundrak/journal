@@ -49,7 +49,7 @@ BLOG3+=images/opengrok-shot2.png
 BLOG3+=images/opengrok-shot1-tn.png
 BLOG3+=images/opengrok-shot2-tn.png
 
-JUNK+=$(BLOG3)
+TARGETS+=$(BLOG3)
 JUNK+=images/opengrok-shot1.xwd-tn
 JUNK+=images/opengrok-shot2.xwd-tn
 
@@ -67,7 +67,19 @@ images/opengrok-shot2-tn.png: images/opengrok-shot2.xwd
 	${TN} $< $<-tn
 	${SHADOW} $<-tn $@
 
-blog3: ${BLOG3}
+entries/opengrok-on-rhel5.html: ${BLOG3}
+
+###
+### Gallery blog
+###
+
+RS=convert -resize 570
+BLOG4+=images/xyz-gallery-tn.png
+TARGETS+=$(BLOG4)
+
+images/xyz-gallery-tn.png: images/xyz-gallery.jpeg
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
 
 ###
 ### Meta...
@@ -79,4 +91,4 @@ clean:
 	rm -f ${TARGETS} ${JUNK}
 
 upload: build
-	tar cf - ${TARGETS} ${BLOG3} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
