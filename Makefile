@@ -49,9 +49,7 @@ BLOG3+=images/opengrok-shot2.png
 BLOG3+=images/opengrok-shot1-tn.png
 BLOG3+=images/opengrok-shot2-tn.png
 
-TARGETS+=$(BLOG3)
-JUNK+=images/opengrok-shot1.xwd-tn
-JUNK+=images/opengrok-shot2.xwd-tn
+JUNK+=images/*-tn
 
 images/opengrok-shot1.png: images/opengrok-shot1.xwd
 	${SHADOW} $< $@
@@ -75,11 +73,44 @@ entries/opengrok-on-rhel5.html: ${BLOG3}
 
 RS=convert -resize 570
 BLOG4+=images/xyz-gallery-tn.png
-TARGETS+=$(BLOG4)
 
 images/xyz-gallery-tn.png: images/xyz-gallery.jpeg
 	${RS} $< $<-tn
 	${SHADOW} $<-tn $@
+
+entries/galleries.html: ${BLOG4}
+
+###
+### Opengrok2
+###
+
+BLOG5+=images/fedora-opengrok-1-tn.png
+BLOG5+=images/fedora-opengrok-2-tn.png
+BLOG5+=images/fedora-opengrok-3-tn.png
+BLOG5+=images/fedora-opengrok-4-tn.png
+BLOG5+=images/fedora-opengrok-5-tn.png
+
+images/fedora-opengrok-1-tn.png: images/fedora-opengrok-1.xwd
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
+
+images/fedora-opengrok-2-tn.png: images/fedora-opengrok-2.xwd
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
+
+images/fedora-opengrok-3-tn.png: images/fedora-opengrok-3.xwd
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
+
+images/fedora-opengrok-4-tn.png: images/fedora-opengrok-4.xwd
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
+
+images/fedora-opengrok-5-tn.png: images/fedora-opengrok-5.xwd
+	${RS} $< $<-tn
+	${SHADOW} $<-tn $@
+
+entries/fedora-opengrok.html: ${BLOG5}
 
 ###
 ### Meta...
