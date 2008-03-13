@@ -5,6 +5,8 @@ So I am officially owner of the coolest web gallery.
 The package that generated it was approved for Fedora today,
 https://bugzilla.redhat.com/show_bug.cgi?id=xyz-gallery-review
 See it in action at http://ovecka.be/~lkundrak/gallery/.
+
+http://ovecka.be/~lkundrak/blog/images/xyz-gallery-tn.png
 <!-- /rss:description -->
 
 <!-- break -->
@@ -13,4 +15,6 @@ See it in action at http://ovecka.be/~lkundrak/gallery/.
 
 With a shadow!
 
-http://ovecka.be/~lkundrak/blog/images/xyz-gallery-tn.png
+'''Update:''' That is actually the one above. I was so excited about
+being able to put various HTML tags into rss feeds and having it load
+at Fedora Planet that I had to move it over there!

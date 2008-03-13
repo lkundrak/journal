@@ -6,6 +6,7 @@ use strict;
 use warnings;
 
 use XML::RSS;
+use scripts::wikize;
 
 my $base = 'http://ovecka.be/~lkundrak/blog/';
 my $rss = new XML::RSS (version => '2.0');
@@ -38,6 +39,8 @@ foreach my $file (@ARGV) {
 		$indesc and $desc .= $_;
 		/<!-- rss:description -->/ and $indesc++;
 	}
+
+	$desc = wikize ($desc);
 
 	$rss->add_item (
 		title		=> $title,
