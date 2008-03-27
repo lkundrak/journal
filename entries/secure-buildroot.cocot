@@ -1,0 +1,27 @@
+= <!-- rss:title -->BuildRoot Race<!-- /rss:title --> =
+
+<!-- rss:description -->
+Ever noticed that one of most exemplary cases of insecure temporary files
+is the way we treat installation root when building packages?
+<!-- /rss:description -->
+
+Gentoo solved something like this some time ago, if I recall correctly.
+On the other hand, their problem was a bit more serious, building packages
+is the daily routine of Gentoo Linux administrators, chance that they'll
+have an untrusted local user is much bigger.
+
+<!-- break -->
+
+== Solution ==
+
+There have been some efforts to obsolete the {{{BuildRoot}}} tag.
+That is probably the most elegant solution, but not likely in a reasonable
+timeframe:
+
+* https://lists.dulug.duke.edu/pipermail/rpm-maint/2007-February/000162.html
+
+However, we can do something ourselves:
+
+* http://fedoraproject.org/wiki/PackagingDrafts/SecureBuildRoot
+
+Let us see what Packaging guys think.
