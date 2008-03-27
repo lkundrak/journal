@@ -1,4 +1,13 @@
 BEGIN {
+	cmd = "rlog "ARGV[2];
+	while (cmd |getline) {
+		if (gsub ("^date: ", "")) {
+			gsub (";.*", "");
+			if (!last) last = $0
+			first = $0;
+		}
+	}
+
 	if (!ARGV[2]) {
 		print "No input files" |"cat 1>&2";
 		exit 1;
@@ -14,10 +23,7 @@ BEGIN {
 	}
 }
 
-
-/@TITLE@/ {
-	gsub ("@TITLE@", title);
-}
+# Block replacements
 
 /@BODY@/ {
 	system ("perl scripts/wiki2html.pl <"ARGV[2]);
@@ -28,8 +34,15 @@ BEGIN {
 /@HEADLINES@/ {
 	for (i = 2; ARGV[i]; i++) {
 		print "<hr>";
+
+		# Last modification date
+		system ("LANG=C date -r "ARGV[i]);
+
+		# Caption and text
 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
 			"| perl scripts/wiki2html.pl");
+
+		# Read more link
 		link = ARGV[i];
 		gsub (".cocot", ".html", link);
 		gsub (".*", "<a href=\"&\">Read more...</a>", link);
@@ -40,5 +53,11 @@ BEGIN {
 }
 
 {
+	# Inline replacements
+
+	gsub ("@FIRST@", first);
+	gsub ("@LAST@", last);
+	gsub ("@TITLE@", title);
+
 	print $0;
 }

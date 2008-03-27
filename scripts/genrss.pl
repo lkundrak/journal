@@ -46,6 +46,7 @@ foreach my $file (@ARGV) {
 		title		=> $title,
 		permaLink	=> $base.$html,
 		description	=> $desc,
+		pubDate		=> `LANG=C date +'%a, %d %b %Y %T %z' -r $file`,
 	);
 
 	close (BLOG);
