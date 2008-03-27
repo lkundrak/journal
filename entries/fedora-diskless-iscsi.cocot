@@ -1,35 +1,117 @@
 = <!-- rss:title -->Running diskless Fedora via iSCSI<!-- /rss:title --> =
 
-This is an introduction, not the description.
-This is an introduction, not the description.
-This is an introduction, not the description.
-This is an introduction, not the description.
+<!-- rss:description -->
+If you have a diskless machine and want it to boot and run your favourite distro
+over network, you have several options how to achieve it.
+<!-- /rss:description -->
+
+In my case the machine was a rather small one, with slow CPU and little RAM,
+therefore I could not run anaconda on it. NFS can not be swapped on, therefore
+I used a iSCSI target to swap on, and also placed the root filestem image on
+iSCSI.
 
 <!-- rss:description -->
-This a description, for RSS feeds.
-This a description, for RSS feeds.
-This a description, for RSS feeds.
-This a description, for RSS feeds.
+This article describes how to create a filesystem image that can be used for
+network booting painlessly and how to boot it.
 <!-- /rss:description -->
 
 <!-- break -->
 
-== Sub-title ==
+== Server setup ==
 
-Some list:
+=== iSCSI target ===
 
-* Lala
-** http://netbsd.sk/ This is a link
-*** [/google.html] this won't work
-* Lala
-* Lala
+You need to run an iSCSI target on the server.
+In Fedora, you have several choices of the target software.
+User-space based solution that are available {{{netbsd-iscsi}}}
+and {{{scsi-target}}}. All should work equally well.
+I chose a kernel-based solution, IET, that is available from
+Livna repository in {{{iscsitarget}}} package. It depends on
+kernel module, {{{kmod-iscsitarget}}}.
 
-# Foo
-# Bar
-# Baz
+This is what my configuration in {{{/etc/ietd.conf}}} looks like:
 
-=== This is verbatim ===
+  Target iqn.2008-02.lan:target0
+          Lun 0 Path=/var/local/diskless-root
+          MaxConnections 1
 
-  $ su -c 'rm -rf /' >/dev/null 2>&1 &
-  [8]
-  $ watch 'cat /dev/urandom |hexdump -Cv |head'
+  Target iqn.2008-02.lan:target1
+          Lun 0 Path=/var/local/diskless-swap
+          MaxConnections 1
+
+Before you start the {{{iscsi-target}}} service, be sure to
+create the images. Files with holes are perfectly ok and will
+occupy virtually no space when they are created:
+
+  # dd if=/dev/zero of=/var/local/diskless-root bs=1k count=0 seek=5M
+  # dd if=/dev/zero of=/var/local/diskless-swap bs=1k count=0 seek=512k
+
+Now you can fire up the service.
+
+  # service iscsi-target start
+
+=== Network boot ===
+
+You need just two things:
+
+# DHCP server
+# TFTP server with images for boot
+
+For the former, you need the {{{dhcp}}} package.
+The latter consist of {{{tftp-server}}} package,
+{{{pxelinux}}} from {{{syslinux}}} package, kernel
+you'll copy from the client filesystem tree once it's created and
+ramdisk once it's generated.
+you'll have to copy the client kernel and the ramdisk to the boot server
+
+Network boot setup is documented in various places in more detail.
+Search the Internets!
+
+== Installing the client image ==
+
+Now move to your workstation.
+You need {{{iscsi-initiator-utils}}} there and {{{iscsi}}} service running.
+Log in to the iSCSI targets, create root partition and the filesytem.
+
+  # iscsiadm -m discovery -t st -p server-address
+  # iscsiadm -m node --login
+
+Unless you've added some cool udev rules, you need to kind of guess which
+{{{/dev/sd*}}} device is your iSCSI target for the root filesystem.
+Probably {{{dmesg}}} or {{{/proc/partitions}}} are your friends while identifying.
+
+  # fdisk /dev/sdb
+  (...create at least one partition, for root...)
+  # mke2fs -j -L diskless-root /dev/sdb1
+  # mkswap -L diskless-swap /dev/sdc
+
+Now we can start installing the operating system.
+You need {{{anaconda}}}.
+Having a mirror with Fedora tree will come handy
+
+  # mount LABEL=diskless-root /mnt
+  # anaconda -G -r /mnt -m http://mirror-address/fedora/linux/development/i386/os/
+
+Once finished, update the target fstab and generate an inital ram disk image.
+
+  # cat >>/etc/fstab <<EOF
+  LABEL=diskless-root	/	ext3	relatime	1 1
+  LABEL=diskless-swap	swap	swap	defaults	0 0
+  EOF
+  # mkinitrd -v --preload=crc32c			\
+	--fstab=/mnt/etc/fstab				\
+	--rootfs ext3 --rootdev=LABEL=diskless-root	\
+	--with=via-rhine --with=sis900 			\
+	initrd-image $(uname -r)
+
+Note the following:
+
+* {{{--with=via-rhine --with=sis900}}} should be replaced with the module for your actual network card
+* {{{--preload=crc32c}}} is here due to a known bug. It is needed by iSCSI initiator
+
+Copy kernel from {{{/mnt/boot}}}, and the {{{initrd-image}}} to the TFTP server
+and you can safely unmount your target image.
+
+  # umount LABEL=diskless-root
+
+Log off the targets and you boot up your client. Good luck!
