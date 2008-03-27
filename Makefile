@@ -49,7 +49,7 @@ BLOG3+=images/opengrok-shot2.png
 BLOG3+=images/opengrok-shot1-tn.png
 BLOG3+=images/opengrok-shot2-tn.png
 
-JUNK+=images/*-tn
+JUNK+=images/*-tn.*
 
 images/opengrok-shot1.png: images/opengrok-shot1.xwd
 	${SHADOW} $< $@
@@ -119,7 +119,7 @@ entries/fedora-opengrok.html: ${BLOG5}
 build: ${TARGETS}
 
 clean:
-	rm -f ${TARGETS} ${JUNK}
+	rm -f ${TARGETS} ${JUNK} ?
 
 upload: build
 	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
