@@ -4,7 +4,7 @@ BLOGPAGE?=awk -f scripts/blogpage.awk templates/page.template
 BLOGINDEX?=awk -f scripts/blogpage.awk templates/index.template
 GENRSS?=perl scripts/genrss.pl
 #WIKI2HTML?=perl scripts/wiki2html.pl
-TIDY?=tidy
+TIDY?=tidy -raw
 
 SOURCES=$(shell ls -t */*.cocot)
 BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
