@@ -1,0 +1,16 @@
+= <!-- rss:title -->OpenJDK in EPEL<!-- /rss:title --> =
+
+<!-- rss:description -->
+I managed to bootstrap and import OpenJDK into Fedora
+Enterprise Linux Extras for Red Hat Enterprise Linux 5,
+and hopefully it will hit the repo soonish.
+<!-- /rss:description -->
+
+<!-- break -->
+
+Updated my Tomcat instance to use it was straightforward I
+did not encouter any problems. In case you do, please report
+any problems to https://bugizlla.redhat.com/
+
+Until it hits the repo, get it from here
+http://buildsys.fedoraproject.org/plague-results/fedora-5-epel/java-1.6.0-openjdk/1.6.0.0-0.7.b08.el5.1/x86_64/
