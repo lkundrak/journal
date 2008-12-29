@@ -14,16 +14,13 @@
 </head>
 
 <body>
-	<h1>lkundrak's web log</h1>
+	<img src="images/ketchup.jpeg" alt="" align="left">
+	<h1>Sick Things</h1>
+	<i>Web 2.0 blog of Spirituality, Romance, National values, Apple computers, Pop music and Python programming.</i>
 
-	<img src="images/mozchomp.gif" alt="lala">
-
-	<p>
-        Below are my journal entries. This exists for solemn purpose of no purpose.
-	<br>
-        Software that generates is it is so good that it uses templates that
-        can be edited in Dreamwaver so I can have an eye-candy design!
-	</p>
+	<p>So I have a journal again. Please pardon me if I don't update it regularly -- I decided
+	not to go with wordpress or bloxspot and did a really bad job replacing them, so it's
+	a big pain to write journal entries for me. I prayed for help.</p>
 
 	@HEADLINES@
 

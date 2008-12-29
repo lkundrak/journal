@@ -36,13 +36,15 @@ BEGIN {
 		print "<hr>";
 
 		# Last modification date
+		print "<i>";
 		system ("LANG=C date -d \"$(rlog "ARGV[i]" |awk '/^date:/ {date=$2\" \"$3} END {gsub (\";\", \"\", date); print date}')\"");
+		print "</i>";
 
 		# Caption and text
 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
 			"| perl scripts/wiki2html.pl");
 
-		# Read more link
+		# "Read more" link
 		link = ARGV[i];
 		gsub (".cocot", ".html", link);
 		gsub (".*", "<a href=\"&\">Read more...</a>", link);
