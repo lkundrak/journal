@@ -36,7 +36,7 @@ BEGIN {
 		print "<hr>";
 
 		# Last modification date
-		system ("LANG=C date -r "ARGV[i]);
+		system ("LANG=C date -d \"$(rlog "ARGV[i]" |awk '/^date:/ {date=$2\" \"$3} END {gsub (\";\", \"\", date); print date}')\"");
 
 		# Caption and text
 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
