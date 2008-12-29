@@ -19,7 +19,7 @@ all: build
 
 .SUFFIXES: .cocot .html
 .cocot.html: templates/page.template scripts/blogpage.awk
-	${BLOGPAGE} $< >$@
+	${BLOGPAGE} $< >$@ || rm -f $@
 	${TIDY} -qim $@ || rm -f $@
 
 ###
@@ -27,7 +27,7 @@ all: build
 ###
 
 rss.xml: ${SOURCES} scripts/genrss.pl
-	${GENRSS} ${SOURCES} >$@
+	${GENRSS} ${SOURCES} >$@ || rm -f $@
 	${TIDY} -qim -xml -raw $@ || rm -f $@
 
 ###
@@ -35,7 +35,7 @@ rss.xml: ${SOURCES} scripts/genrss.pl
 ###
 
 index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
-	${BLOGINDEX} ${SOURCES} >$@
+	${BLOGINDEX} ${SOURCES} >$@ || rm -f $@
 	${TIDY} -qim $@ || rm -f $@
 
 ###
@@ -122,4 +122,4 @@ clean:
 	rm -f ${TARGETS} ${JUNK} ?
 
 upload: build
-	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} images/mozchomp.gif |ssh v3.sk "tar xf - -C public_html/blog"

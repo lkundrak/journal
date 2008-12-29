@@ -77,7 +77,7 @@ and swap (generally a better idea if you have NAS -- extensive writes to a Flash
 media was never a good idea).
 
 See the other blog entry on how to install into an image, this time iSCSI one:
-http://ovecka.be/~lkundrak/blog/entries/fedora-diskless-iscsi.html
+http://v3.sk/~lkundrak/blog/entries/fedora-diskless-iscsi.html
 
 Remember to keep {{{/nwrlinux/bzImage}}} and {{{/nwrlinux/initrd}}} up to date
 with your kernel and initrd. Possibly write a script.
