@@ -60,7 +60,8 @@ it on a network server, or on CF as well.
 === Kernel Trouble ===
 
 As I depicted above, stock kernel won't run. Modification to the kernel configuration
-are pretty straightforward; look at the [http://people.redhat.com/lkundrak/netvista/ patches].
+are pretty straightforward; look at the patches ('''Update:''' the {{{people.redhat.com}}}
+link no longer works.  Please mail me if interested!).
 Aside from configuration changes they contain one mor change -- a module for rebooting.
 This may sound funny, but these machines contain no 8042 which is usually connected
 to CPU's reset line -- it uses USB HID devies.
@@ -68,7 +69,6 @@ to CPU's reset line -- it uses USB HID devies.
 === Kernel Solution ===
 
 Use custom kernel. It's not that hard to patch the SRPM anyways.
-See http://people.redhat.com/lkundrak/netvista/.
 
 === Installing Fedora ===
 
@@ -87,3 +87,5 @@ with your kernel and initrd. Possibly write a script.
 http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/thumbnail/netvista-1.jpeg
 
 ''See it (and the Ficus) here:'' http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/
+
+'''Update 2008-12-29:''' Removed {{{redhat.com}}} links.
