@@ -8,7 +8,7 @@ use warnings;
 use XML::RSS;
 use scripts::wikize;
 
-my $base = 'http://ovecka.be/~lkundrak/blog/';
+my $base = 'http://v3.sk/~lkundrak/blog/';
 my $rss = new XML::RSS (version => '2.0');
 
 $rss->channel(
@@ -16,11 +16,11 @@ $rss->channel(
 	link		=> 'http://skosi.org/~lkundrak/',
 	language	=> 'en',
 	description	=> 'Personal web log of lkundrak',
-	copyright	=> 'Copyright (C) 2007 Lubomir Rintel',
+	copyright	=> 'Copyright (C) 2007,2008 Lubomir Rintel',
 #	pubDate		=> 'Thu, 23 Aug 1999 07:00:00 GMT',
 #	lastBuildDate	=> 'Thu, 23 Aug 1999 07:00:00 GMT',
-	managingEditor	=> 'lkundrak@redhat.com',
-	webMaster	=> 'lkundrak@redhat.com',
+	managingEditor	=> 'lkundrak@v3.sk',
+	webMaster	=> 'lkundrak@v3.sk',
 );
 
 foreach my $file (@ARGV) {
@@ -46,7 +46,7 @@ foreach my $file (@ARGV) {
 		title		=> $title,
 		permaLink	=> $base.$html,
 		description	=> $desc,
-		pubDate		=> `LANG=C date +'%a, %d %b %Y %T %z' -r $file`,
+		pubDate		=> `LANG=C date +'\%a, \%d \%b \%Y \%T \%z' -d "\$(rlog $file |awk '/^date:/ {date=\$2" "\$3} END {gsub (";", "", date); print date}')"`
 	);
 
 	close (BLOG);
