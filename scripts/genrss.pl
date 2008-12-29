@@ -46,7 +46,7 @@ foreach my $file (@ARGV) {
 		title		=> $title,
 		permaLink	=> $base.$html,
 		description	=> $desc,
-		pubDate		=> `LANG=C date +'\%a, \%d \%b \%Y \%T \%z' -d "\$(rlog $file |awk '/^date:/ {date=\$2" "\$3} END {gsub (";", "", date); print date}')"`
+		pubDate		=> `LANG=C scripts/creationdate.sh '\%a, \%d \%b \%Y \%T \%z' $file`
 	);
 
 	close (BLOG);

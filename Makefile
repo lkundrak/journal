@@ -6,7 +6,7 @@ GENRSS?=perl scripts/genrss.pl
 #WIKI2HTML?=perl scripts/wiki2html.pl
 TIDY?=tidy -raw
 
-SOURCES=$(shell ls -t */*.cocot)
+SOURCES=$(shell scripts/creationdate.sh %s entries/*.cocot |sort -rn |awk '{print $$2}')
 BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
 
 TARGETS=${BLOGS} index.html rss.xml
