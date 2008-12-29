@@ -122,4 +122,4 @@ clean:
 	rm -f ${TARGETS} ${JUNK} ?
 
 upload: build
-	tar cf - ${TARGETS} images/mozchomp.gif |ssh v3.sk "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} images/mozchomp.gif images/ketchup.jpeg |ssh v3.sk "tar xf - -C public_html/blog"
