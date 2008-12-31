@@ -1,0 +1,15 @@
+= <!-- rss:title -->Run Mosaic on your Fedora!<!-- /rss:title --> =
+
+<!-- rss:description -->
+Packages of NCSA Mosaic patched to run on modern Linux desktop
+[http://v3.sk/~lkundrak/mosaic/ are available for download].
+
+http://v3.sk/~lkundrak/mosaic/screenshots/mosaic-mag.png
+
+They are patched so that they behave at least somehow sensible with
+today's sick web sites.
+
+Hope they'll run with lesstif. The license is bad enough not to
+permit it to go to Fedora (thanks God!). If you think this should
+go to RPM Fusion for some reason, feel free to grab the packages :)
+<!-- /rss:description -->
