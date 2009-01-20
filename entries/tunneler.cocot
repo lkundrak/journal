@@ -1,9 +1,11 @@
 = <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
 
+<!-- rss:description -->
 Did you know a free SDL-based clone of Tunneler exists?
 
 http://v3.sk/~lkundrak/blog/images/tunneler.png
 
 Anyone wants to swap [https://bugzilla.redhat.com/show_bug.cgi?id=480771 reviews]? :)
+<!-- /rss:description -->
 
 <!-- break -->
