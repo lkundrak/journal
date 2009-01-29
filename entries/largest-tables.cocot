@@ -1,0 +1,19 @@
+= <!-- rss:title -->Find largest tables in a SQL dump<!-- /rss:title --> =
+
+<!-- rss:description -->
+Anyone comes up with an easier way to locate big tables in a SQL dump w/o
+loading it? Ouch, if only it was possible to add comments here. Anyways,
+here's the poor man's oneliner:
+
+  $ (fold metadata.dump; echo 'CREATE TABLE') |cat -n |grep 'CREATE TABLE' |awk '{if (line) print 80*($1-line)"\t"table; line=$1; table=$4;}' |sort -rn |head
+  3730560 `rr_xch_aaadst3nrgax96c`
+  2418640 `rr_xcl_aaabsx1cobabj4b`
+  1834560 `rr_xch_aaabsx1cobabj4b`
+  1834480 `rr_xch_aaavsibqetaefyl`
+  1834480 `rr_xch_aaausibqetaefyl`
+  1834480 `rr_xch_aaarsibqetaefyl`
+  1834480 `rr_xch_aaaqsibqetaefyl`
+  1834480 `rr_xch_aaapsibqetaefyl`
+  1834480 `rr_xch_aaakst3ocaax942`
+  1834480 `rr_xch_aaakst3nrgax96c`
+<!-- /rss:description -->
