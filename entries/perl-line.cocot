@@ -1,0 +1,39 @@
+= <!-- rss:title -->Stuck in Perl?<!-- /rss:title --> =
+
+<!-- rss:description -->
+
+Just in case there's anyone else who's often in situation where
+he needs to fund out what is his (in better case) perl code doing,
+or has a core dump and has always been lazy to look into perl
+internals a bit -- you can get the file, line number and subroutine
+name from {{{interpreter}}}'s {{{Tcurcop}}} structure (in 5.8.8, in
+5.11 it seems to be {{{Icurcop}}}):
+
+  (gdb) set print pretty on 
+  (gdb) print *my_perl->Tcurcop
+  $1 = {
+    op_next = 0x9d8d8d8, 
+    op_sibling = 0x9d8d9c0, 
+    op_ppaddr = 0x5956d20 <Perl_pp_nextstate>, 
+    op_targ = 0, 
+    op_type = 174, 
+    op_seq = 597, 
+    op_flags = 1 '\001', 
+    op_private = 0 '\0', 
+    cop_label = 0x0, 
+    cop_stashpv = 0x9d77020 "idle", 
+    cop_file = 0x9d76ff0 "world-domination-script.pl", 
+    cop_seq = 59, 
+    cop_arybase = 0, 
+    cop_line = 616, 
+    cop_warnings = 0x0, 
+    cop_io = 0x0
+  }
+  (gdb) 
+
+See, we're on line {{{616}}} of {{{world-domination-script.pl}}}
+doing {{{idle()}}}. In case you've not been scared away by
+{{{pp_caller()}}} and you've found out how to get full stack trace
+as {{{Carp}}} does, please let me know :)
+
+<!-- /rss:description -->
