@@ -1,0 +1,26 @@
+= <!-- rss:title -->Inkscape snapshot in Rawhide<!-- /rss:title --> =
+
+<!-- rss:description -->
+SVN snapshot that will eventually lead to 0.47 release landed in Rawhide.
+It took some time to get it compile with GCC 4.4, and even more to get it run.
+Now that it runs, I'm sure you know that (like everything in Rawhide), it
+can burn your house, kill your cat and make the whole world implode.
+
+== What's new ==
+
+The package has been refactored, it doesn't drag each possible dependency
+for each extension. However, you may lack some extensions (Inkscape hides
+most of them if their dependencies are unsatisfied). I yet have to figure
+out what to do about this; mention it in Release Notes, split the core
+into a subpackage and let the main package depend on all possible dependencies
+or install dependencies on-demand via PackageKit (ideas? mail me)
+
+Apart from that, upstream added a whole lot of new features:
+http://wiki.inkscape.org/wiki/index.php/ReleaseNotes047
+
+== Feedback? ==
+
+Does it suck? Tell me. If 0.47 doesn't come close enough to Fedora 11
+release, we can still revert to 0.46 code base.
+
+<!-- /rss:description -->
