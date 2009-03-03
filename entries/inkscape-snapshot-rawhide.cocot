@@ -6,6 +6,8 @@ It took some time to get it compile with GCC 4.4, and even more to get it run.
 Now that it runs, I'm sure you know that (like everything in Rawhide), it
 can burn your house, kill your cat and make the whole world implode.
 
+http://v3.sk/~lkundrak/blog/images/inkscape.png
+
 == What's new ==
 
 The package has been refactored, it doesn't drag each possible dependency
