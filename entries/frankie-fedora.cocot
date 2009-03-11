@@ -1,0 +1,27 @@
+= <!-- rss:title -->Anyone to review Yo Frankie (BGE) package?<!-- /rss:title --> =
+
+<!-- rss:description -->
+No? Fine, I'm closing it {{{WONTFIX}}}. I just thought it might be a good idea
+to have a game that showcases Open Source 3D graphics capabilities in distro.
+
+Seriously, if there's any package who likes the game, I'd even swap reviews.
+Not a packager and want to be? Doing a good review may help you get sponsored.
+I'd be thankful for a good unofficial review as well.
+
+The package itself is quite simple, just a bunch of static files in {{{/usr/share}}},
+I can't understand why noone picked in up in almost three weeks.
+
+Here's the [https://bugzilla.redhat.com/show_bug.cgi?id=486758 review request], and here
+are couple of screen shots to convince you. The game is actually much better than
+these:
+
+http://v3.sk/~lkundrak/blog/images/yo-frankie/level1.png
+
+http://v3.sk/~lkundrak/blog/images/yo-frankie/log.png
+
+http://v3.sk/~lkundrak/blog/images/yo-frankie/goat.png
+
+http://v3.sk/~lkundrak/blog/images/yo-frankie/water.png
+
+http://v3.sk/~lkundrak/blog/images/yo-frankie/sheep.png
+<!-- /rss:description -->
