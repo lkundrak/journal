@@ -1,0 +1,12 @@
+= <!-- rss:title -->Getting rid of crop marks<!-- /rss:title --> =
+
+<!-- rss:description -->
+The quickest way I've found for getting rid of crop marks before
+printing out pages from [http://lwn.net/Kernel/LDD3/ Linux Device Drivers]
+(you would not believe how annoying they could be :)
+
+  pstops -pa4 '0@1.3(-3.5cm,-4cm)' ch10.ps ch10-cropped.ps
+
+I'm wondering whether there's a GUI tool that could save me from
+trial-and-error while finding the right shift and scale.
+<!-- /rss:description -->
