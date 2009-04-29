@@ -1,0 +1,50 @@
+= <!-- rss:title -->{{{shortrpm}}} - Short circuitting binary RPM builds<!-- /rss:title --> =
+
+<!-- rss:description -->
+Ever wonderred why can't you do a {{{rpmbuild -bb --short-circuit}}} just
+after you found out that you forgot to add something in {{{%files}}}
+or made a typo in {{%install}}, having waited three hours for a package
+to compile? Being able to quickly fix your problem could easily save you
+many hours of compiling.  You could check whether the package is able to install,
+check whether dependencies are fine, the program runs, scriptlets behave fine
+or just {{{rpmlint}}} the resulting package.
+
+There are lot of packages that take >1 hour to build, and for certain
+packages, say {{{java-1.6.0-openjdk}}} on PowerPC, an extra compilation
+effectively means one more day to get the package done.
+
+If you don't like having to rebuild your package every time you make a
+small mistake just because of a [https://bugzilla.redhat.com/show_bug.cgi?id=478463
+religious issue with RPM] you may have a look at
+{{{[https://admin.fedoraproject.org/pkgdb/packages/name/shortrpm shortrpm]}}}
+package. It transparently wraps {{{rpmbuild}}}, causing it to think
+most sections contain {{{exit 0}}} as first command intercepting {{{open}}}(3)
+call via {{{LD_PRELOAD}}}.
+
+== Workflow ==
+
+Once you install the {{{shortrpm}}} package (and eventually restart your shell),
+you may follow the same procedure when building the package as before,
+while gainging the ability to short-circuit the binary package build:
+
+  rpmbuild -ba gnomovision.spec
+
+''Oh my! Install failed on EL-5 since I forgot to add {{{--vendor}}}
+parameter to {{{desktop-file-install}}}.'' Fix it.
+
+  rpmbuild -bi --short-circuit gnomovision.spec
+
+''Succeeded. Fine.'' You'd have to do an extra rebuild here without {{{shortrpm}}}.
+
+  rpmbuild -bb --short-circuit gnomovision.spec
+
+''{{{rpmlint}}} says you're missing {{{%defattr}}} and that your permissions
+are generally insane.'' Fix it. Again one more rebuild without {{{shortrpm}}}.
+
+  rpmbuild -bb --short-circuit gnomovision.spec
+
+''Looks fine.'' I'm gonna do a final build to ensure everything builds fine as it is.
+
+  rpmbuild -ba gnomovision.spec
+
+<!-- /rss:description -->
