@@ -1,4 +1,4 @@
-= <!-- rss:title -->{{{shortrpm}}} - Short circuitting binary RPM builds<!-- /rss:title --> =
+= <!-- rss:title -->Short circuitting binary RPM builds with shortrpm<!-- /rss:title --> =
 
 <!-- rss:description -->
 Ever wonderred why can't you do a {{{rpmbuild -bb --short-circuit}}} just
