@@ -3,7 +3,7 @@
 <!-- rss:description -->
 Ever wonderred why can't you do a {{{rpmbuild -bb --short-circuit}}} just
 after you found out that you forgot to add something in {{{%files}}}
-or made a typo in {{%install}}, having waited three hours for a package
+or made a typo in {{{%install}}}, having waited three hours for a package
 to compile? Being able to quickly fix your problem could easily save you
 many hours of compiling.  You could check whether the package is able to install,
 check whether dependencies are fine, the program runs, scriptlets behave fine
@@ -16,7 +16,7 @@ effectively means one more day to get the package done.
 If you don't like having to rebuild your package every time you make a
 small mistake just because of a [https://bugzilla.redhat.com/show_bug.cgi?id=478463
 religious issue with RPM] you may have a look at
-{{{[https://admin.fedoraproject.org/pkgdb/packages/name/shortrpm shortrpm]}}}
+{{{[http://v3.sk/~lkundrak/shortrpm/ shormtrpm]}}}
 package. It transparently wraps {{{rpmbuild}}}, causing it to think
 most sections contain {{{exit 0}}} as first command intercepting {{{open}}}(3)
 call via {{{LD_PRELOAD}}}.
