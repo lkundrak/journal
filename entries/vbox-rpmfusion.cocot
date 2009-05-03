@@ -1,0 +1,22 @@
+= <!-- rss:title -->VirtualBox OSE in RPM Fusion<!-- /rss:title --> =
+
+<!-- rss:description -->
+Open Source edition of VirtualBox had recently finally been
+imported into RPM Fusion.
+
+While the Fedora 10 Branch carries the 2.1.4 version, and is not
+likely to be updated to a newer release, a brand new '''2.2.2''' version had
+been imported into development branch '''targetting Fedora 11''' today
+and will hit the devel repository soonish.
+
+Grab it while it's hot unless you already have done so -- download the
+[http://fedoraproject.org/get-prerelease Fedora 11 Preview] release,
+[http://rpmfusion.org/Configuration enable RPM Fusion free] repository
+and add {{{VirtualBox-OSE}}} package. All feedback (either bugs in
+bugzilla or success reports) is of course welcome.
+
+And finally the screenshot, which probably grabbed your attention to this
+post ;)
+
+http://v3.sk/~lkundrak/blog/images/vbox-2.2.2-tn.png
+<!-- /rss:description -->
