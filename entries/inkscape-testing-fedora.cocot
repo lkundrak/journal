@@ -1,0 +1,29 @@
+= <!-- rss:title -->Fedora 11 and Inkscape 0.47<!-- /rss:title --> =
+
+<!-- rss:description -->
+Dearest Fedora and Inkscape users,
+
+As you may have noticed, Fedora 11 (Leonidas) will ship with SVN snapshot
+of Inkscape that targets 0.47 release. As such it may have bugs that will
+not be present in the release and even incomplete feature set since it is
+from few days before the feature freeze.
+
+This was done due to demand from user base and to help shape the final 0.47.
+
+Once Inkscape 0.47 is released, which is
+[http://www.inkscape.org/#The_road_to_0.47:April_21,_2009 planned for mid-July],
+it will be pushed to the stable updates repository. Until then, testing
+repository will be regularly updates with beta and release candidate packages
+starting with a [https://admin.fedoraproject.org/updates/inkscape-0.47-0.9.20090518svn.fc11
+snapshot from May 18th]. See Fedora Wiki for details on
+[https://fedoraproject.org/wiki/QA/Updates_Testing
+how to get the package from the testing repository].
+
+Any feedback is, of course welcome. Please report issues you'll find at
+[https://bugs.launchpad.net/inkscape Inkscape's bug tracker] or
+[http://bugzilla.redhat.com/ our Bugzilla instance]. Please ensure you're
+running latest {{{inkscape}}} package from the testing repository
+before reporting a bug.
+
+Have fun with brand new Fedora and Inkscape!
+<!-- /rss:description -->
