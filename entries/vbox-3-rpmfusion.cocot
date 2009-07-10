@@ -1,9 +1,9 @@
 = <!-- rss:title -->VirtualBox 3.0.0 in RPM Fusion<!-- /rss:title --> =
 
 <!-- rss:description -->
-VirtualBox 3.0.0 Open Source Edition (OSE) was built into RPM Fusion for
-Fedora 11 and unless something breaks horribly it will hit the repositories
-soonish. That means now it's the best time to test it!
+VirtualBox 3.0.0 Open Source Edition (OSE) will hit RPM Fusion Free repository
+for Fedora 11 soon unless something breaks horribly.
+That means now it's the best time to test it!
 
 http://v3.sk/~lkundrak/blog/images/virtualbox3.png
 
@@ -11,6 +11,11 @@ Apart from rebase to newest, freshest, coolest upstream code,
 the guest additions for Fedora were reworked (which means they
 actually should work now). To get them, install the
 {{{VirtualBox-OSE-guest}}} package in your Fedora 11 Virtual Machine.
+
+For the X11 display resize functionality to work, you need a
+[https://admin.fedoraproject.org/updates/xorg-x11-server-1.6.2-2.fc11
+recent {{{xorg-x11-server-Xorg}}}] package, which is currently waiting
+to be pushed to the testing repository.
 
 == Credits ==
 
