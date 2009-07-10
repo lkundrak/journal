@@ -1,0 +1,23 @@
+= <!-- rss:title -->VirtualBox 3.0.0 in RPM Fusion<!-- /rss:title --> =
+
+<!-- rss:description -->
+VirtualBox 3.0.0 Open Source Edition (OSE) was built into RPM Fusion for
+Fedora 11 and unless something breaks horribly it will hit the repositories
+soonish. That means now it's the best time to test it!
+
+http://v3.sk/~lkundrak/blog/images/virtualbox3.png
+
+Apart from rebase to newest, freshest, coolest upstream code,
+the guest additions for Fedora were reworked (which means they
+actually should work now). To get them, install the
+{{{VirtualBox-OSE-guest}}} package in your Fedora 11 Virtual Machine.
+
+== Credits ==
+
+The RPM Fusion community had been doing fantastic job reporting issues and
+providing fixes for the package, so I feel obliged to send a big thank you
+to them especially to Kevin Pouget, Gabriel Ramirez, Valent Turkovic and
+Jonathan Dieter (in no particular order). Kudos to the upstream
+developers as well, especially for fixing the irritiating network-related
+[http://www.virtualbox.org/ticket/4343 hang bug] very promptly.
+<!-- /rss:description -->
