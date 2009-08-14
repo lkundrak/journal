@@ -1,22 +1,24 @@
-= <!-- rss:title -->Title of the blog<!-- /rss:title --> =
+= <!-- rss:title -->Logo-shaped collage of Fedora users<!-- /rss:title --> =
 
 <!-- rss:description -->
-Pavol Rusnak of OpenSuse made a beautiful
+Pavol Rusnak of OpenSUSE made a beautiful
 [http://stick.gk2.sk/blog/2009/08/opensuse-users-collage/ collage of their user avatars].
 I tried to do the same with Fedora users. See how it looks:
 
-http://v3.sk/~lkundrak/fedora-users.png
+http://v3.sk/~lkundrak/blog/images/fedora-users-tn.png
+
+[http://v3.sk/~lkundrak/blog/images/fedora-users.png See Full size picture].
 
 <!-- break -->
 
-I had slightly less pictures, since Facebook doesn't provide API for getting lists of
+Tool to create these is {{{metapixel}}} available in Fedora.
+Sources of my pictures were:
+
+* Cca. 280 from Gravatar for {{{fedora-list}}} and {{{fedora-devel}}} participants
+* Cca. 220 from Platet fedora Avatars
+* Cca. 1100 from Facebook {{{Fedora}}} and {{{FEL}}} groups
+
+I had slightly less pictures than OpenSUSE, since Facebook doesn't provide API for getting lists of
 page fans unlike of groups, therefore I did not use pictures of 2600+ ''Fedora - Linux'' fans.
-
-My source pictures were:
-
-|| Count (cca) || Source ||
-| 280 | Gravatar for {{{fedora-list}}} and {{{fedora-devel}}} participants |
-| 220 | Platet fedora Avatars |
-| 1100 | Facebook {{{Fedora}}} and {{{FEL}}} groups |
 
 <!-- /rss:description -->
