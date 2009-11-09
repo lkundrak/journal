@@ -34,6 +34,8 @@ is 1280x800 and there's a VGA port for external display.
 You can have a look at the innards here:
 http://ravicblog.blogspot.com/2009/01/dell-mini-12-dissected.html
 
+http://www.blogcdn.com/www.engadget.com/media/2009/02/2-1-09-dell-mini-12-splayed.jpg
+
 == Software ==
 
 This is the most poorly supported machine by Linux that I've touched in ages.
@@ -77,7 +79,7 @@ year's hate-your-user competition.
 Sound not work out of box. Fortunatelly, it worked with sound-2.6 and as I
 later discovered, Takashi Iwai commited a fix just two days ago. This is not
 the first time he was found guilty of commiting exactly the fix I needed.
-He's a SUSE developer as well, therefore I'd expect OpenSUSE stack to be
+He's a SUSE developer as well, therefore I'd expect OpenSUSE audio stack to be
 generally in a decent state, it was probably just me picking the wrong piece
 of hardware this time. Oh, and here's that fix:
 
@@ -102,12 +104,12 @@ In worst case, the MiniPCI-E network adapter is replaceable.
 
 === Software Load ===
 
-As I've said, I've chosen the GNOME flavour (Most OpenSUSE users seem to prefer
+As I've said, I've chosen the GNOME flavour (most OpenSUSE users seem to prefer
 KDE). The distro feels very polished, from the bootup procedure to the Desktop
 itself. They replaced the GNOME menu with their own version, and I'd say it
 could use some improvement (found it hard to launch terminal :). It does only offer
 a couple of most used applications, it uses a separate dialog to find
-and run some other application. You can't search the application from the menu.
+and run some other application. You can't search for an application from the menu.
 Probably needless to add, this is just a matter of taste, not a technical barier.
 The standard GNOME menu is offered as Panel applet, you can replace the OpenSUSE
 menu with it, or even use both if you like.
