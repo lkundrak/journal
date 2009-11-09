@@ -1,10 +1,10 @@
-= <!-- rss:title -->OpenSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =
+= <!-- rss:title -->openSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =
 
 <!-- rss:description -->
 Bought a new toy lately, a small Atom-based laptop and took an oportiunity
 to experiment with a platform different from what would you expect from
 a Fedora enthusiast. Grabbed a fresh new installation of
-[http://en.opensuse.org/OpenSUSE_11.2 OpenSUSE 11.2]
+[http://en.opensuse.org/openSUSE_11.2 openSUSE 11.2]
 and gave it a try.
 
 == Hardware ==
@@ -44,7 +44,7 @@ of its hardware is usable.
 
 === Installing ===
 
-So I copied the Gnome flavour of live OpenSUSE live media to an USB flash memory
+So I copied the Gnome flavour of live openSUSE live media to an USB flash memory
 stick and booted it. It booted up a lot faster than I expect it to and what I
 immediately found out was that the display resolution was rather exotic and I
 could not connect to wireless (more about those later). Honestly, the really
@@ -79,7 +79,7 @@ year's hate-your-user competition.
 Sound not work out of box. Fortunatelly, it worked with sound-2.6 and as I
 later discovered, Takashi Iwai commited a fix just two days ago. This is not
 the first time he was found guilty of commiting exactly the fix I needed.
-He's a SUSE developer as well, therefore I'd expect OpenSUSE audio stack to be
+He's a SUSE developer as well, therefore I'd expect openSUSE audio stack to be
 generally in a decent state, it was probably just me picking the wrong piece
 of hardware this time. Oh, and here's that fix:
 
@@ -104,17 +104,17 @@ In worst case, the MiniPCI-E network adapter is replaceable.
 
 === Software Load ===
 
-As I've said, I've chosen the GNOME flavour (most OpenSUSE users seem to prefer
+As I've said, I've chosen the GNOME flavour (most openSUSE users seem to prefer
 KDE). The distro feels very polished, from the bootup procedure to the Desktop
 itself. They replaced the GNOME menu with their own version, and I'd say it
 could use some improvement (found it hard to launch terminal :). It does only offer
 a couple of most used applications, it uses a separate dialog to find
 and run some other application. You can't search for an application from the menu.
 Probably needless to add, this is just a matter of taste, not a technical barier.
-The standard GNOME menu is offered as Panel applet, you can replace the OpenSUSE
+The standard GNOME menu is offered as Panel applet, you can replace the openSUSE
 menu with it, or even use both if you like.
 
-When it comes to applications, OpenSUSE tends to use Mono-base tools. Looking both
+When it comes to applications, openSUSE tends to use Mono-base tools. Looking both
 at the performance and the memory consumption I couldn't help thinking it feels
 pre-production. Having said the machine has humble techincal parameters one can't
 blame me for not using Tomboy, Banshee or F-Spot. (Tried to actually use the
@@ -125,13 +125,13 @@ For package management a tool called {{{zypper}}} is used. With command-line int
 similar to {{{yum}}} it's rather easy to grasp. I appreciated that it searches rather
 quickly compared to {{{yum}}}, didn't care much enough to research why. The repositories
 can be added and removed without editing the configuration file. A nice detail, but
-OpenSUSE seems to rely on custom repositories heavily so it's rather
+openSUSE seems to rely on custom repositories heavily so it's rather
 important there. What I did not like is that it by default refreshes the repository
 metadata on each run and installs packages right after downloading. The latter may
 be an advantage if you are disk-space constrained, though it might have been nice
 if they parallelized it (not that {{{yum}}} would do that).
 
-What's unhappy is how OpenSUSE decentralizes repositories. It might be useful
+What's unhappy is how openSUSE decentralizes repositories. It might be useful
 in some specific use-cases, but think of the poor user who just wants to install a
 package... I needed Rhythmbox. Took me some time to learn about Contrib repository
 (shame on me for not reading documentation). Why on earth isn't it present by default?
@@ -146,14 +146,14 @@ set to {{{auto}}}, the pager didn't let the escape sequences pass through like
 {{{less -R}}} does). Everything else worked flawlessly so far, I'm not used to
 that :) Another thing worth noting is that anyone who drives the
 [http://en.opensuse.org/Kernel_Module_Packages kernel module packaging]
-infrastructure for OpenSUSE did not do a proper research, otherwise he could have
+infrastructure for openSUSE did not do a proper research, otherwise he could have
 delivered [http://rpmfusion.org/Packaging/KernelModules/Kmods2 more for smaller price
 resuing what's already been done].
 
-This is where I started to think that OpenSUSE must just hate packagers. Having
+This is where I started to think that openSUSE must just hate packagers. Having
 my tiny RPM done, I had no way to ensure it's buildable reproducibly (its
 BuildRequires are correct). Fedora engineers are familiar with {{{mock}}} tool -- for
-OpenSUSE I was told that I need a Build Service account. For a local build.
+openSUSE I was told that I need a Build Service account. For a local build.
 And I need a "Build Service checkout" to build from. If a Novell engineer happens
 to read this, surprised why you have so little community contributors? They
 don't feel welcome. They feel that your tooling is a medieval torture device.
