@@ -13,7 +13,7 @@ my $rss = new XML::RSS (version => '2.0');
 
 $rss->channel(
 	title		=> "lkundrak's Journal",
-	link		=> 'http://skosi.org/~lkundrak/',
+	link		=> 'http://v3.sk/~lkundrak/',
 	language	=> 'en',
 	description	=> 'Personal web log of lkundrak',
 	copyright	=> 'Copyright (C) 2007,2008 Lubomir Rintel',
