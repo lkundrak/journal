@@ -23,9 +23,15 @@
 	a big pain to write journal entries for me. I prayed for help, no answer so far. Maybe my
 	prayer got stuck in spam filter.</p>
 
+	<p>Source code of the entries and scripts that format this site are available on
+	<a href="http://github.com/lkundrak/lkundrak-journal">github</a>. Text of journal entries
+	is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
+	license.</p>
+
 	@HEADLINES@
 
 	<hr>
+
 	Mail questions, comments and pizza to
 	<a href="mailto:lkundrak@v3.sk"><tt>lkundrak@v3.sk</tt></a>
 </body>
