@@ -1,0 +1,27 @@
+diff -up PurpleWiki-0.94/Makefile.PL.nocgi PurpleWiki-0.94/Makefile.PL
+--- PurpleWiki-0.94/Makefile.PL.nocgi	2009-03-11 18:29:38.000000000 +0100
++++ PurpleWiki-0.94/Makefile.PL	2009-03-11 18:29:56.000000000 +0100
+@@ -2,17 +2,17 @@ use ExtUtils::MakeMaker;
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
+ # the contents of the Makefile that is written.
+ 
+-my $cgiDir = prompt("Where should the wiki.pl CGI be installed?",
+-    '/var/www/cgi-bin');
++#my $cgiDir = prompt("Where should the wiki.pl CGI be installed?",
++#    '/var/www/cgi-bin');
+ 
+ WriteMakefile(
+     'NAME'		=> 'PurpleWiki',
+     'VERSION'	=> '0.94',
+     'PREREQ_PRINT' => 1,
+-    'EXE_FILES' => [
+-        'wiki.pl',
+-        ],
+-    'INSTALLSCRIPT' => $cgiDir,
++#    'EXE_FILES' => [
++#        'wiki.pl',
++#        ],
++#    'INSTALLSCRIPT' => $cgiDir,
+     'PREREQ_PM'		=> {
+         Template => 0,
+     	Text::Wrap => 0,
