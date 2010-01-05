@@ -1,8 +1,8 @@
 BEGIN {
-	cmd = "rlog "ARGV[2];
+	cmd = "git log "ARGV[2];
 	while (cmd |getline) {
-		if (gsub ("^date: ", "")) {
-			gsub (";.*", "");
+		if (gsub ("^Date: *", "")) {
+			gsub ("+.*", "");
 			if (!last) last = $0
 			first = $0;
 		}
@@ -37,7 +37,7 @@ BEGIN {
 
 		# Last modification date
 		print "<i>";
-		system ("LANG=C date -d \"$(rlog "ARGV[i]" |awk '/^date:/ {date=$2\" \"$3} END {gsub (\";\", \"\", date); print date}')\"");
+		system ("LANG=C date -d \"$(git log $FILE |awk '/Date:/ {gsub (\"Date: *\", \"\"); gsub (\"+.*\",\"\"); d=$0} END {print d}')\"");
 		print "</i>";
 
 		# Caption and text
