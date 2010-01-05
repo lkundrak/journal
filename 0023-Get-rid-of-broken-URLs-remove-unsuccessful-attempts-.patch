@@ -1,5 +1,5 @@
 From fa2b8c62bb66cf7bf1f3a8c1517c874d848f4ccc Mon Sep 17 00:00:00 2001
-From: lkundrak <lkundrak>
+From: Lubomir Rintel <lkundrak@v3.sk>
 Date: Mon, 29 Dec 2008 01:12:16 +0000
 Subject: [PATCH 23/88] Get rid of broken URLs, remove unsuccessful attempts to compile entries
 

@@ -1,5 +1,5 @@
 From 36df27c18164a866c9df85392f9d394efaa23d8a Mon Sep 17 00:00:00 2001
-From: lkundrak <lkundrak>
+From: Lubomir Rintel <lkundrak@v3.sk>
 Date: Fri, 29 Feb 2008 21:49:20 +0000
 Subject: [PATCH 06/88] Do not delete godzilla
 

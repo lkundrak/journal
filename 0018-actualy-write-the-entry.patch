@@ -1,5 +1,5 @@
 From 857c93dfcc7edab8603348e81769fb4f824fb628 Mon Sep 17 00:00:00 2001
-From: lkundrak <lkundrak>
+From: Lubomir Rintel <lkundrak@v3.sk>
 Date: Thu, 27 Mar 2008 22:37:38 +0000
 Subject: [PATCH 18/88] Actualy write the entry
 
