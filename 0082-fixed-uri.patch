@@ -1,0 +1,25 @@
+From f395dc40a1ff6e489fb2502e7953b05f991f8892 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 9 Nov 2009 14:16:38 +0000
+Subject: [PATCH 82/88] fixed uri
+
+---
+ scripts/RCS/genrss.pl |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+index fad5545..a3bf917 100644
+--- a/scripts/RCS/genrss.pl
++++ b/scripts/RCS/genrss.pl
+@@ -13,7 +13,7 @@ my $rss = new XML::RSS (version => '2.0');
+ 
+ $rss->channel(
+ 	title		=> "lkundrak's Journal",
+-	link		=> 'http://skosi.org/~lkundrak/',
++	link		=> 'http://v3.sk/~lkundrak/',
+ 	language	=> 'en',
+ 	description	=> 'Personal web log of lkundrak',
+ 	copyright	=> 'Copyright (C) 2007,2008 Lubomir Rintel',
+-- 
+1.6.5.2
+

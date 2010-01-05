@@ -1,0 +1,49 @@
+From 51a96d2670160e0ed5266d013bee8cdcb9781fa7 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 01:39:30 +0000
+Subject: [PATCH 25/88] fix address, date
+
+---
+ scripts/RCS/genrss.pl |   10 +++++-----
+ 1 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+index 15dfbf3..e2733cc 100644
+--- a/scripts/RCS/genrss.pl
++++ b/scripts/RCS/genrss.pl
+@@ -8,7 +8,7 @@ use warnings;
+ use XML::RSS;
+ use scripts::wikize;
+ 
+-my $base = 'http://ovecka.be/~lkundrak/blog/';
++my $base = 'http://v3.sk/~lkundrak/blog/';
+ my $rss = new XML::RSS (version => '2.0');
+ 
+ $rss->channel(
+@@ -16,11 +16,11 @@ $rss->channel(
+ 	link		=> 'http://skosi.org/~lkundrak/',
+ 	language	=> 'en',
+ 	description	=> 'Personal web log of lkundrak',
+-	copyright	=> 'Copyright (C) 2007 Lubomir Rintel',
++	copyright	=> 'Copyright (C) 2007,2008 Lubomir Rintel',
+ #	pubDate		=> 'Thu, 23 Aug 1999 07:00:00 GMT',
+ #	lastBuildDate	=> 'Thu, 23 Aug 1999 07:00:00 GMT',
+-	managingEditor	=> 'lkundrak@redhat.com',
+-	webMaster	=> 'lkundrak@redhat.com',
++	managingEditor	=> 'lkundrak@v3.sk',
++	webMaster	=> 'lkundrak@v3.sk',
+ );
+ 
+ foreach my $file (@ARGV) {
+@@ -46,7 +46,7 @@ foreach my $file (@ARGV) {
+ 		title		=> $title,
+ 		permaLink	=> $base.$html,
+ 		description	=> $desc,
+-		pubDate		=> `LANG=C date +'%a, %d %b %Y %T %z' -r $file`,
++		pubDate		=> `LANG=C date +'\%a, \%d \%b \%Y \%T \%z' -d "\$(rlog $file |awk '/^date:/ {date=\$2" "\$3} END {gsub (";", "", date); print date}')"`
+ 	);
+ 
+ 	close (BLOG);
+-- 
+1.6.5.2
+

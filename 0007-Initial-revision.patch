@@ -1,0 +1,41 @@
+From b996b629ae9c280dd3ca8c62216d389ff976f90b Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 3 Mar 2008 18:41:49 +0000
+Subject: [PATCH 07/88] Initial revision
+
+---
+ entries/RCS/opengrok-on-rhel5.cocot |   22 ++++++++++++++++++++++
+ 1 files changed, 22 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/opengrok-on-rhel5.cocot
+
+diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+new file mode 100644
+index 0000000..05b20b3
+--- /dev/null
++++ b/entries/RCS/opengrok-on-rhel5.cocot
+@@ -0,0 +1,22 @@
++= <!-- rss:title -->Got OpenGrok running on RHEL5<!-- /rss:title --> =
++
++<!-- rss:description -->
++I made packages that are needed for running my beloved source browser on RHEL5 today.
++Mostly backporting stuff from Rawhide actually.
++<!-- /rss:description -->
++
++Be sure to grab {{{java-1.5.0-ibm}}} from Supplemental disc to run it.
++It also runs nicely with {{{java-1.5.0-sun}}} and {{{java-1.6.0-sun}}},
++that were shipped in some preview update I believe.
++
++<!-- break -->
++
++The repository is http://people.redhat.com/lkundrak/opengrok-el5/,
++probably will be subject to move to
++http://people.redhat.com/lkundrak/opengrok/.
++
++Pictures!
++
++http://ovecka.be/~lkundrak/blog/images/opengrok-shot1-tn.png
++
++http://ovecka.be/~lkundrak/blog/images/opengrok-shot2-tn.png
+-- 
+1.6.5.2
+

@@ -1,0 +1,74 @@
+From 929b713ddce104932312cd27931609c067064407 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 13 Mar 2008 20:21:11 +0000
+Subject: [PATCH 14/88] Pictures of Fedora OpenGrok theme
+
+---
+ RCS/Makefile |   39 +++++++++++++++++++++++++++++++++++----
+ 1 files changed, 35 insertions(+), 4 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index a4f6492..a0d2270 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -49,9 +49,7 @@ BLOG3+=images/opengrok-shot2.png
+ BLOG3+=images/opengrok-shot1-tn.png
+ BLOG3+=images/opengrok-shot2-tn.png
+ 
+-TARGETS+=$(BLOG3)
+-JUNK+=images/opengrok-shot1.xwd-tn
+-JUNK+=images/opengrok-shot2.xwd-tn
++JUNK+=images/*-tn
+ 
+ images/opengrok-shot1.png: images/opengrok-shot1.xwd
+ 	${SHADOW} $< $@
+@@ -75,12 +73,45 @@ entries/opengrok-on-rhel5.html: ${BLOG3}
+ 
+ RS=convert -resize 570
+ BLOG4+=images/xyz-gallery-tn.png
+-TARGETS+=$(BLOG4)
+ 
+ images/xyz-gallery-tn.png: images/xyz-gallery.jpeg
+ 	${RS} $< $<-tn
+ 	${SHADOW} $<-tn $@
+ 
++entries/galleries.html: ${BLOG4}
++
++###
++### Opengrok2
++###
++
++BLOG5+=images/fedora-opengrok-1-tn.png
++BLOG5+=images/fedora-opengrok-2-tn.png
++BLOG5+=images/fedora-opengrok-3-tn.png
++BLOG5+=images/fedora-opengrok-4-tn.png
++BLOG5+=images/fedora-opengrok-5-tn.png
++
++images/fedora-opengrok-1-tn.png: images/fedora-opengrok-1.xwd
++	${RS} $< $<-tn
++	${SHADOW} $<-tn $@
++
++images/fedora-opengrok-2-tn.png: images/fedora-opengrok-2.xwd
++	${RS} $< $<-tn
++	${SHADOW} $<-tn $@
++
++images/fedora-opengrok-3-tn.png: images/fedora-opengrok-3.xwd
++	${RS} $< $<-tn
++	${SHADOW} $<-tn $@
++
++images/fedora-opengrok-4-tn.png: images/fedora-opengrok-4.xwd
++	${RS} $< $<-tn
++	${SHADOW} $<-tn $@
++
++images/fedora-opengrok-5-tn.png: images/fedora-opengrok-5.xwd
++	${RS} $< $<-tn
++	${SHADOW} $<-tn $@
++
++entries/fedora-opengrok.html: ${BLOG5}
++
+ ###
+ ### Meta...
+ ###
+-- 
+1.6.5.2
+

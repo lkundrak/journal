@@ -1,0 +1,30 @@
+From f4d7b4acb42218c361aca7d2fa231c9a65ae1e9d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Sun, 28 Jun 2009 11:25:28 +0000
+Subject: [PATCH 71/88] Initial revision
+
+---
+ entries/RCS/fudcon-patch.cocot |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/fudcon-patch.cocot
+
+diff --git a/entries/RCS/fudcon-patch.cocot b/entries/RCS/fudcon-patch.cocot
+new file mode 100644
+index 0000000..7622bd6
+--- /dev/null
++++ b/entries/RCS/fudcon-patch.cocot
+@@ -0,0 +1,11 @@
++= <!-- rss:title -->Two more FUDcon photo patches<!-- /rss:title --> =
++
++<!-- rss:description -->
++Michal Ingeli ({{{<ksyz>}}})
++
++http://farm3.static.flickr.com/2455/3668030526_955bc8cb94.jpg
++
++Lubomir Rintel ({{{<lkundrak>}}})
++
++http://farm4.static.flickr.com/3372/3668030540_f48a399be8.jpg
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

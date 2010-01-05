@@ -1,0 +1,30 @@
+From a01086dc6b9878f924278a815e5022a682689660 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 10 Jul 2009 15:50:29 +0000
+Subject: [PATCH 74/88] formatting
+
+---
+ entries/RCS/vbox-3-rpmfusion.cocot |    6 +++---
+ 1 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/entries/RCS/vbox-3-rpmfusion.cocot b/entries/RCS/vbox-3-rpmfusion.cocot
+index d71cbe5..a769ae4 100644
+--- a/entries/RCS/vbox-3-rpmfusion.cocot
++++ b/entries/RCS/vbox-3-rpmfusion.cocot
+@@ -12,10 +12,10 @@ the guest additions for Fedora were reworked (which means they
+ actually should work now). To get them, install the
+ {{{VirtualBox-OSE-guest}}} package in your Fedora 11 Virtual Machine.
+ 
+-For the X11 display resize functionality to work, you need a
++For the X11 display resize functionality to work, you need a recent
++{{{xorg-x11-server-Xorg}}} package, which is currently
+ [https://admin.fedoraproject.org/updates/xorg-x11-server-1.6.2-2.fc11
+-recent {{{xorg-x11-server-Xorg}}}] package, which is currently waiting
+-to be pushed to the testing repository.
++waiting to be pushed] to the testing repository.
+ 
+ == Credits ==
+ 
+-- 
+1.6.5.2
+

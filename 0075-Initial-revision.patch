@@ -1,0 +1,28 @@
+From 2b1666fa431ad4e84a6e99c5cce0b93ceba5651d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 16 Jul 2009 15:04:13 +0000
+Subject: [PATCH 75/88] Initial revision
+
+---
+ entries/RCS/pulse-suid.cocot |    9 +++++++++
+ 1 files changed, 9 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/pulse-suid.cocot
+
+diff --git a/entries/RCS/pulse-suid.cocot b/entries/RCS/pulse-suid.cocot
+new file mode 100644
+index 0000000..1b1cb03
+--- /dev/null
++++ b/entries/RCS/pulse-suid.cocot
+@@ -0,0 +1,9 @@
++= <!-- rss:title -->Still wondering why File System Capabilities are just Awesome?<!-- /rss:title --> =
++
++<!-- rss:description -->
++If [http://udrepper.livejournal.com/20709.html File System Capabilities] were in use now,
++today's local root [http://blog.cr0.org/2009/07/old-school-local-root-vulnerability-in.html
++privilege escalation flaw] in Pulseaudio just wouldn't happen. Happily, they have been
++finally [http://cvs.fedoraproject.org/viewvc/rpms/rpm/devel/rpm.spec?view=diff&r1=1.347&r2=1.348
++enabled in RPM for Fedora 12]!.
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,24 @@
+From eb868fdaa53d3e4df1defb35aa803883168aa00d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 2 Jun 2009 16:20:45 +0000
+Subject: [PATCH 66/88] Initial revision
+
+---
+ entries/RCS/gnome-feature.cocot |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/gnome-feature.cocot
+
+diff --git a/entries/RCS/gnome-feature.cocot b/entries/RCS/gnome-feature.cocot
+new file mode 100644
+index 0000000..d67b162
+--- /dev/null
++++ b/entries/RCS/gnome-feature.cocot
+@@ -0,0 +1,5 @@
++= <!-- rss:title -->How to get a feature into Gnome<!-- /rss:title --> =
++
++<!-- rss:description -->
++[http://bugzilla.gnome.org/show_bug.cgi?id=566546]
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

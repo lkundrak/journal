@@ -1,0 +1,24 @@
+From 19078691d0be53f3235e50a57cf46908a167a87b Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 26 Aug 2009 12:44:49 +0000
+Subject: [PATCH 78/88] Initial revision
+
+---
+ entries/RCS/fedora-new-logo.cocot |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/fedora-new-logo.cocot
+
+diff --git a/entries/RCS/fedora-new-logo.cocot b/entries/RCS/fedora-new-logo.cocot
+new file mode 100644
+index 0000000..a739ba8
+--- /dev/null
++++ b/entries/RCS/fedora-new-logo.cocot
+@@ -0,0 +1,5 @@
++= <!-- rss:title -->Announcing Fedora Project Logo<!-- /rss:title --> =
++
++<!-- rss:description -->
++http://v3.sk/~lkundrak/blog/images/fedora-new-logo.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

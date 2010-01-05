@@ -1,0 +1,52 @@
+From 92d79db42394c292ec9640fb1b3fb3c4e203e910 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 1 Jan 2009 20:21:31 +0000
+Subject: [PATCH 37/88] Initial revision
+
+---
+ entries/RCS/virtualbox.cocot |   33 +++++++++++++++++++++++++++++++++
+ 1 files changed, 33 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/virtualbox.cocot
+
+diff --git a/entries/RCS/virtualbox.cocot b/entries/RCS/virtualbox.cocot
+new file mode 100644
+index 0000000..fe16365
+--- /dev/null
++++ b/entries/RCS/virtualbox.cocot
+@@ -0,0 +1,33 @@
++= <!-- rss:title -->Rage Against the Virtual Machine<!-- /rss:title --> =
++
++<!-- rss:description -->
++
++[http://www.virtualbox.org/wiki/Editions VirtualBox OSE] 2.1.0 was released,
++bringing support for 64-bit guests. Apart from
++that, it adds a {{vmnet}}-style packet injection for unprivileged user via a
++dedicated kernel module and a whole handful of features to its closed source brother.
++
++So why would anyone use that? VirtualBox OSE brings a high-performance full
++virtualization to desktops of people whose hardware doesn't support
++[http://kvm.qumranet.com/kvmwiki KVM].
++Furthermore it equips them with a mature, stable, and easy to
++use user interface, who is in many areas still superior to {{{virt-manager}}}.
++In other words -- it saves them from ''VMWare'', replacing it with a lightweight
++and fast package which is hardly 20-th of size.
++
++http://v3.sk/~lkundrak/blog/images/virtualbox-tn.png
++
++It was undoubtly a very demanded package for many Fedora users, thogh its
++kernel modules of questionable quality prevented it from entering Fedora.
++Please note that the word ''questionable'' does not necessarily mean ''bad'',
++understand it as ''undecided'', since there was no attempt to merge it with
++mainline kernel and therefore comply with kernel quality standards.
++
++== Packages for RPM Fusion being reviewed ==
++
++Fedora does not permit kernel modules built outside of mainline tree, but
++[http://rpmfusion.org/ RPM Fusion] does. And finally it seems it will leave RPM
++Fusion's wishlist soonish: [//bugzilla.rpmfusion.org/show_bug.cgi?id=285 A review]
++was already submitted and taken by Xavier (thanks to him)!
++
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

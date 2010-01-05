@@ -1,0 +1,38 @@
+From 60539e60cbf1592d73fb7e8320b8b73fe81f5ea1 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 11:52:52 +0000
+Subject: [PATCH 30/88] Initial revision
+
+---
+ entries/RCS/widelife.cocot |   19 +++++++++++++++++++
+ 1 files changed, 19 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/widelife.cocot
+
+diff --git a/entries/RCS/widelife.cocot b/entries/RCS/widelife.cocot
+new file mode 100644
+index 0000000..6dfdb21
+--- /dev/null
++++ b/entries/RCS/widelife.cocot
+@@ -0,0 +1,19 @@
++= <!-- rss:title -->Widelife<!-- /rss:title --> =
++
++<!-- rss:description -->
++
++I've stumbled across a truly interesting group of people lately.
++Calling themselves [http://www.widelife.sk/index.php?option=com_frontpage&Itemid=1 Widelife CLUB],
++they define themselves as people, who
++
++  ... love God, good music, action, McDonalds,
++  table football, Fridays, our leader Tomas etc.
++
++What strikes there is the mention of McDonald's there. Hope their deity
++is ok with [http://www.greenpeace.org.uk/media/reports/were-trashin-it
++devastation of rainforests], otherwise they may burn in [http://www.mindfully.org/Food/Hindus-Sue-McDonalds.htm
++beef fat].
++
++<!-- /rss:description -->
++
++<!-- break -->
+-- 
+1.6.5.2
+

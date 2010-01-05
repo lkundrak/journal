@@ -1,0 +1,26 @@
+From 0f6243837e861170c7732d32325b299dc49da5d2 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 23 Apr 2009 12:34:28 +0000
+Subject: [PATCH 59/88] Initial revision
+
+---
+ entries/RCS/devicekit-disks.cocot |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/devicekit-disks.cocot
+
+diff --git a/entries/RCS/devicekit-disks.cocot b/entries/RCS/devicekit-disks.cocot
+new file mode 100644
+index 0000000..3faaabe
+--- /dev/null
++++ b/entries/RCS/devicekit-disks.cocot
+@@ -0,0 +1,7 @@
++= <!-- rss:title -->Good user interface<!-- /rss:title --> =
++
++<!-- rss:description -->
++...knows what to do better than the user.
++
++http://v3.sk/~lkundrak/blog/images/ebay.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

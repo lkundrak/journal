@@ -1,0 +1,35 @@
+From 8a92bb9e4003f1587d81e05252934505341665d8 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 7 Apr 2008 09:56:07 +0000
+Subject: [PATCH 21/88] Initial revision
+
+---
+ entries/RCS/openjdk-in-epel.cocot |   16 ++++++++++++++++
+ 1 files changed, 16 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/openjdk-in-epel.cocot
+
+diff --git a/entries/RCS/openjdk-in-epel.cocot b/entries/RCS/openjdk-in-epel.cocot
+new file mode 100644
+index 0000000..877b6cb
+--- /dev/null
++++ b/entries/RCS/openjdk-in-epel.cocot
+@@ -0,0 +1,16 @@
++= <!-- rss:title -->OpenJDK in EPEL<!-- /rss:title --> =
++
++<!-- rss:description -->
++I managed to bootstrap and import OpenJDK into Fedora
++Enterprise Linux Extras for Red Hat Enterprise Linux 5,
++and hopefully it will hit the repo soonish.
++<!-- /rss:description -->
++
++<!-- break -->
++
++Updated my Tomcat instance to use it was straightforward I
++did not encouter any problems. In case you do, please report
++any problems to https://bugizlla.redhat.com/
++
++Until it hits the repo, get it from here
++http://buildsys.fedoraproject.org/plague-results/fedora-5-epel/java-1.6.0-openjdk/1.6.0.0-0.7.b08.el5.1/x86_64/
+-- 
+1.6.5.2
+

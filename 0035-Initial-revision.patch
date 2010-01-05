@@ -1,0 +1,34 @@
+From a1a9d01516b74b9bac5aed2413e876b5b28e24f6 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 31 Dec 2008 11:13:26 +0000
+Subject: [PATCH 35/88] Initial revision
+
+---
+ entries/RCS/mosaic.cocot |   15 +++++++++++++++
+ 1 files changed, 15 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/mosaic.cocot
+
+diff --git a/entries/RCS/mosaic.cocot b/entries/RCS/mosaic.cocot
+new file mode 100644
+index 0000000..a1ae14f
+--- /dev/null
++++ b/entries/RCS/mosaic.cocot
+@@ -0,0 +1,15 @@
++= <!-- rss:title -->Run Mosaic on your Fedora!<!-- /rss:title --> =
++
++<!-- rss:description -->
++Packages of NCSA Mosaic patched to run on modern Linux desktop
++[http://v3.sk/~lkundrak/mosaic/ are available for download].
++
++http://v3.sk/~lkundrak/mosaic/screenshots/mosaic-mag.png
++
++They are patched so that they behave at least somehow sensible with
++today's sick web sites.
++
++Hope they'll run with lesstif. The license is bad enough not to
++permit it to go to Fedora (thanks God!). If you think this should
++go to RPM Fusion for some reason, feel free to grab the packages :)
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

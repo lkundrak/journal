@@ -1,0 +1,25 @@
+From 543d0107e70fe4eaf1eb61abfcdc2bf0c49c7d6e Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 3 Nov 2009 11:50:44 +0000
+Subject: [PATCH 80/88] fix url
+
+---
+ entries/RCS/review-swappies-2.cocot |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/entries/RCS/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
+index 99125a0..c524fb5 100644
+--- a/entries/RCS/review-swappies-2.cocot
++++ b/entries/RCS/review-swappies-2.cocot
+@@ -5,7 +5,7 @@ Need someone to review your package?
+ 
+ As my need-to-have-reviewed queue grows, I'm willing to swap
+ reviews with you! Just check these out,
+-http://preview.tinyurl.com/review-queue most are failry simple,
++http://tinyurl.com/review-queue most are failry simple,
+ pick some and let me know which package you want me to review.
+ 
+ If you've never made a package or newer done a review and
+-- 
+1.6.5.2
+

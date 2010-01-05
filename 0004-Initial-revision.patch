@@ -1,0 +1,108 @@
+From 81557ed3991a94da819cd941a1aa10c66d9d371d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 29 Feb 2008 21:42:49 +0000
+Subject: [PATCH 04/88] Initial revision
+
+---
+ entries/RCS/fedora-on-netvista.cocot |   89 ++++++++++++++++++++++++++++++++++
+ 1 files changed, 89 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/fedora-on-netvista.cocot
+
+diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+new file mode 100644
+index 0000000..ebf1d1a
+--- /dev/null
++++ b/entries/RCS/fedora-on-netvista.cocot
+@@ -0,0 +1,89 @@
++= <!-- rss:title -->Running Fedora on IBM NetVista Thin Client<!-- /rss:title --> =
++
++<!-- rss:description -->
++Contrary to popular belief, IBM NetVista Thin Clients can run recent 2.6 kernels.
++Though it need some effort and, well binary blob bootstrap loader, it is possible.
++All the hardware they contain is fairly well supported and givent the belief
++mentioned, their reputation is fairly wrecked and they can be gotten for very good
++prices, which makes an ideal toy out of them, or maybe a LTSP terminal.
++<!-- /rss:description -->
++
++<!-- break -->
++
++== The Hardware ==
++
++One [http://www.smolts.org/show?UUID=pub_cce01503-8a5d-4960-a755-854d1e98f512 Smolt report]
++is worth thousand words. It's a 233 MHz Geode.
++
++It has
++* Two USB 1.0 ports
++* Speaker and Microphone connectors
++* VGA output
++* 10/100 full duplex Ethernet
++* An SDRAM slot
++* Slot for Compact Flash
++
++== Software ==
++
++=== Bootloader Trouble ===
++
++These Linux 2200 (8363-EXX) models don't have a BIOS.
++I never seen a Windows CE based one, but I suspect the same for it.
++Not that BIOS would be anyhow useful, but there's not LinuxBIOS for these
++machines (due to limitied debugging capabilities; BIOS flash chip soldered
++on board and no serial port) and its firmware is ''horribly'' crappy.
++
++It can load ELF kernel via NFS or TFTP of from Ext2 formatted Compact Flash.
++However it is very... picky. It was intended to load kernel of Red Hat Linux 7,
++which is 2.2 series. It is known to be able to load some 2.4 kernels compiled
++with some ancient GCC, but nothing more than this horribly obsolete stuff.
++Moreover i can't handle zImage nor bzImage. It demand uncompressed {{{vmlinux}}}.
++
++Look 
++[http://www.bluetrait.com/archive/2005/08/07/installing-linux-2200-onto-the-ibm-netvista-n2200-8363/ here]
++for an example of a 2.4 based system running happily
++
++=== Bootloader Solution ===
++
++This can be worked around by using second stage loader
++[http://skosi.org/~lkundrak/misc/nsboot nsboot]. It basically loads as 2.2 kernel
++at {{{0x100000}}} (1M), relocates itself away, does ''something'' and
++uncompresses the kernel image, again at 1M -- this is not configurable and
++have to be taken into account when creating the configuration for kernel build.
++
++Unfortunatelly, it can not obtain the kernel image from network, just from
++Ext2 formated CF. It needs kernel in {{{/nwrlinux/bzImage}}} and initial ram disk
++image in {{{/nwrlinux/initrd}}} -- both have to exist. To boot them you should
++specify the {{{nsboot}}} binary as kernel in the setup utility, you can place
++it on a network server, or on CF as well.
++
++=== Kernel Trouble ===
++
++As I depicted above, stock kernel won't run. Modification to the kernel configuration
++are pretty straightforward; look at the [http://people.redhat.com/lkundrak/netvista/ patches].
++Aside from configuration changes they contain one mor change -- a module for rebooting.
++This may sound funny, but these machines contain no 8042 which is usually connected
++to CPU's reset line -- it uses USB HID devies.
++
++=== Kernel Solution ===
++
++Use custom kernel. It's not that hard to patch the SRPM anyways.
++See http://people.redhat.com/lkundrak/netvista/.
++
++=== Installing Fedora ===
++
++Either install it on a Compact Flash connected to your workstation or use iSCSI root
++and swap (generally a better idea if you have NAS -- extensive writes to a Flash
++media was never a good idea).
++
++See the other blog entry on how to install into an image, this time iSCSI one:
++http://ovecka.be/~lkundrak/blog/entries/fedora-diskless-iscsi.html
++
++Remember to keep {{{/nwrlinux/bzImage}}} and {{{/nwrlinux/initrd}}} up to date
++with your kernel and initrd. Possibly write a script.
++
++== Pictures ==
++
++http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/thumbnail/netvista-1.jpeg
++
++''See it (and the Ficus) here:'' http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/
+-- 
+1.6.5.2
+

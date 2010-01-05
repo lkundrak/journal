@@ -1,0 +1,51 @@
+From a9635efc81a3f0a929b377a061af4f50ef885430 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 6 Jan 2009 08:40:00 +0000
+Subject: [PATCH 38/88] Initial revision
+
+---
+ entries/RCS/prejudice.cocot |   32 ++++++++++++++++++++++++++++++++
+ 1 files changed, 32 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/prejudice.cocot
+
+diff --git a/entries/RCS/prejudice.cocot b/entries/RCS/prejudice.cocot
+new file mode 100644
+index 0000000..db9df67
+--- /dev/null
++++ b/entries/RCS/prejudice.cocot
+@@ -0,0 +1,32 @@
++= <!-- rss:title -->We're not racists...<!-- /rss:title --> =
++
++<!-- rss:description -->
++...whe just don't want Roma, foreigners and people of different
++races to be our neighbors! Religion does not matter, as long as
++it's no Muslim or Jew. And we want no homosexuals. We probably
++don't want you to be our neighbor, especially if you have a health
++trouble that would qualify you as disabled.
++
++This is the result of [http://www.sme.sk/c/4247836/predsudky-voci-romom-ci-moslimom-sa-vraj-prehlbuju.html
++a poll] recently taken in [http://en.wikipedia.org/wiki/Slovakia Slovakia].
++What I find interesting is the ''far right'' line in the chart, how
++does that make sense? Do neo-fascist hate even themselves?
++
++And you see -- it's not just words, the intensity of attacks motivated
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fdnes.atlas.sk%2Fslovensko%2Fregiony%2F213223%2Fza-utok-na-klub-obluda-policia-obvinila-rastislava-r-&sl=sk&tl=en&history_state0= Seems by]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fdanilov.blog.sme.sk%2Fc%2F155323%2FBudu-za-utok-neonacistov-v-klube-Obluda-pykat-len-jeho-obete.html&sl=sk&tl=en&history_state0= racial]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fwww.webnoviny.sk%2Fslovensko%2Fclanok%2F5401%2FMeseznikova-napadol-muz-a-vykrikoval%2C-ze-nenavidi-Zidov.html&sl=sk&tl=en&history_state0= or]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fwww.sme.sk%2Fc%2F3667863%2FZa-rasovo-motivovany-utok-vymeral-sud-podmienku.html&sl=sk&tl=en&history_state0= ethnical]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fwww.sme.sk%2Fc%2F4104997%2Fnajskor-napadli-cernosku-teraz-romov.html&sl=sk&tl=en&history_state0= hatred]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fwww.sme.sk%2Fc%2F3817838%2Frasisti-napadli-basketbalistku.html&sl=sk&tl=en&history_state0= is]
++[http://translate.google.com/translate?hl=en&ie=UTF-8&u=http%3A%2F%2Fwww.sme.sk%2Fc%2F4183291%2Frasista-ktory-napadol-doktora-dostal-podmienku.html&sl=sk&tl=en&history_state0= increasing].
++Given [http://en.wikipedia.org/wiki/Slovak_National_Party SNS],
++a party that would easily be banned in other countries for being supportive
++of racial and ethnical hatred while openly sympathizing with World Word II
++pro-fascist government is them most infuential political party in Slovakia,
++this doesn't seems to be just an attitude of small amount of people that
++would qualify as ''extremists'', but rather a natoin-wide attitude.
++
++So for now, I'll refrain from going back to that country, and advise
++you to think twice before going there.
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

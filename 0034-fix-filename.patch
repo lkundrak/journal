@@ -1,0 +1,25 @@
+From d8116621a53634c9147d933f7f04640c7939e285 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 20:25:41 +0000
+Subject: [PATCH 34/88] fix filename
+
+---
+ entries/RCS/good-one.cocot |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/entries/RCS/good-one.cocot b/entries/RCS/good-one.cocot
+index 9777e29..f84d3c9 100644
+--- a/entries/RCS/good-one.cocot
++++ b/entries/RCS/good-one.cocot
+@@ -5,7 +5,7 @@
+ Found this while cleaning up my {{{~}}}. It is from Brno FUDCon and
+ it would indeed be a real pity if it got lost.
+ 
+-http://v3.sk/~lkundrak/blog/images/fedora-opengrok-1-tn.png
++http://v3.sk/~lkundrak/blog/images/good-one.png
+ 
+ <!-- /rss:description -->
+ 
+-- 
+1.6.5.2
+

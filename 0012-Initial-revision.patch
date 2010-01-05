@@ -1,0 +1,85 @@
+From 8482aade4ac71faa7a4b1b902a100605fd8f0dd7 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 13 Mar 2008 10:13:30 +0000
+Subject: [PATCH 12/88] Initial revision
+
+---
+ entries/RCS/openjdk-el5.cocot |   28 ++++++++++++++++++++++++++++
+ scripts/RCS/wikize.pm         |   30 ++++++++++++++++++++++++++++++
+ 2 files changed, 58 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/openjdk-el5.cocot
+ create mode 100644 scripts/RCS/wikize.pm
+
+diff --git a/entries/RCS/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
+new file mode 100644
+index 0000000..34caaf0
+--- /dev/null
++++ b/entries/RCS/openjdk-el5.cocot
+@@ -0,0 +1,28 @@
++= <!-- rss:title -->Nearly stable OpenJDK for RHEL<!-- /rss:title --> =
++
++http://dusk2.geo.orst.edu/djl/images/rotating_skull.gif
++
++<!-- rss:description -->
++Have RHEL, want Java and abhor the summplemental disc?
++Lilian and Thomas (and Sun :) did some cool thing for you:
++https://bugzilla.redhat.com/show_bug.cgi?id=433070.
++Now we want you to mangle it for EPEL somehow and smuggle it in!
++
++Binaries at http://netbsd.sk/~lkundrak/openjdk-el5/ since I am
++officially not loved enough to have a bigger quota at Red Hat :)
++When things change it will land at {{{people.redhat.com}}}.
++<!-- /rss:description -->
++
++<!-- break -->
++
++== And now some pictures as usual ==
++
++http://st.blog.cz/z/zatkyn.blog.cz/obrazky/3370690.jpg
++
++http://st.blog.cz/z/zuziiikuv.blog.cz/obrazky/4463709.jpg
++Syseľ
++
++http://st.blog.cz/z/zuziiikuv.blog.cz/obrazky/4463330.jpg
++Líštička
++
++http://www.alicecooper.com/photos/res/PleaseUpdateFlashPlayer.gif
+diff --git a/scripts/RCS/wikize.pm b/scripts/RCS/wikize.pm
+new file mode 100644
+index 0000000..dba61d0
+--- /dev/null
++++ b/scripts/RCS/wikize.pm
+@@ -0,0 +1,30 @@
++# Preprocess input for wikifying
++# $Id$
++
++sub wikize
++{
++	my $text = join ("", @_);
++	$text =~ s/<!-- \S+ -->//g;
++
++	# PurpleWiki stuff
++
++	use PurpleWiki::Config;
++	use PurpleWiki::Parser::WikiText;
++	use PurpleWiki::View::wikihtml;
++
++	%params = (
++		config	=> new PurpleWiki::Config ('.'),
++		freelink => 1,
++	);
++
++
++	my $parser = PurpleWiki::Parser::WikiText->new;
++	my $tree = $parser->parse($text, %config);
++
++	#print $tree->view ('xhtml', %params);
++
++	my $view = new PurpleWiki::View::wikihtml;
++	return $view->view ($tree);
++}
++
++0.99999;
+-- 
+1.6.5.2
+

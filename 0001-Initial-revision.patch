@@ -1,0 +1,409 @@
+From ce06cbeb6e5995a57a6629c4d077e962766f6714 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 27 Feb 2008 11:45:59 +0000
+Subject: [PATCH 01/88] Initial revision
+
+---
+ RCS/Makefile                            |   51 +++++++++++++++++++++++++++++++
+ RCS/config                              |    1 +
+ entries/RCS/fedora-diskless-iscsi.cocot |   35 +++++++++++++++++++++
+ entries/RCS/gifts.cocot                 |   13 ++++++++
+ entries/RCS/template                    |   36 ++++++++++++++++++++++
+ scripts/RCS/blogpage.awk                |   44 ++++++++++++++++++++++++++
+ scripts/RCS/genrss.pl                   |   51 +++++++++++++++++++++++++++++++
+ scripts/RCS/wiki2html.pl                |   25 +++++++++++++++
+ templates/RCS/index.template            |   37 ++++++++++++++++++++++
+ templates/RCS/page.template             |   25 +++++++++++++++
+ 10 files changed, 318 insertions(+), 0 deletions(-)
+ create mode 100644 RCS/Makefile
+ create mode 100644 RCS/config
+ create mode 100644 entries/RCS/fedora-diskless-iscsi.cocot
+ create mode 100644 entries/RCS/gifts.cocot
+ create mode 100644 entries/RCS/template
+ create mode 100644 scripts/RCS/blogpage.awk
+ create mode 100644 scripts/RCS/genrss.pl
+ create mode 100644 scripts/RCS/wiki2html.pl
+ create mode 100644 templates/RCS/index.template
+ create mode 100644 templates/RCS/page.template
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+new file mode 100644
+index 0000000..b681f8d
+--- /dev/null
++++ b/RCS/Makefile
+@@ -0,0 +1,51 @@
++# $Id$
++
++BLOGPAGE?=awk -f scripts/blogpage.awk templates/page.template
++BLOGINDEX?=awk -f scripts/blogpage.awk templates/index.template
++GENRSS?=perl scripts/genrss.pl
++#WIKI2HTML?=perl scripts/wiki2html.pl
++TIDY?=tidy
++
++SOURCES=$(shell ls -t */*.cocot)
++BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
++
++TARGETS=${BLOGS} index.html rss.xml
++
++all: build
++
++###
++### Blog entries by themselves
++###
++
++.SUFFIXES: .cocot .html
++.cocot.html: templates/page.template scripts/blogpage.awk
++	${BLOGPAGE} $< >$@
++	${TIDY} -qim $@ || rm -f $@
++
++###
++### RSS feed
++###
++
++rss.xml: ${SOURCES} scripts/genrss.pl
++	${GENRSS} ${SOURCES} >$@
++	${TIDY} -qim -xml -raw $@ || rm -f $@
++
++###
++### Index
++###
++
++index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
++	${BLOGINDEX} ${SOURCES} >$@
++	${TIDY} -qim $@ || rm -f $@
++
++###
++### Meta...
++###
++
++build: ${TARGETS}
++
++clean:
++	rm -f ${TARGETS}
++
++upload: build
++	tar cf - ${TARGETS} |ssh ovecka.be "tar xf - -C public_html/blog"
+diff --git a/RCS/config b/RCS/config
+new file mode 100644
+index 0000000..51e798e
+--- /dev/null
++++ b/RCS/config
+@@ -0,0 +1 @@
++# lame duck config for PurpleWiki
+diff --git a/entries/RCS/fedora-diskless-iscsi.cocot b/entries/RCS/fedora-diskless-iscsi.cocot
+new file mode 100644
+index 0000000..f2718cd
+--- /dev/null
++++ b/entries/RCS/fedora-diskless-iscsi.cocot
+@@ -0,0 +1,35 @@
++= <!-- rss:title -->Running diskless Fedora via iSCSI<!-- /rss:title --> =
++
++This is an introduction, not the description.
++This is an introduction, not the description.
++This is an introduction, not the description.
++This is an introduction, not the description.
++
++<!-- rss:description -->
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++<!-- /rss:description -->
++
++<!-- break -->
++
++== Sub-title ==
++
++Some list:
++
++* Lala
++** http://netbsd.sk/ This is a link
++*** [/google.html] this won't work
++* Lala
++* Lala
++
++# Foo
++# Bar
++# Baz
++
++=== This is verbatim ===
++
++  $ su -c 'rm -rf /' >/dev/null 2>&1 &
++  [8]
++  $ watch 'cat /dev/urandom |hexdump -Cv |head'
+diff --git a/entries/RCS/gifts.cocot b/entries/RCS/gifts.cocot
+new file mode 100644
+index 0000000..587136a
+--- /dev/null
++++ b/entries/RCS/gifts.cocot
+@@ -0,0 +1,13 @@
++= <!-- rss:title -->Gifts from FOSDEM<!-- /rss:title --> =
++
++<!-- rss:description -->
++Today I got a black NetBSD T-shirt, a beastie pin and a
++"Powered by NetBSD" sticker from ones who love me so much,
++that they give me gifts.
++<!-- /rss:description -->
++
++<!-- break -->
++
++Some might think that it's not so special.
++It's that just my cool scripts would wait for input
++on {{{stdin}}} if there were no blog entry.
+diff --git a/entries/RCS/template b/entries/RCS/template
+new file mode 100644
+index 0000000..6c06a38
+--- /dev/null
++++ b/entries/RCS/template
+@@ -0,0 +1,36 @@
++= <!-- rss:title -->Title of the blog<!-- /rss:title --> =
++
++This is an introduction, not the description.
++This is an introduction, not the description.
++This is an introduction, not the description.
++This is an introduction, not the description.
++
++<!-- rss:description -->
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++This a description, for RSS feeds.
++<!-- /rss:description -->
++
++<!-- break -->
++
++== Sub-title ==
++
++Some list:
++
++* Lala
++** http://netbsd.sk/ This is a link
++*** [/google.html] this won't work
++* Lala
++* Lala
++
++# Foo
++# Bar
++# Baz
++
++=== This is verbatim ===
++
++  $ su -c 'rm -rf /' >/dev/null 2>&1 &
++  [8]
++  $ watch 'cat /dev/urandom |hexdump -Cv |head'
++
+diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+new file mode 100644
+index 0000000..aad4027
+--- /dev/null
++++ b/scripts/RCS/blogpage.awk
+@@ -0,0 +1,44 @@
++BEGIN {
++	if (!ARGV[2]) {
++		print "No input files" |"cat 1>&2";
++		exit 1;
++	}
++
++	while (getline <ARGV[2]) {
++		print $0 >/dev/stderr
++		if (gsub ("<!-- rss:title -->.*<!-- /rss:title -->", "&")) {
++			gsub (".*<!-- rss:title -->", "");
++			gsub ("<!-- /rss:title -->.*", "");
++			title = $0;
++		}
++	}
++}
++
++
++/@TITLE@/ {
++	gsub ("@TITLE@", title);
++}
++
++/@BODY@/ {
++	system ("perl scripts/wiki2html.pl <"ARGV[2]);
++	ARGV[2]="";
++	next;
++}
++
++/@HEADLINES@/ {
++	for (i = 2; ARGV[i]; i++) {
++		print "<hr>";
++		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
++			"| perl scripts/wiki2html.pl");
++		link = ARGV[i];
++		gsub (".cocot", ".html", link);
++		gsub (".*", "<a href=\"&\">Read more...</a>", link);
++		print "<div><i>"link"</i></div>";
++		ARGV[i]="";
++	}
++	next;
++}
++
++{
++	print $0;
++}
+diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+new file mode 100644
+index 0000000..8e06a82
+--- /dev/null
++++ b/scripts/RCS/genrss.pl
+@@ -0,0 +1,51 @@
++#!/usr/bin/env perl
++
++# $Id$
++
++use strict;
++use warnings;
++
++use XML::RSS;
++
++my $base = 'http://ovecka.be/~lkundrak/blog/';
++my $rss = new XML::RSS (version => '2.0');
++
++$rss->channel(
++	title		=> "lkundrak's Journal",
++	link		=> 'http://skosi.org/~lkundrak/',
++	language	=> 'en',
++	description	=> 'Personal web log of lkundrak',
++	copyright	=> 'Copyright (C) 2007 Lubomir Rintel',
++#	pubDate		=> 'Thu, 23 Aug 1999 07:00:00 GMT',
++#	lastBuildDate	=> 'Thu, 23 Aug 1999 07:00:00 GMT',
++	managingEditor	=> 'lkundrak@redhat.com',
++	webMaster	=> 'lkundrak@redhat.com',
++);
++
++foreach my $file (@ARGV) {
++	open (BLOG, '<'.$file);
++
++	my $html = $file;
++	$html =~ s/\.cocot$/.html/;
++
++	my $title;
++	my $desc;
++	my $indesc = 0;
++
++	foreach (<BLOG>) {
++		/<!-- rss:title -->(.*)<!-- \/rss:title -->/ and $title = $1;
++		/<!-- \/rss:description -->/ and $indesc--;
++		$indesc and $desc .= $_;
++		/<!-- rss:description -->/ and $indesc++;
++	}
++
++	$rss->add_item (
++		title		=> $title,
++		permaLink	=> $base.$html,
++		description	=> $desc,
++	);
++
++	close (BLOG);
++}
++
++print $rss->as_string;
+diff --git a/scripts/RCS/wiki2html.pl b/scripts/RCS/wiki2html.pl
+new file mode 100644
+index 0000000..ca924fa
+--- /dev/null
++++ b/scripts/RCS/wiki2html.pl
+@@ -0,0 +1,25 @@
++# Preprocess input for wikifying
++# $Id$
++
++my $text = join ("", <>);
++$text =~ s/<!-- \S+ -->//g;
++
++# PurpleWiki stuff
++
++use PurpleWiki::Config;
++use PurpleWiki::Parser::WikiText;
++use PurpleWiki::View::wikihtml;
++
++%params = (
++	config	=> new PurpleWiki::Config ('.'),
++	freelink => 1,
++);
++
++
++my $parser = PurpleWiki::Parser::WikiText->new;
++my $tree = $parser->parse($text, %config);
++
++#print $tree->view ('xhtml', %params);
++
++my $view = new PurpleWiki::View::wikihtml;
++print $view->view ($tree);
+diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+new file mode 100644
+index 0000000..98259e0
+--- /dev/null
++++ b/templates/RCS/index.template
+@@ -0,0 +1,37 @@
++<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
++
++<!-- $Id$ -->
++
++<html>
++<head>
++	<meta name="generator" content="Makefile">
++	<title>lkundrak's Journal</title>
++	<link
++		rel="alternate"
++		type="application/rss+xml"
++		title="lkundrak's Journal Feed"
++		href="rss.xml">
++</head>
++
++<body>
++	<h1>lkundrak's web log</h1>
++
++	<p>
++        Below are my journal entries. This exists for solemn purpose of no purpose.
++	<br>
++        Software that generates is it is so good that it uses templates that
++        can be edited in Dreamwaver so I can have an eye-candy design!
++	</p>
++
++	@HEADLINES@
++
++	<hr>
++	Mail <a href="mailto:lkundrak@redhat.com"><tt>lkundrak@redhat.com</tt></a>
++	for questions and commentaries.
++
++        <div style="display: none;">
++        <a href="http://skosi.org/~lkundrak/">libexig</a>
++        </div>
++</body>
++
++</html>
+diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+new file mode 100644
+index 0000000..f005b86
+--- /dev/null
++++ b/templates/RCS/page.template
+@@ -0,0 +1,25 @@
++<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
++
++<!-- $Id$ -->
++
++<html>
++<head>
++	<meta name="generator" content="Makefile">
++	<title>lkundrak's Journal | @TITLE@</title>
++</head>
++
++<body>
++	<h1>lkundrak's web log</h1>
++
++	@BODY@
++
++        <hr>
++        Mail <a href="mailto:lkundrak@redhat.com"><tt>lkundrak@redhat.com</tt></a>
++        for questions and commentaries.
++
++        <div style="display: none;">
++        <a href="http://skosi.org/~lkundrak/">libexig</a>
++        </div>
++</body>
++
++</html>
+-- 
+1.6.5.2
+

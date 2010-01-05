@@ -1,0 +1,34 @@
+From b2a385f29c4325ad18149f9722d58ce7c4a55b5d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 3 Feb 2009 18:23:17 +0000
+Subject: [PATCH 46/88] fix typoes
+
+---
+ entries/RCS/perl-carp.cocot |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/entries/RCS/perl-carp.cocot b/entries/RCS/perl-carp.cocot
+index 5e73c85..21b0918 100644
+--- a/entries/RCS/perl-carp.cocot
++++ b/entries/RCS/perl-carp.cocot
+@@ -1,7 +1,7 @@
+ = <!-- rss:title -->Stuck in Perl? (Part 2)<!-- /rss:title --> =
+ 
+ <!-- rss:description -->
+-Your perl code being stuck afain, still alive and you need a backtrace?
++Your perl code being stuck again, still alive and you need a backtrace?
+ Here's how to get it, in case you have {{{Carp}}} loaded:
+ 
+   [lkundrak@trurl ~]$ cat lala.pl 
+@@ -11,7 +11,7 @@ Here's how to get it, in case you have {{{Carp}}} loaded:
+   c ();
+   [lkundrak@trurl ~]$ perl5.11.0 -MCarp lala.pl &
+   [1] 31236
+-  [lkundrak@trurl ~]$ gdb -p 31236
++  [lkundrak@trurl ~]$ gdb -p $!
+   GNU gdb Fedora (6.8-27.el5)
+   ...
+   0x00110402 in __kernel_vsyscall ()
+-- 
+1.6.5.2
+

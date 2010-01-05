@@ -1,0 +1,34 @@
+From f6dd0097e248d04daf3f30e9f92593e248411a35 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Sun, 7 Jun 2009 12:40:36 +0000
+Subject: [PATCH 68/88] Initial revision
+
+---
+ entries/RCS/review-swappies.cocot |   15 +++++++++++++++
+ 1 files changed, 15 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/review-swappies.cocot
+
+diff --git a/entries/RCS/review-swappies.cocot b/entries/RCS/review-swappies.cocot
+new file mode 100644
+index 0000000..a937de0
+--- /dev/null
++++ b/entries/RCS/review-swappies.cocot
+@@ -0,0 +1,15 @@
++= <!-- rss:title -->Review Swappies<!-- /rss:title --> =
++
++<!-- rss:description -->
++Need someone to review your package? 
++
++I'm in a desperate need of having load of Ruby stuff in
++and willing to swap reviews with you! Just check these out,
++http://tinyurl.com/gdc-ruby-stack most are failry simple,
++pick some and let me know which package you want me to review.
++
++Please help a brotha out!
++
++NB: This may come handy to you when reviewing those:
++https://fedoraproject.org/wiki/Packaging:Ruby
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

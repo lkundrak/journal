@@ -1,0 +1,27 @@
+From 020b600faa296e0b7ceca3fffa199e8d168f3fd0 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 20 Jan 2009 13:20:47 +0000
+Subject: [PATCH 39/88] Initial revision
+
+---
+ entries/RCS/tunneler.cocot |    8 ++++++++
+ 1 files changed, 8 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/tunneler.cocot
+
+diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+new file mode 100644
+index 0000000..36f02d4
+--- /dev/null
++++ b/entries/RCS/tunneler.cocot
+@@ -0,0 +1,8 @@
++= <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
++
++Did you know a free SDL-based clone of Tunneler exists?
++http://v3.sk/~lkundrak/blog/images/tunneler.png
++
++Anyone wants to swap [https://bugzilla.redhat.com/show_bug.cgi?id=480771 reviews]? :)
++
++<!-- break -->
+-- 
+1.6.5.2
+

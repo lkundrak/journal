@@ -1,0 +1,25 @@
+From bb55bf221c789284870f05f433ddfea4212c4e79 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 01:44:26 +0000
+Subject: [PATCH 27/88] Fix date
+
+---
+ scripts/RCS/blogpage.awk |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+index 6a5220c..561bebc 100644
+--- a/scripts/RCS/blogpage.awk
++++ b/scripts/RCS/blogpage.awk
+@@ -36,7 +36,7 @@ BEGIN {
+ 		print "<hr>";
+ 
+ 		# Last modification date
+-		system ("LANG=C date -r "ARGV[i]);
++		system ("LANG=C date -d \"$(rlog "ARGV[i]" |awk '/^date:/ {date=$2\" \"$3} END {gsub (\";\", \"\", date); print date}')\"");
+ 
+ 		# Caption and text
+ 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
+-- 
+1.6.5.2
+

@@ -1,0 +1,29 @@
+From 8d96bc767e525ab229e06ed64924c35bd7b15143 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Sat, 7 Mar 2009 13:07:19 +0000
+Subject: [PATCH 55/88] Initial revision
+
+---
+ entries/RCS/dos-games-linux.cocot |   10 ++++++++++
+ 1 files changed, 10 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/dos-games-linux.cocot
+
+diff --git a/entries/RCS/dos-games-linux.cocot b/entries/RCS/dos-games-linux.cocot
+new file mode 100644
+index 0000000..a4affd3
+--- /dev/null
++++ b/entries/RCS/dos-games-linux.cocot
+@@ -0,0 +1,10 @@
++= <!-- rss:title -->DOS Games in Linux<!-- /rss:title --> =
++
++<!-- rss:description -->
++I've made RPM packages of some DOS Abandonware Games.
++[http://v3.sk/~lkundrak/dosgames/ Check it out] if you want
++if you want to relive your old memories, before
++software lawyers knock on my door :)
++
++http://v3.sk/~lkundrak/dosgames/img/imapc.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,26 @@
+From b27789083416c50418a19e42e37568bad384b328 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 29 Feb 2008 21:47:16 +0000
+Subject: [PATCH 05/88] back link
+
+---
+ templates/RCS/page.template |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+index 06160e0..fb07c9d 100644
+--- a/templates/RCS/page.template
++++ b/templates/RCS/page.template
+@@ -11,6 +11,9 @@
+ <body>
+ 	<h1>lkundrak's web log</h1>
+ 
++	<a href="..">Back to index...</a>
++	<hr>
++
+ 	@BODY@
+ 
+         <hr>
+-- 
+1.6.5.2
+

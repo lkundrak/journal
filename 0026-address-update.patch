@@ -1,0 +1,57 @@
+From a9263cba47d04e3b99f33a3d39b459cc292ca5e5 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 01:39:51 +0000
+Subject: [PATCH 26/88] address update
+
+---
+ entries/RCS/fedora-on-netvista.cocot |    6 ++++--
+ entries/RCS/opengrok-on-rhel5.cocot  |    5 ++---
+ 2 files changed, 6 insertions(+), 5 deletions(-)
+
+diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+index e3a59bf..509be69 100644
+--- a/entries/RCS/fedora-on-netvista.cocot
++++ b/entries/RCS/fedora-on-netvista.cocot
+@@ -60,7 +60,8 @@ it on a network server, or on CF as well.
+ === Kernel Trouble ===
+ 
+ As I depicted above, stock kernel won't run. Modification to the kernel configuration
+-are pretty straightforward; look at the [http://people.redhat.com/lkundrak/netvista/ patches].
++are pretty straightforward; look at the patches ('''Update:''' the {{{people.redhat.com}}}
++link no longer works.  Please mail me if interested!).
+ Aside from configuration changes they contain one mor change -- a module for rebooting.
+ This may sound funny, but these machines contain no 8042 which is usually connected
+ to CPU's reset line -- it uses USB HID devies.
+@@ -68,7 +69,6 @@ to CPU's reset line -- it uses USB HID devies.
+ === Kernel Solution ===
+ 
+ Use custom kernel. It's not that hard to patch the SRPM anyways.
+-See http://people.redhat.com/lkundrak/netvista/.
+ 
+ === Installing Fedora ===
+ 
+@@ -87,3 +87,5 @@ with your kernel and initrd. Possibly write a script.
+ http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/thumbnail/netvista-1.jpeg
+ 
+ ''See it (and the Ficus) here:'' http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/
++
++'''Update 2008-12-29:''' Removed {{{redhat.com}}} links.
+diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+index 0a3784f..cc7647d 100644
+--- a/entries/RCS/opengrok-on-rhel5.cocot
++++ b/entries/RCS/opengrok-on-rhel5.cocot
+@@ -11,9 +11,8 @@ that were shipped in some preview update I believe.
+ 
+ <!-- break -->
+ 
+-The repository is http://people.redhat.com/lkundrak/opengrok-el5/,
+-probably will be subject to move to
+-http://people.redhat.com/lkundrak/opengrok/.
++'''Update 2008-12-29:''' Removed dead {{{people.redhat.com}}} links.
++Mail me if interested in packages.
+ 
+ Pictures!
+ 
+-- 
+1.6.5.2
+

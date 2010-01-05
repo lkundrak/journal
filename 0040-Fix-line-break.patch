@@ -1,0 +1,24 @@
+From 133e3a85a62b8f8adeb25a218c65db7851ef855d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 20 Jan 2009 13:21:54 +0000
+Subject: [PATCH 40/88] Fix line break
+
+---
+ entries/RCS/tunneler.cocot |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+index 36f02d4..ce9f50f 100644
+--- a/entries/RCS/tunneler.cocot
++++ b/entries/RCS/tunneler.cocot
+@@ -1,6 +1,7 @@
+ = <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
+ 
+ Did you know a free SDL-based clone of Tunneler exists?
++
+ http://v3.sk/~lkundrak/blog/images/tunneler.png
+ 
+ Anyone wants to swap [https://bugzilla.redhat.com/show_bug.cgi?id=480771 reviews]? :)
+-- 
+1.6.5.2
+

@@ -1,0 +1,124 @@
+From fa2b8c62bb66cf7bf1f3a8c1517c874d848f4ccc Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 01:12:16 +0000
+Subject: [PATCH 23/88] Get rid of broken URLs, remove unsuccessful attempts to compile entries
+
+---
+ RCS/Makefile                         |    8 ++++----
+ entries/RCS/fedora-on-netvista.cocot |    2 +-
+ entries/RCS/fedora-opengrok.cocot    |   10 +++++-----
+ entries/RCS/galleries.cocot          |    4 ++--
+ entries/RCS/opengrok-on-rhel5.cocot  |    4 ++--
+ 5 files changed, 14 insertions(+), 14 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index b53a420..f71369e 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -19,7 +19,7 @@ all: build
+ 
+ .SUFFIXES: .cocot .html
+ .cocot.html: templates/page.template scripts/blogpage.awk
+-	${BLOGPAGE} $< >$@
++	${BLOGPAGE} $< >$@ || rm -f $@
+ 	${TIDY} -qim $@ || rm -f $@
+ 
+ ###
+@@ -27,7 +27,7 @@ all: build
+ ###
+ 
+ rss.xml: ${SOURCES} scripts/genrss.pl
+-	${GENRSS} ${SOURCES} >$@
++	${GENRSS} ${SOURCES} >$@ || rm -f $@
+ 	${TIDY} -qim -xml -raw $@ || rm -f $@
+ 
+ ###
+@@ -35,7 +35,7 @@ rss.xml: ${SOURCES} scripts/genrss.pl
+ ###
+ 
+ index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
+-	${BLOGINDEX} ${SOURCES} >$@
++	${BLOGINDEX} ${SOURCES} >$@ || rm -f $@
+ 	${TIDY} -qim $@ || rm -f $@
+ 
+ ###
+@@ -122,4 +122,4 @@ clean:
+ 	rm -f ${TARGETS} ${JUNK} ?
+ 
+ upload: build
+-	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
++	tar cf - ${TARGETS} images/mozchomp.gif |ssh v3.sk "tar xf - -C public_html/blog"
+diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+index ebf1d1a..e3a59bf 100644
+--- a/entries/RCS/fedora-on-netvista.cocot
++++ b/entries/RCS/fedora-on-netvista.cocot
+@@ -77,7 +77,7 @@ and swap (generally a better idea if you have NAS -- extensive writes to a Flash
+ media was never a good idea).
+ 
+ See the other blog entry on how to install into an image, this time iSCSI one:
+-http://ovecka.be/~lkundrak/blog/entries/fedora-diskless-iscsi.html
++http://v3.sk/~lkundrak/blog/entries/fedora-diskless-iscsi.html
+ 
+ Remember to keep {{{/nwrlinux/bzImage}}} and {{{/nwrlinux/initrd}}} up to date
+ with your kernel and initrd. Possibly write a script.
+diff --git a/entries/RCS/fedora-opengrok.cocot b/entries/RCS/fedora-opengrok.cocot
+index 8faecfe..5d31eda 100644
+--- a/entries/RCS/fedora-opengrok.cocot
++++ b/entries/RCS/fedora-opengrok.cocot
+@@ -5,19 +5,19 @@
+ I played a bit with Fedora theme for OpenGrok this evening.
+ <!-- /rss:description -->
+ 
+-http://ovecka.be/~lkundrak/blog/images/fedora-opengrok-1-tn.png
++http://v3.sk/~lkundrak/blog/images/fedora-opengrok-1-tn.png
+ 
+ <!-- break -->
+ 
+-http://ovecka.be/~lkundrak/blog/images/fedora-opengrok-2-tn.png
++http://v3.sk/~lkundrak/blog/images/fedora-opengrok-2-tn.png
+ 
+-http://ovecka.be/~lkundrak/blog/images/fedora-opengrok-3-tn.png
++http://v3.sk/~lkundrak/blog/images/fedora-opengrok-3-tn.png
+ <!-- rss:description -->
+ 
+-http://ovecka.be/~lkundrak/blog/images/fedora-opengrok-4-tn.png
++http://v3.sk/~lkundrak/blog/images/fedora-opengrok-4-tn.png
+ 
+ <!-- /rss:description -->
+-http://ovecka.be/~lkundrak/blog/images/fedora-opengrok-5-tn.png
++http://v3.sk/~lkundrak/blog/images/fedora-opengrok-5-tn.png
+ 
+ <!-- rss:description -->
+ I am considering to propose a it a a f10 targeted feature --
+diff --git a/entries/RCS/galleries.cocot b/entries/RCS/galleries.cocot
+index 79b96ef..2a88d4d 100644
+--- a/entries/RCS/galleries.cocot
++++ b/entries/RCS/galleries.cocot
+@@ -4,9 +4,9 @@
+ So I am officially owner of the coolest web gallery.
+ The package that generated it was approved for Fedora today,
+ https://bugzilla.redhat.com/show_bug.cgi?id=xyz-gallery-review
+-See it in action at http://ovecka.be/~lkundrak/gallery/.
++See it in action at http://v3.sk/~lkundrak/gallery/.
+ 
+-http://ovecka.be/~lkundrak/blog/images/xyz-gallery-tn.png
++http://v3.sk/~lkundrak/blog/images/xyz-gallery-tn.png
+ <!-- /rss:description -->
+ 
+ <!-- break -->
+diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+index 05b20b3..0a3784f 100644
+--- a/entries/RCS/opengrok-on-rhel5.cocot
++++ b/entries/RCS/opengrok-on-rhel5.cocot
+@@ -17,6 +17,6 @@ http://people.redhat.com/lkundrak/opengrok/.
+ 
+ Pictures!
+ 
+-http://ovecka.be/~lkundrak/blog/images/opengrok-shot1-tn.png
++http://v3.sk/~lkundrak/blog/images/opengrok-shot1-tn.png
+ 
+-http://ovecka.be/~lkundrak/blog/images/opengrok-shot2-tn.png
++http://v3.sk/~lkundrak/blog/images/opengrok-shot2-tn.png
+-- 
+1.6.5.2
+

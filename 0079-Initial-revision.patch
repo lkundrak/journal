@@ -1,0 +1,35 @@
+From d6d5149dc483baf22e3a1e85be3f8e7b0485bd4d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 3 Nov 2009 11:48:46 +0000
+Subject: [PATCH 79/88] Initial revision
+
+---
+ entries/RCS/review-swappies-2.cocot |   16 ++++++++++++++++
+ 1 files changed, 16 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/review-swappies-2.cocot
+
+diff --git a/entries/RCS/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
+new file mode 100644
+index 0000000..99125a0
+--- /dev/null
++++ b/entries/RCS/review-swappies-2.cocot
+@@ -0,0 +1,16 @@
++= <!-- rss:title -->Review Swappies<!-- /rss:title --> =
++
++<!-- rss:description -->
++Need someone to review your package? 
++
++As my need-to-have-reviewed queue grows, I'm willing to swap
++reviews with you! Just check these out,
++http://preview.tinyurl.com/review-queue most are failry simple,
++pick some and let me know which package you want me to review.
++
++If you've never made a package or newer done a review and
++would like to join maintainers of Fedora package collection,
++this is a good way to start! Do not hesitate to let me know
++if you need any help then!
++
++<!-- break -->
+-- 
+1.6.5.2
+

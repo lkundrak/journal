@@ -1,0 +1,46 @@
+From ab4c70830bb1a0f6e81f901768a770762d4ef076 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 27 Mar 2008 22:13:44 +0000
+Subject: [PATCH 16/88] Initial revision
+
+---
+ entries/RCS/secure-buildroot.cocot |   27 +++++++++++++++++++++++++++
+ 1 files changed, 27 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/secure-buildroot.cocot
+
+diff --git a/entries/RCS/secure-buildroot.cocot b/entries/RCS/secure-buildroot.cocot
+new file mode 100644
+index 0000000..83efeae
+--- /dev/null
++++ b/entries/RCS/secure-buildroot.cocot
+@@ -0,0 +1,27 @@
++= <!-- rss:title -->BuildRoot Race<!-- /rss:title --> =
++
++<!-- rss:description -->
++Ever noticed that one of most exemplary cases of insecure temporary files
++is the way we treat installation root when building packages?
++<!-- /rss:description -->
++
++Gentoo solved something like this some time ago, if I recall correctly.
++On the other hand, their problem was a bit more serious, building packages
++is the daily routine of Gentoo Linux administrators, chance that they'll
++have an untrusted local user is much bigger.
++
++<!-- break -->
++
++== Solution ==
++
++There have been some efforts to obsolete the {{{BuildRoot}}} tag.
++That is probably the most elegant solution, but not likely in a reasonable
++timeframe:
++
++* https://lists.dulug.duke.edu/pipermail/rpm-maint/2007-February/000162.html
++
++However, we can do something ourselves:
++
++* http://fedoraproject.org/wiki/PackagingDrafts/SecureBuildRoot
++
++Let us see what Packaging guys think.
+-- 
+1.6.5.2
+

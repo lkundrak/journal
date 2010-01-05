@@ -1,0 +1,41 @@
+From 7f5558862b7199f3aabb77f4cfb172a3cd038d9f Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Sun, 3 May 2009 15:53:48 +0000
+Subject: [PATCH 64/88] Initial revision
+
+---
+ entries/RCS/vbox-rpmfusion.cocot |   22 ++++++++++++++++++++++
+ 1 files changed, 22 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/vbox-rpmfusion.cocot
+
+diff --git a/entries/RCS/vbox-rpmfusion.cocot b/entries/RCS/vbox-rpmfusion.cocot
+new file mode 100644
+index 0000000..ffa459b
+--- /dev/null
++++ b/entries/RCS/vbox-rpmfusion.cocot
+@@ -0,0 +1,22 @@
++= <!-- rss:title -->VirtualBox OSE in RPM Fusion<!-- /rss:title --> =
++
++<!-- rss:description -->
++Open Source edition of VirtualBox had recently finally been
++imported into RPM Fusion.
++
++While the Fedora 10 Branch carries the 2.1.4 version, and is not
++likely to be updated to a newer release, a brand new '''2.2.2''' version had
++been imported into development branch '''targetting Fedora 11''' today
++and will hit the devel repository soonish.
++
++Grab it while it's hot unless you already have done so -- download the
++[http://fedoraproject.org/get-prerelease Fedora 11 Preview] release,
++[http://rpmfusion.org/Configuration enable RPM Fusion free] repository
++and add {{{VirtualBox-OSE}}} package. All feedback (either bugs in
++bugzilla or success reports) is of course welcome.
++
++And finally the screenshot, which probably grabbed your attention to this
++post ;)
++
++http://v3.sk/~lkundrak/blog/images/vbox-2.2.2-tn.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,30 @@
+From 554d9cd1386699b3e8403b28796c1c62bd86ad3d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 29 Jan 2009 20:50:06 +0000
+Subject: [PATCH 43/88] Initial revision
+
+---
+ entries/RCS/rms.cocot |   11 +++++++++++
+ 1 files changed, 11 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/rms.cocot
+
+diff --git a/entries/RCS/rms.cocot b/entries/RCS/rms.cocot
+new file mode 100644
+index 0000000..bf5daaa
+--- /dev/null
++++ b/entries/RCS/rms.cocot
+@@ -0,0 +1,11 @@
++= <!-- rss:title -->Webcomic<!-- /rss:title --> =
++
++<!-- rss:description -->
++A direct competition to today's nicu's webcomic strip.
++
++Please note that I finally made some changes to the figures, so
++there's finally some originality. Also, please note that my drawing
++skills vastly improved.
++
++http://v3.sk/~lkundrak/blog/images/rms.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,51 @@
+From 18b111635a0f4daf977b3f90072be5a3c0ffc368 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 14 Aug 2009 14:47:38 +0000
+Subject: [PATCH 77/88] finished
+
+---
+ entries/RCS/metapixel.cocot |   22 ++++++++++++----------
+ 1 files changed, 12 insertions(+), 10 deletions(-)
+
+diff --git a/entries/RCS/metapixel.cocot b/entries/RCS/metapixel.cocot
+index fc3731e..58b88d3 100644
+--- a/entries/RCS/metapixel.cocot
++++ b/entries/RCS/metapixel.cocot
+@@ -1,22 +1,24 @@
+-= <!-- rss:title -->Title of the blog<!-- /rss:title --> =
++= <!-- rss:title -->Logo-shaped collage of Fedora users<!-- /rss:title --> =
+ 
+ <!-- rss:description -->
+-Pavol Rusnak of OpenSuse made a beautiful
++Pavol Rusnak of OpenSUSE made a beautiful
+ [http://stick.gk2.sk/blog/2009/08/opensuse-users-collage/ collage of their user avatars].
+ I tried to do the same with Fedora users. See how it looks:
+ 
+-http://v3.sk/~lkundrak/fedora-users.png
++http://v3.sk/~lkundrak/blog/images/fedora-users-tn.png
++
++[http://v3.sk/~lkundrak/blog/images/fedora-users.png See Full size picture].
+ 
+ <!-- break -->
+ 
+-I had slightly less pictures, since Facebook doesn't provide API for getting lists of
+-page fans unlike of groups, therefore I did not use pictures of 2600+ ''Fedora - Linux'' fans.
++Tool to create these is {{{metapixel}}} available in Fedora.
++Sources of my pictures were:
+ 
+-My source pictures were:
++* Cca. 280 from Gravatar for {{{fedora-list}}} and {{{fedora-devel}}} participants
++* Cca. 220 from Platet fedora Avatars
++* Cca. 1100 from Facebook {{{Fedora}}} and {{{FEL}}} groups
+ 
+-|| Count (cca) || Source ||
+-| 280 | Gravatar for {{{fedora-list}}} and {{{fedora-devel}}} participants |
+-| 220 | Platet fedora Avatars |
+-| 1100 | Facebook {{{Fedora}}} and {{{FEL}}} groups |
++I had slightly less pictures than OpenSUSE, since Facebook doesn't provide API for getting lists of
++page fans unlike of groups, therefore I did not use pictures of 2600+ ''Fedora - Linux'' fans.
+ 
+ <!-- /rss:description -->
+-- 
+1.6.5.2
+

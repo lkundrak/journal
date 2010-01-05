@@ -1,0 +1,35 @@
+From 2bfb7d687550a57da370f7d935af8f55bdd7548e Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 29 Apr 2009 10:28:08 +0000
+Subject: [PATCH 62/88] url
+ typo
+
+---
+ entries/RCS/shortrpm.cocot |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/entries/RCS/shortrpm.cocot b/entries/RCS/shortrpm.cocot
+index 6db3f94..1823712 100644
+--- a/entries/RCS/shortrpm.cocot
++++ b/entries/RCS/shortrpm.cocot
+@@ -3,7 +3,7 @@
+ <!-- rss:description -->
+ Ever wonderred why can't you do a {{{rpmbuild -bb --short-circuit}}} just
+ after you found out that you forgot to add something in {{{%files}}}
+-or made a typo in {{%install}}, having waited three hours for a package
++or made a typo in {{{%install}}}, having waited three hours for a package
+ to compile? Being able to quickly fix your problem could easily save you
+ many hours of compiling.  You could check whether the package is able to install,
+ check whether dependencies are fine, the program runs, scriptlets behave fine
+@@ -16,7 +16,7 @@ effectively means one more day to get the package done.
+ If you don't like having to rebuild your package every time you make a
+ small mistake just because of a [https://bugzilla.redhat.com/show_bug.cgi?id=478463
+ religious issue with RPM] you may have a look at
+-{{{[https://admin.fedoraproject.org/pkgdb/packages/name/shortrpm shortrpm]}}}
++{{{[http://v3.sk/~lkundrak/shortrpm/ shormtrpm]}}}
+ package. It transparently wraps {{{rpmbuild}}}, causing it to think
+ most sections contain {{{exit 0}}} as first command intercepting {{{open}}}(3)
+ call via {{{LD_PRELOAD}}}.
+-- 
+1.6.5.2
+

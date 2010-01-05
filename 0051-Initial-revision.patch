@@ -1,0 +1,26 @@
+From 142f524e66c2d1527bbe6d8bf16df2d487778660 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 25 Feb 2009 11:27:45 +0000
+Subject: [PATCH 51/88] Initial revision
+
+---
+ entries/RCS/congrats.cocot |    7 +++++++
+ 1 files changed, 7 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/congrats.cocot
+
+diff --git a/entries/RCS/congrats.cocot b/entries/RCS/congrats.cocot
+new file mode 100644
+index 0000000..14eba15
+--- /dev/null
++++ b/entries/RCS/congrats.cocot
+@@ -0,0 +1,7 @@
++= <!-- rss:title -->Congratulations<!-- /rss:title --> =
++
++<!-- rss:description -->
++...to [http://mnagy.fedorapeople.org/ Martin Nagy].
++
++http://v3.sk/~lkundrak/blog/images/sparta.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

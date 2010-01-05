@@ -1,0 +1,48 @@
+From 9875b8966fe74733f16eceaa0776541635fab41f Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 19 May 2009 15:52:40 +0000
+Subject: [PATCH 65/88] Initial revision
+
+---
+ entries/RCS/inkscape-testing-fedora.cocot |   29 +++++++++++++++++++++++++++++
+ 1 files changed, 29 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/inkscape-testing-fedora.cocot
+
+diff --git a/entries/RCS/inkscape-testing-fedora.cocot b/entries/RCS/inkscape-testing-fedora.cocot
+new file mode 100644
+index 0000000..3c9a998
+--- /dev/null
++++ b/entries/RCS/inkscape-testing-fedora.cocot
+@@ -0,0 +1,29 @@
++= <!-- rss:title -->Fedora 11 and Inkscape 0.47<!-- /rss:title --> =
++
++<!-- rss:description -->
++Dearest Fedora and Inkscape users,
++
++As you may have noticed, Fedora 11 (Leonidas) will ship with SVN snapshot
++of Inkscape that targets 0.47 release. As such it may have bugs that will
++not be present in the release and even incomplete feature set since it is
++from few days before the feature freeze.
++
++This was done due to demand from user base and to help shape the final 0.47.
++
++Once Inkscape 0.47 is released, which is
++[http://www.inkscape.org/#The_road_to_0.47:April_21,_2009 planned for mid-July],
++it will be pushed to the stable updates repository. Until then, testing
++repository will be regularly updates with beta and release candidate packages
++starting with a [https://admin.fedoraproject.org/updates/inkscape-0.47-0.9.20090518svn.fc11
++snapshot from May 18th]. See Fedora Wiki for details on
++[https://fedoraproject.org/wiki/QA/Updates_Testing
++how to get the package from the testing repository].
++
++Any feedback is, of course welcome. Please report issues you'll find at
++[https://bugs.launchpad.net/inkscape Inkscape's bug tracker] or
++[http://bugzilla.redhat.com/ our Bugzilla instance]. Please ensure you're
++running latest {{{inkscape}}} package from the testing repository
++before reporting a bug.
++
++Have fun with brand new Fedora and Inkscape!
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

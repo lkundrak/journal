@@ -1,0 +1,39 @@
+From 74f41f08c58456e899f888d075b4db4b3c79c852 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 29 Feb 2008 17:59:21 +0000
+Subject: [PATCH 03/88] godzilla
+
+---
+ RCS/Makefile                 |    2 +-
+ templates/RCS/index.template |    2 ++
+ 2 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index b681f8d..249c05b 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -9,7 +9,7 @@ TIDY?=tidy
+ SOURCES=$(shell ls -t */*.cocot)
+ BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
+ 
+-TARGETS=${BLOGS} index.html rss.xml
++TARGETS=${BLOGS} index.html rss.xml images/mozchomp.gif
+ 
+ all: build
+ 
+diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+index 233df61..19f095b 100644
+--- a/templates/RCS/index.template
++++ b/templates/RCS/index.template
+@@ -16,6 +16,8 @@
+ <body>
+ 	<h1>lkundrak's web log</h1>
+ 
++	<img src="images/mozchomp.gif" alt="lala">
++
+ 	<p>
+         Below are my journal entries. This exists for solemn purpose of no purpose.
+ 	<br>
+-- 
+1.6.5.2
+

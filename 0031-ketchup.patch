@@ -1,0 +1,22 @@
+From 457e8ef63de50ce9c5dfdf3e179cb9654279d35b Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 11:55:50 +0000
+Subject: [PATCH 31/88] ketchup
+
+---
+ RCS/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index 740788f..af19b66 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -122,4 +122,4 @@ clean:
+ 	rm -f ${TARGETS} ${JUNK} ?
+ 
+ upload: build
+-	tar cf - ${TARGETS} images/mozchomp.gif |ssh v3.sk "tar xf - -C public_html/blog"
++	tar cf - ${TARGETS} images/mozchomp.gif images/ketchup.jpeg |ssh v3.sk "tar xf - -C public_html/blog"
+-- 
+1.6.5.2
+

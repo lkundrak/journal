@@ -1,0 +1,34 @@
+From c51e8b45ef69518ad661f21a8cba80b00d5f9676 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 27 Mar 2008 22:40:08 +0000
+Subject: [PATCH 19/88] clean up more
+
+---
+ RCS/Makefile |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index 7d62f33..b53a420 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -49,7 +49,7 @@ BLOG3+=images/opengrok-shot2.png
+ BLOG3+=images/opengrok-shot1-tn.png
+ BLOG3+=images/opengrok-shot2-tn.png
+ 
+-JUNK+=images/*-tn
++JUNK+=images/*-tn.*
+ 
+ images/opengrok-shot1.png: images/opengrok-shot1.xwd
+ 	${SHADOW} $< $@
+@@ -119,7 +119,7 @@ entries/fedora-opengrok.html: ${BLOG5}
+ build: ${TARGETS}
+ 
+ clean:
+-	rm -f ${TARGETS} ${JUNK}
++	rm -f ${TARGETS} ${JUNK} ?
+ 
+ upload: build
+ 	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
+-- 
+1.6.5.2
+

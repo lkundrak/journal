@@ -1,0 +1,61 @@
+From ece5f435fdb7bb708e73986da05ace36d674be79 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 11:41:57 +0000
+Subject: [PATCH 29/88] cosmetics
+
+---
+ scripts/RCS/blogpage.awk     |    4 +++-
+ templates/RCS/index.template |   15 ++++++---------
+ 2 files changed, 9 insertions(+), 10 deletions(-)
+
+diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+index 561bebc..84616dc 100644
+--- a/scripts/RCS/blogpage.awk
++++ b/scripts/RCS/blogpage.awk
+@@ -36,13 +36,15 @@ BEGIN {
+ 		print "<hr>";
+ 
+ 		# Last modification date
++		print "<i>";
+ 		system ("LANG=C date -d \"$(rlog "ARGV[i]" |awk '/^date:/ {date=$2\" \"$3} END {gsub (\";\", \"\", date); print date}')\"");
++		print "</i>";
+ 
+ 		# Caption and text
+ 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
+ 			"| perl scripts/wiki2html.pl");
+ 
+-		# Read more link
++		# "Read more" link
+ 		link = ARGV[i];
+ 		gsub (".cocot", ".html", link);
+ 		gsub (".*", "<a href=\"&\">Read more...</a>", link);
+diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+index 03989bd..5379c81 100644
+--- a/templates/RCS/index.template
++++ b/templates/RCS/index.template
+@@ -14,16 +14,13 @@
+ </head>
+ 
+ <body>
+-	<h1>lkundrak's web log</h1>
++	<img src="images/ketchup.jpeg" alt="" align="left">
++	<h1>Sick Things</h1>
++	<i>Web 2.0 blog of Spirituality, Romance, National values, Apple computers, Pop music and Python programming.</i>
+ 
+-	<img src="images/mozchomp.gif" alt="lala">
+-
+-	<p>
+-        Below are my journal entries. This exists for solemn purpose of no purpose.
+-	<br>
+-        Software that generates is it is so good that it uses templates that
+-        can be edited in Dreamwaver so I can have an eye-candy design!
+-	</p>
++	<p>So I have a journal again. Please pardon me if I don't update it regularly -- I decided
++	not to go with wordpress or bloxspot and did a really bad job replacing them, so it's
++	a big pain to write journal entries for me. I prayed for help.</p>
+ 
+ 	@HEADLINES@
+ 
+-- 
+1.6.5.2
+

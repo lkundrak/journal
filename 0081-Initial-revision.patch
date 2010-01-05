@@ -1,0 +1,33 @@
+From 5a314eec731e1679bf265bbfcefaf12a220a20af Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 4 Nov 2009 13:34:24 +0000
+Subject: [PATCH 81/88] Initial revision
+
+---
+ entries/RCS/linuxalt2009.cocot |   14 ++++++++++++++
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/linuxalt2009.cocot
+
+diff --git a/entries/RCS/linuxalt2009.cocot b/entries/RCS/linuxalt2009.cocot
+new file mode 100644
+index 0000000..1099464
+--- /dev/null
++++ b/entries/RCS/linuxalt2009.cocot
+@@ -0,0 +1,14 @@
++= <!-- rss:title -->See you at LinuxAlt 2009<!-- /rss:title --> =
++
++<!-- rss:description -->
++LinuxAlt 2009 takes place this weekend in Brno.
++The talks seem pretty interesting, see details at web site http://www.linuxalt.cz/ (czech).
++
++http://lkundrak.fedorapeople.org/linuxalt2009brno.jpeg
++
++(There's no good blog without a picture. Hopefully god will forgive me for
++reusing older artwork, and noone will notice either.)
++
++<!-- /rss:description -->
++
++<!-- break -->
+-- 
+1.6.5.2
+

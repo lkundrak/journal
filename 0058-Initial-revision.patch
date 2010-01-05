@@ -1,0 +1,45 @@
+From b03ca94153351e036ea2593a7fd06f888148e568 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Sun, 29 Mar 2009 17:20:07 +0000
+Subject: [PATCH 58/88] Initial revision
+
+---
+ entries/RCS/crash.cocot |   26 ++++++++++++++++++++++++++
+ 1 files changed, 26 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/crash.cocot
+
+diff --git a/entries/RCS/crash.cocot b/entries/RCS/crash.cocot
+new file mode 100644
+index 0000000..8eb6945
+--- /dev/null
++++ b/entries/RCS/crash.cocot
+@@ -0,0 +1,26 @@
++= <!-- rss:title -->Trouble running crash against live system?<!-- /rss:title --> =
++
++<!-- rss:description -->
++If you've attempted to run {{{crash}}} against live system with recent
++Rawhide kernel that doesn't ship the {{{crash}}} driver, but uses {{{/dev/mem}}}
++to access memory, you've probably failed, getting an error message similar to this:
++
++  crash: read error: kernel virtual address: c0abb600  type: "xtime"
++
++That's because for some unknown reason {{{/dev/mem}}} is limited to first
++256 pages. Until this is fixed [http://lkml.org/lkml/2008/11/16/117 upstream],
++here's a simple [http://sourceware.org/systemtap/ SystemTap] script that
++tricks the range-checking routine into thinking that our access is not
++beyond the 256-page boundary:
++
++  probe kernel.function("devmem_is_allowed")
++  {
++  	$pagenr = 0;
++  }
++
++It modifies a local variable, so it has to be run in Guru mode:
++
++  [root@bimbo stap]# stap -g devmem.stp 
++
++Voila, {{{crash}}} works.
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

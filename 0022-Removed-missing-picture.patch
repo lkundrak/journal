@@ -1,0 +1,24 @@
+From 67da901cd8b64094bd8a9084edf7e3cf5a4cf17b Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 01:04:46 +0000
+Subject: [PATCH 22/88] Removed missing picture
+
+---
+ entries/RCS/openjdk-el5.cocot |    2 --
+ 1 files changed, 0 insertions(+), 2 deletions(-)
+
+diff --git a/entries/RCS/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
+index 34caaf0..ba8b0f7 100644
+--- a/entries/RCS/openjdk-el5.cocot
++++ b/entries/RCS/openjdk-el5.cocot
+@@ -1,7 +1,5 @@
+ = <!-- rss:title -->Nearly stable OpenJDK for RHEL<!-- /rss:title --> =
+ 
+-http://dusk2.geo.orst.edu/djl/images/rotating_skull.gif
+-
+ <!-- rss:description -->
+ Have RHEL, want Java and abhor the summplemental disc?
+ Lilian and Thomas (and Sun :) did some cool thing for you:
+-- 
+1.6.5.2
+

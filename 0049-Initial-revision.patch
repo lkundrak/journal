@@ -1,0 +1,77 @@
+From 4cd19d4ba09ec38e54fe406c75018e369fcc0584 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 11 Feb 2009 22:05:30 +0000
+Subject: [PATCH 49/88] Initial revision
+
+---
+ entries/RCS/autoreconnect.cocot |   58 +++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 58 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/autoreconnect.cocot
+
+diff --git a/entries/RCS/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
+new file mode 100644
+index 0000000..97dc3ba
+--- /dev/null
++++ b/entries/RCS/autoreconnect.cocot
+@@ -0,0 +1,58 @@
++= <!-- rss:title -->Getting rid of autoreconnect<!-- /rss:title --> =
++
++<!-- rss:description -->
++Switching to {{{Apache::DBI::Cache}}} and thus heavy use of MySQL's
++{{{USE}}} statement it was clear we couldn't use MySQL's {{{autoreconnect}}}
++feature. Though it's very seldom useful, there here are the drawbacks.
++Apart from continuing outside of transaction when it breaks discarding
++what was done so far, which doesn't generally happen in active connections
++unless a server bug exists, the major problem is autoreconnection to the
++database the handle was originally created for, not the one that was
++switched to.
++
++Not a big problems, unless your connections are idle for too long, you'd
++say. {{{Apache::DBI::Cache}}} pings a connection before giving it to you,
++so you'll get a fresh connection everytime you request a {{{DBI}} handle.
++There are still creative ways how to circumvent that. What our programmers
++did was to keep a structure containing a {{{DBH}}} reference in a global,
++even when in {{{mod_perl}}} worker:
++
++  package Package;
++  my $Cache;
++
++  # Package cache
++  sub getPackage
++  {
++      $Cache ? $Cache : $Cache = { db => DBI->connect ($dsn) };
++  }
++
++Guess how long were these left being opened for workers after the load peak.
++Hint: default {{{wait_timeout}}} of MySQL is eight hours. Neat. Ever heard
++of the Morning Bug?
++
++Another problem being hit was if fact in a test. Point of the test was to
++access the database concurrently, possibly creating a deadlock that is
++detected by mysql an test that transactions are restarted correctly;
++ 
++  $db = DBI->connect ($dsn);
++  $db->do ($prepare_the_data_model);
++
++  # Ensure problematic transactions are being restarted
++  if (fork ()) {
++      my $db2 = DBI_WRAPPER_THAT_RESTARTS_TRANSACTIONS->connect ($dsn);
++      $db2->do_stuff;
++  } else {
++      my $db2 = DBI_WRAPPER_THAT_RESTARTS_TRANSACTIONS->connect ($dsn);
++      $db2->do_stuff;
++      exit ();
++  }
++
++  wait;
++  $db->do ($check_that_result_makes_sense);
++
++Seems correct? This works perfectly with reconnects, but MySQL server goes away
++before the last line can be executed? Why? The {{{$db}}} handle is inherited
++by the child and it closes it upon exit. A correct solution is to either with
++{{{_exit}}} call from {{{POSIX}}} module, initialize another database handle,
++or reconnect the existing one.
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

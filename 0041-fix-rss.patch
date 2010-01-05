@@ -1,0 +1,28 @@
+From 5e753b6d4db7b2cf64b4f99fbc0d02839f603568 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 20 Jan 2009 13:31:08 +0000
+Subject: [PATCH 41/88] fix rss
+
+---
+ entries/RCS/tunneler.cocot |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+index ce9f50f..0a074c2 100644
+--- a/entries/RCS/tunneler.cocot
++++ b/entries/RCS/tunneler.cocot
+@@ -1,9 +1,11 @@
+ = <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
+ 
++<!-- rss:description -->
+ Did you know a free SDL-based clone of Tunneler exists?
+ 
+ http://v3.sk/~lkundrak/blog/images/tunneler.png
+ 
+ Anyone wants to swap [https://bugzilla.redhat.com/show_bug.cgi?id=480771 reviews]? :)
++<!-- /rss:description -->
+ 
+ <!-- break -->
+-- 
+1.6.5.2
+

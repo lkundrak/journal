@@ -1,0 +1,25 @@
+From a229c531ffff52bace28420da5281050634d1dc6 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 27 Mar 2008 22:36:57 +0000
+Subject: [PATCH 17/88] don't complain about utf8
+
+---
+ RCS/Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index a0d2270..7d62f33 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -4,7 +4,7 @@ BLOGPAGE?=awk -f scripts/blogpage.awk templates/page.template
+ BLOGINDEX?=awk -f scripts/blogpage.awk templates/index.template
+ GENRSS?=perl scripts/genrss.pl
+ #WIKI2HTML?=perl scripts/wiki2html.pl
+-TIDY?=tidy
++TIDY?=tidy -raw
+ 
+ SOURCES=$(shell ls -t */*.cocot)
+ BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
+-- 
+1.6.5.2
+

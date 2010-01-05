@@ -1,0 +1,23 @@
+From 28716b6a0428e3782b6e051b06f4fa217e46896f Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 9 Feb 2009 20:45:19 +0000
+Subject: [PATCH 48/88] typo
+
+---
+ entries/RCS/f11-alpha.cocot |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/entries/RCS/f11-alpha.cocot b/entries/RCS/f11-alpha.cocot
+index 2d28cb4..b9c66d0 100644
+--- a/entries/RCS/f11-alpha.cocot
++++ b/entries/RCS/f11-alpha.cocot
+@@ -5,5 +5,5 @@ First alpha of Leonidas ships! Yay!
+ 
+ http://v3.sk/~lkundrak/blog/images/floppy.jpeg
+ 
+-Some users have reportedly had some minor problems starting it from the live media :(
++Some users have reportedly had some minor problems starting it from the live media though :(
+ <!-- /rss:description -->
+-- 
+1.6.5.2
+

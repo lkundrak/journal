@@ -1,0 +1,56 @@
+From e76293b05393d496bbb5788ad22f502c07ca8d5b Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 24 Apr 2009 09:46:37 +0000
+Subject: [PATCH 60/88] Initial revision
+
+---
+ entries/RCS/bashrc.cocot |   37 +++++++++++++++++++++++++++++++++++++
+ 1 files changed, 37 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/bashrc.cocot
+
+diff --git a/entries/RCS/bashrc.cocot b/entries/RCS/bashrc.cocot
+new file mode 100644
+index 0000000..81b0923
+--- /dev/null
++++ b/entries/RCS/bashrc.cocot
+@@ -0,0 +1,37 @@
++= <!-- rss:title -->Taking advantage of tab titles<!-- /rss:title --> =
++
++<!-- rss:description -->
++If you're using many terminal tabs, you may have noticed that the default tab title
++does not particularly contribute to easy identification of the tab. {{{user@hostname}}}.
++It may make sense if your work mainly consists of administering systems remotely, which
++is frequently not the case.
++
++This led me to adding this little snippet to my {{{.bashrc}}} files, resulting in
++nicer tab names:
++
++  _set_xterm () { echo -ne "\e]0;$@\007"; }
++  _clear_title () { _set_xterm shell; }
++  
++  _set_title ()
++  {
++          TITLE="$@"
++  
++          # Ignore ourselves
++          [ "$1" = _clear_title ] && return
++  
++          # Deal with job control
++          if [ "$1" = fg ]
++          then
++                  MATCH='^\[.*\]\+'
++                  [ -n "$2" ] && MATCH="$(echo $2 |sed 's/^%\([0-9]*\)/^\\[\1\\]/')"
++                  TITLE="$(jobs |grep "$MATCH" |sed 's/^[^ ]* *[^ ]* *//')"
++          fi
++  
++          _set_xterm "$TITLE"
++  }
++  
++  PROMPT_COMMAND="_clear_title"
++  trap 'set +o functrace; _set_title $BASH_COMMAND' DEBUG
++
++http://v3.sk/~lkundrak/blog/images/bashrc.png
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,38 @@
+From e4b662868db3c473d2957d0345a53798779fe1a0 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 11 Feb 2009 22:09:20 +0000
+Subject: [PATCH 50/88] typoes
+
+---
+ entries/RCS/autoreconnect.cocot |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/entries/RCS/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
+index 97dc3ba..962157e 100644
+--- a/entries/RCS/autoreconnect.cocot
++++ b/entries/RCS/autoreconnect.cocot
+@@ -1,7 +1,11 @@
+ = <!-- rss:title -->Getting rid of autoreconnect<!-- /rss:title --> =
+ 
+ <!-- rss:description -->
+-Switching to {{{Apache::DBI::Cache}}} and thus heavy use of MySQL's
++Do not read this unless you have to. I in fact wrote this just to see
++if my new hackergotchi shows in Fedora Planet.
++
++Having said that,
++switching to {{{Apache::DBI::Cache}}} and thus heavy use of MySQL's
+ {{{USE}}} statement it was clear we couldn't use MySQL's {{{autoreconnect}}}
+ feature. Though it's very seldom useful, there here are the drawbacks.
+ Apart from continuing outside of transaction when it breaks discarding
+@@ -12,7 +16,7 @@ switched to.
+ 
+ Not a big problems, unless your connections are idle for too long, you'd
+ say. {{{Apache::DBI::Cache}}} pings a connection before giving it to you,
+-so you'll get a fresh connection everytime you request a {{{DBI}} handle.
++so you'll get a fresh connection everytime you request a {{{DBI}}} handle.
+ There are still creative ways how to circumvent that. What our programmers
+ did was to keep a structure containing a {{{DBH}}} reference in a global,
+ even when in {{{mod_perl}}} worker:
+-- 
+1.6.5.2
+

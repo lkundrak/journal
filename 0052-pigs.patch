@@ -1,0 +1,25 @@
+From bb9eb74a4e84e9ca49d43d2d9903224ee6b9280d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Wed, 25 Feb 2009 11:29:08 +0000
+Subject: [PATCH 52/88] pigs.
+
+---
+ templates/RCS/index.template |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+index 358084f..f9b090e 100644
+--- a/templates/RCS/index.template
++++ b/templates/RCS/index.template
+@@ -15,7 +15,7 @@
+ 
+ <body>
+ 	<img src="images/ketchup.jpeg" alt="" align="left">
+-	<h1>Sick Things</h1>
++	<h1>Pigs! Shit! Pigs! Shit!</h1>
+ 	<i>Web 2.0 blog of Spirituality, Romance, National values, Apple computers, Pop music and Python programming.</i>
+ 
+ 	<p>So I have a journal again. Please pardon me if I don't update it regularly -- I decided
+-- 
+1.6.5.2
+

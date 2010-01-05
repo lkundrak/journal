@@ -1,0 +1,39 @@
+From 06825084b088e5a5bf171df730fdfd2883a4d2fd Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 29 Dec 2008 11:41:30 +0000
+Subject: [PATCH 28/88] Use creation dates commonly
+
+---
+ RCS/Makefile          |    2 +-
+ scripts/RCS/genrss.pl |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index f71369e..740788f 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -6,7 +6,7 @@ GENRSS?=perl scripts/genrss.pl
+ #WIKI2HTML?=perl scripts/wiki2html.pl
+ TIDY?=tidy -raw
+ 
+-SOURCES=$(shell ls -t */*.cocot)
++SOURCES=$(shell scripts/creationdate.sh %s entries/*.cocot |sort -rn |awk '{print $$2}')
+ BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
+ 
+ TARGETS=${BLOGS} index.html rss.xml
+diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+index e2733cc..fad5545 100644
+--- a/scripts/RCS/genrss.pl
++++ b/scripts/RCS/genrss.pl
+@@ -46,7 +46,7 @@ foreach my $file (@ARGV) {
+ 		title		=> $title,
+ 		permaLink	=> $base.$html,
+ 		description	=> $desc,
+-		pubDate		=> `LANG=C date +'\%a, \%d \%b \%Y \%T \%z' -d "\$(rlog $file |awk '/^date:/ {date=\$2" "\$3} END {gsub (";", "", date); print date}')"`
++		pubDate		=> `LANG=C scripts/creationdate.sh '\%a, \%d \%b \%Y \%T \%z' $file`
+ 	);
+ 
+ 	close (BLOG);
+-- 
+1.6.5.2
+

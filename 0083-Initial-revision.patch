@@ -1,0 +1,182 @@
+From 0b67cd8f1a795119b4d314ab2f1f374453c042ab Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Mon, 9 Nov 2009 16:14:40 +0000
+Subject: [PATCH 83/88] Initial revision
+
+---
+ entries/RCS/inspiron-12-opensuse.cocot |  163 ++++++++++++++++++++++++++++++++
+ 1 files changed, 163 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/inspiron-12-opensuse.cocot
+
+diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+new file mode 100644
+index 0000000..dfd1dec
+--- /dev/null
++++ b/entries/RCS/inspiron-12-opensuse.cocot
+@@ -0,0 +1,163 @@
++= <!-- rss:title -->OpenSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =
++
++<!-- rss:description -->
++Bought a new toy lately, a small Atom-based laptop and took an oportiunity
++to experiment with a platform different from what would you expect from
++a Fedora enthusiast. Grabbed a fresh new installation of
++[http://en.opensuse.org/OpenSUSE_11.2 OpenSUSE 11.2]
++and gave it a try.
++
++== Hardware ==
++
++The toy looks rather appealing. One can't overlook similarity with another thin
++laptop by a hardware vendor best known for being a notoric winner in the
++vendor-lock in paralympics. Compared to that one, this one is smaller and
++lighter, which is paid for with a rather small battery life (around 2 hours).
++If you ever used a MacBook Air you'd probably be disappointed that unlike Air,
++you can't iron your clothes with Inspiron Mini. For a fraction of price, the
++engineers obviously could not affort putting a fan inside, nor have a reason
++to do so. Wasn't it for the moving-head 1.8" hard drive, there wouldn't be any
++moving parts there. Unfortunatelly, I could not find a model with a solid
++state one.
++
++Upgradability of the machine is virtually none. You can't even replace upgrade
++the humble 1G of RAM memory. You know, the RAM chips never go bad, or do they?
++Dell no longer sells these machines; makes one think if the users didn't
++appreciate not being able to stick in more RAM -- something that can be done
++even with smaller 10" and 9" models.
++The RAM's soldered on the same board with dual-core 1.3 GHz CPU.
++Definitely not a miracle, performance-wise. Apart from three times the
++amount of USB ports of what Air has, you'd be probably surprised to find
++an SD card reader built in. Just for semi-completeness, the display's resolution
++is 1280x800 and there's a VGA port for external display.
++
++You can have a look at the innards here:
++http://ravicblog.blogspot.com/2009/01/dell-mini-12-dissected.html
++
++== Software ==
++
++This is the most poorly supported machine by Linux that I've touched in ages.
++A complete sucker. Which is good, since with a little effort most each piece
++of its hardware is usable.
++
++=== Installing ===
++
++So I copied the Gnome flavour of live OpenSUSE live media to an USB flash memory
++stick and booted it. It booted up a lot faster than I expect it to and what I
++immediately found out was that the display resolution was rather exotic and I
++could not connect to wireless (more about those later). Honestly, the really
++first thought was "wow, the artwork is beautiful." So much for the first
++impression, I rebooted it into installer and started installing. It went pretty
++smoothly, no surprises apart from the disk partitioning.
++
++No idea why is that so hard to get it right, but the partitioner in yast2-based
++installer sucked nearly as much as Debian's one.
++Personally, I like how does Fedora do that, but every other installer I saw
++would do a better job if it just launched {{{fdisk}}}.  No matter how much I tried,
++I could not convince it to use all disk's free space and not just 14G. I ended
++up running an "expert" mode where I could not do anything at all, since the
++device was "busy". "Probably confused by existing partitioning," I thought,
++it contained a NT partition and some service dell stuff. Wiped it away, created
++and empty partition table. This time the installer looked a lot nicer, allowed
++me to create a big partition that spans the whole disk and LVM on it.
++Installation finished. Result? One 14G partition. FFFFFFFFFFUUUUUUUU-, single
++user mode, {{{fdisk}}}, {{{pvresize}}}, {{{lvresize}}}, {{{e2resize}}}...
++
++=== Graphics Blues ===
++
++A lot has been writted about the gigantic suckage the Poulsbo GPU is.
++More-or-less good news is that at http://v3.sk/~lkundrak/psb-opensuse-11.2/
++you can find packages I've ported over from RPM Fusion that can be used.
++Bad news is that the drivers are (who'd think that for a closed blob)
++rather limited. Can't help thinking this must have been a winner of this
++year's hate-your-user competition.
++
++=== Making it Sing ===
++
++Sound not work out of box. Fortunatelly, it worked with sound-2.6 and as I
++later discovered, Takashi Iwai commited a fix just two days ago. This is not
++the first time he was found guilty of commiting exactly the fix I needed.
++He's a SUSE developer as well, therefore I'd expect OpenSUSE stack to be
++generally in a decent state, it was probably just me picking the wrong piece
++of hardware this time. Oh, and here's that fix:
++
++http://git.kernel.org/?p=linux/kernel/git/tiwai/sound-2.6.git;a=commit;h=1a6969788ef2d5bc3169eee59def6b267182f136
++
++Despite this fix, you get horrible sound dissorts with PulseAudio. As far
++as I'm concerned it's a known bug and being worked on. Not being anything
++that would even remotely resemble anyone thet would be familiar with the
++audio stack, a quick fix for me would be to configure gstreamer to bypass
++Pulse with {{{gstreamer-preferences}}}.
++
++=== Wireless ===
++
++Did not get that to work yet. Broadcom. Not looked into that much, but I'd
++not be surprised if there was a LP PHY. If I'm right, I'm lucky, since some
++time ago I've seen Gábor Stefanik commit some bits that could make it work
++into wireless-testing (though they seem to have been reverted since):
++
++http://git.kernel.org/?p=linux%2Fkernel%2Fgit%2Flinville%2Fwireless-testing.git&a=search&h=HEAD&st=commit&s=LP-PHY
++
++In worst case, the MiniPCI-E network adapter is replaceable.
++
++=== Software Load ===
++
++As I've said, I've chosen the GNOME flavour (Most OpenSUSE users seem to prefer
++KDE). The distro feels very polished, from the bootup procedure to the Desktop
++itself. They replaced the GNOME menu with their own version, and I'd say it
++could use some improvement (found it hard to launch terminal :). It does only offer
++a couple of most used applications, it uses a separate dialog to find
++and run some other application. You can't search the application from the menu.
++Probably needless to add, this is just a matter of taste, not a technical barier.
++The standard GNOME menu is offered as Panel applet, you can replace the OpenSUSE
++menu with it, or even use both if you like.
++
++When it comes to applications, OpenSUSE tends to use Mono-base tools. Looking both
++at the performance and the memory consumption I couldn't help thinking it feels
++pre-production. Having said the machine has humble techincal parameters one can't
++blame me for not using Tomboy, Banshee or F-Spot. (Tried to actually use the
++latter and would definitely advise my friends to do so. If not memory and CPU,
++I could probably at least use more battery life.)
++
++For package management a tool called {{{zypper}}} is used. With command-line interface
++similar to {{{yum}}} it's rather easy to grasp. I appreciated that it searches rather
++quickly compared to {{{yum}}}, didn't care much enough to research why. The repositories
++can be added and removed without editing the configuration file. A nice detail, but
++OpenSUSE seems to rely on custom repositories heavily so it's rather
++important there. What I did not like is that it by default refreshes the repository
++metadata on each run and installs packages right after downloading. The latter may
++be an advantage if you are disk-space constrained, though it might have been nice
++if they parallelized it (not that {{{yum}}} would do that).
++
++What's unhappy is how OpenSUSE decentralizes repositories. It might be useful
++in some specific use-cases, but think of the poor user who just wants to install a
++package... I needed Rhythmbox. Took me some time to learn about Contrib repository
++(shame on me for not reading documentation). Why on earth isn't it present by default?
++It could be disabled or something. Needed another package ({{{synergy}}}), not present
++in contrib, but managed to find it in someone's collection (or how is it called)
++in Build Service. I wish I could just {{{zypper in synergy}}}.
++
++Time to get some real work done. What I do for Fedora is package development; why
++not package stuff I needed? Started with {{{psb}}} kernel module. What I need to note
++now, this is the time I encountered the first bug (with {{{git config color.ui}}}
++set to {{{auto}}}, the pager didn't let the escape sequences pass through like
++{{{less -R}}} does). Everything else worked flawlessly so far, I'm not used to
++that :) Another thing worth noting is that anyone who drives the
++[http://en.opensuse.org/Kernel_Module_Packages kernel module packaging]
++infrastructure for OpenSUSE did not do a proper research, otherwise he could have
++delivered [http://rpmfusion.org/Packaging/KernelModules/Kmods2 more for smaller price
++resuing what's already been done].
++
++This is where I started to think that OpenSUSE must just hate packagers. Having
++my tiny RPM done, I had no way to ensure it's buildable reproducibly (its
++BuildRequires are correct). Fedora engineers are familiar with {{{mock}}} tool -- for
++OpenSUSE I was told that I need a Build Service account. For a local build.
++And I need a "Build Service checkout" to build from. If a Novell engineer happens
++to read this, surprised why you have so little community contributors? They
++don't feel welcome. They feel that your tooling is a medieval torture device.
++
++Overally -- not bad. I'm going to use this for my desktop work and will attempt
++to do some Fedora development from it ;)
++
++<!-- /rss:description -->
++<!-- break -->
+-- 
+1.6.5.2
+

@@ -1,0 +1,25 @@
+From 2f65d4cc98a9152015b9e15b260876f3afe1082d Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 3 Mar 2009 20:44:35 +0000
+Subject: [PATCH 54/88] inkscape screenshot
+
+---
+ entries/RCS/inkscape-snapshot-rawhide.cocot |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/entries/RCS/inkscape-snapshot-rawhide.cocot b/entries/RCS/inkscape-snapshot-rawhide.cocot
+index 75fb066..21f64b0 100644
+--- a/entries/RCS/inkscape-snapshot-rawhide.cocot
++++ b/entries/RCS/inkscape-snapshot-rawhide.cocot
+@@ -6,6 +6,8 @@ It took some time to get it compile with GCC 4.4, and even more to get it run.
+ Now that it runs, I'm sure you know that (like everything in Rawhide), it
+ can burn your house, kill your cat and make the whole world implode.
+ 
++http://v3.sk/~lkundrak/blog/images/inkscape.png
++
+ == What's new ==
+ 
+ The package has been refactored, it doesn't drag each possible dependency
+-- 
+1.6.5.2
+

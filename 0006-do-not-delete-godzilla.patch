@@ -1,0 +1,31 @@
+From 36df27c18164a866c9df85392f9d394efaa23d8a Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Fri, 29 Feb 2008 21:49:20 +0000
+Subject: [PATCH 06/88] do not delete godzilla
+
+---
+ RCS/Makefile |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/RCS/Makefile b/RCS/Makefile
+index 249c05b..a20e45c 100644
+--- a/RCS/Makefile
++++ b/RCS/Makefile
+@@ -9,7 +9,7 @@ TIDY?=tidy
+ SOURCES=$(shell ls -t */*.cocot)
+ BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
+ 
+-TARGETS=${BLOGS} index.html rss.xml images/mozchomp.gif
++TARGETS=${BLOGS} index.html rss.xml
+ 
+ all: build
+ 
+@@ -48,4 +48,4 @@ clean:
+ 	rm -f ${TARGETS}
+ 
+ upload: build
+-	tar cf - ${TARGETS} |ssh ovecka.be "tar xf - -C public_html/blog"
++	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
+-- 
+1.6.5.2
+

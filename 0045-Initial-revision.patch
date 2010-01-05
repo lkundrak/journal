@@ -1,0 +1,49 @@
+From 2cbb0fa6f51cdcb8b6f51bf36d06ba26f0781b1c Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Tue, 3 Feb 2009 18:17:29 +0000
+Subject: [PATCH 45/88] Initial revision
+
+---
+ entries/RCS/perl-carp.cocot |   30 ++++++++++++++++++++++++++++++
+ 1 files changed, 30 insertions(+), 0 deletions(-)
+ create mode 100644 entries/RCS/perl-carp.cocot
+
+diff --git a/entries/RCS/perl-carp.cocot b/entries/RCS/perl-carp.cocot
+new file mode 100644
+index 0000000..5e73c85
+--- /dev/null
++++ b/entries/RCS/perl-carp.cocot
+@@ -0,0 +1,30 @@
++= <!-- rss:title -->Stuck in Perl? (Part 2)<!-- /rss:title --> =
++
++<!-- rss:description -->
++Your perl code being stuck afain, still alive and you need a backtrace?
++Here's how to get it, in case you have {{{Carp}}} loaded:
++
++  [lkundrak@trurl ~]$ cat lala.pl 
++  sub a { <>; }
++  sub b { a (); }
++  sub c { b (); }
++  c ();
++  [lkundrak@trurl ~]$ perl5.11.0 -MCarp lala.pl &
++  [1] 31236
++  [lkundrak@trurl ~]$ gdb -p 31236
++  GNU gdb Fedora (6.8-27.el5)
++  ...
++  0x00110402 in __kernel_vsyscall ()
++  (gdb) call Perl_call_pv(my_perl, "carp", 0)
++   at lala.pl line 1
++          main::a() called at lala.pl line 2
++          main::b() called at lala.pl line 3
++          main::c() called at lala.pl line 4
++  $1 = 1
++  (gdb) 
++
++You'll need {{{perl-debuginfo}}} installed for this.
++In case you're running in {{{mod_perl}}} or some other embedded
++interpreter, replace {{{my_perl}}} with your perl interpreter
++instance.
++<!-- /rss:description -->
+-- 
+1.6.5.2
+

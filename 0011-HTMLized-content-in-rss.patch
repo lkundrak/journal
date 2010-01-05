@@ -1,0 +1,88 @@
+From 0f1aae4effd3b742f204fadbd12d831259413487 Mon Sep 17 00:00:00 2001
+From: lkundrak <lkundrak>
+Date: Thu, 13 Mar 2008 09:53:28 +0000
+Subject: [PATCH 11/88] HTMLized content in rss
+
+---
+ entries/RCS/galleries.cocot |    6 +++++-
+ scripts/RCS/genrss.pl       |    3 +++
+ scripts/RCS/wiki2html.pl    |   24 ++----------------------
+ 3 files changed, 10 insertions(+), 23 deletions(-)
+
+diff --git a/entries/RCS/galleries.cocot b/entries/RCS/galleries.cocot
+index b970d1a..79b96ef 100644
+--- a/entries/RCS/galleries.cocot
++++ b/entries/RCS/galleries.cocot
+@@ -5,6 +5,8 @@ So I am officially owner of the coolest web gallery.
+ The package that generated it was approved for Fedora today,
+ https://bugzilla.redhat.com/show_bug.cgi?id=xyz-gallery-review
+ See it in action at http://ovecka.be/~lkundrak/gallery/.
++
++http://ovecka.be/~lkundrak/blog/images/xyz-gallery-tn.png
+ <!-- /rss:description -->
+ 
+ <!-- break -->
+@@ -13,4 +15,6 @@ See it in action at http://ovecka.be/~lkundrak/gallery/.
+ 
+ With a shadow!
+ 
+-http://ovecka.be/~lkundrak/blog/images/xyz-gallery-tn.png
++'''Update:''' That is actually the one above. I was so excited about
++being able to put various HTML tags into rss feeds and having it load
++at Fedora Planet that I had to move it over there!
+diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+index 8e06a82..cef05d2 100644
+--- a/scripts/RCS/genrss.pl
++++ b/scripts/RCS/genrss.pl
+@@ -6,6 +6,7 @@ use strict;
+ use warnings;
+ 
+ use XML::RSS;
++use scripts::wikize;
+ 
+ my $base = 'http://ovecka.be/~lkundrak/blog/';
+ my $rss = new XML::RSS (version => '2.0');
+@@ -39,6 +40,8 @@ foreach my $file (@ARGV) {
+ 		/<!-- rss:description -->/ and $indesc++;
+ 	}
+ 
++	$desc = wikize ($desc);
++
+ 	$rss->add_item (
+ 		title		=> $title,
+ 		permaLink	=> $base.$html,
+diff --git a/scripts/RCS/wiki2html.pl b/scripts/RCS/wiki2html.pl
+index ca924fa..6ee58e4 100644
+--- a/scripts/RCS/wiki2html.pl
++++ b/scripts/RCS/wiki2html.pl
+@@ -1,25 +1,5 @@
+ # Preprocess input for wikifying
+ # $Id$
+ 
+-my $text = join ("", <>);
+-$text =~ s/<!-- \S+ -->//g;
+-
+-# PurpleWiki stuff
+-
+-use PurpleWiki::Config;
+-use PurpleWiki::Parser::WikiText;
+-use PurpleWiki::View::wikihtml;
+-
+-%params = (
+-	config	=> new PurpleWiki::Config ('.'),
+-	freelink => 1,
+-);
+-
+-
+-my $parser = PurpleWiki::Parser::WikiText->new;
+-my $tree = $parser->parse($text, %config);
+-
+-#print $tree->view ('xhtml', %params);
+-
+-my $view = new PurpleWiki::View::wikihtml;
+-print $view->view ($tree);
++use scripts::wikize;
++print wikize (<>);
+-- 
+1.6.5.2
+
