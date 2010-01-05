@@ -1,7 +1,7 @@
 From a9635efc81a3f0a929b377a061af4f50ef885430 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 6 Jan 2009 08:40:00 +0000
-Subject: [PATCH 38/88] Initial revision
+Subject: [PATCH 38/88] prejudice blog
 
 ---
  entries/RCS/prejudice.cocot |   32 ++++++++++++++++++++++++++++++++

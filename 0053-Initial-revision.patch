@@ -1,7 +1,7 @@
 From dd58cb5cf7742ebdb5b504855a8d29036eb43338 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 3 Mar 2009 18:32:50 +0000
-Subject: [PATCH 53/88] Initial revision
+Subject: [PATCH 53/88] inkscape 0.47
 
 ---
  entries/RCS/inkscape-snapshot-rawhide.cocot |   26 ++++++++++++++++++++++++++

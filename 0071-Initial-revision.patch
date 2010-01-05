@@ -1,7 +1,7 @@
 From f4d7b4acb42218c361aca7d2fa231c9a65ae1e9d Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Sun, 28 Jun 2009 11:25:28 +0000
-Subject: [PATCH 71/88] Initial revision
+Subject: [PATCH 71/88] fudcon patch
 
 ---
  entries/RCS/fudcon-patch.cocot |   11 +++++++++++

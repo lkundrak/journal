@@ -1,7 +1,7 @@
 From 554d9cd1386699b3e8403b28796c1c62bd86ad3d Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 29 Jan 2009 20:50:06 +0000
-Subject: [PATCH 43/88] Initial revision
+Subject: [PATCH 43/88] rms webcomic
 
 ---
  entries/RCS/rms.cocot |   11 +++++++++++

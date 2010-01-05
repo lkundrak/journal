@@ -1,7 +1,7 @@
 From 289ea51ef30921d17ddca94684c410f047f0b723 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Fri, 14 Aug 2009 14:36:35 +0000
-Subject: [PATCH 76/88] Initial revision
+Subject: [PATCH 76/88] metapixel
 
 ---
  entries/RCS/metapixel.cocot |   22 ++++++++++++++++++++++

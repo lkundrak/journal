@@ -1,7 +1,7 @@
 From c64db58c34cd491dc2cd1e8aaefc6d6075093581 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 11 Mar 2008 20:43:51 +0000
-Subject: [PATCH 09/88] Initial revision
+Subject: [PATCH 09/88] Galery blog
 
 ---
  entries/RCS/galleries.cocot |   16 ++++++++++++++++

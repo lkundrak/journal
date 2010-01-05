@@ -1,7 +1,7 @@
 From 92d79db42394c292ec9640fb1b3fb3c4e203e910 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 1 Jan 2009 20:21:31 +0000
-Subject: [PATCH 37/88] Initial revision
+Subject: [PATCH 37/88] vbox blog
 
 ---
  entries/RCS/virtualbox.cocot |   33 +++++++++++++++++++++++++++++++++

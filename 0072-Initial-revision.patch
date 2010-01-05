@@ -1,7 +1,7 @@
 From 7adc6eda11f2ff01e9045ccf4a2057db4da122ea Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Fri, 10 Jul 2009 15:40:24 +0000
-Subject: [PATCH 72/88] Initial revision
+Subject: [PATCH 72/88] vbox 3 blog
 
 ---
  entries/RCS/vbox-3-rpmfusion.cocot |   23 +++++++++++++++++++++++

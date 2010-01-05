@@ -1,7 +1,7 @@
 From eb868fdaa53d3e4df1defb35aa803883168aa00d Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 2 Jun 2009 16:20:45 +0000
-Subject: [PATCH 66/88] Initial revision
+Subject: [PATCH 66/88] gnome feature blog
 
 ---
  entries/RCS/gnome-feature.cocot |    5 +++++

@@ -1,7 +1,7 @@
 From 81557ed3991a94da819cd941a1aa10c66d9d371d Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Fri, 29 Feb 2008 21:42:49 +0000
-Subject: [PATCH 04/88] Initial revision
+Subject: [PATCH 04/88] blog on netvista
 
 ---
  entries/RCS/fedora-on-netvista.cocot |   89 ++++++++++++++++++++++++++++++++++

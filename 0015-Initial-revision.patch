@@ -1,7 +1,7 @@
 From 54e7ab7bef5f993922c0e19c2810d5805fba229b Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 17 Mar 2008 08:18:23 +0000
-Subject: [PATCH 15/88] Initial revision
+Subject: [PATCH 15/88] fortify source blog
 
 ---
  entries/RCS/fortify-check.cocot |   67 +++++++++++++++++++++++++++++++++++++++

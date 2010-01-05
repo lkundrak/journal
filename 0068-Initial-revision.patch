@@ -1,7 +1,7 @@
 From f6dd0097e248d04daf3f30e9f92593e248411a35 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Sun, 7 Jun 2009 12:40:36 +0000
-Subject: [PATCH 68/88] Initial revision
+Subject: [PATCH 68/88] ruby swappies
 
 ---
  entries/RCS/review-swappies.cocot |   15 +++++++++++++++
