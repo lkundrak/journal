@@ -4,13 +4,13 @@ Date: Fri, 10 Jul 2009 15:50:29 +0000
 Subject: [PATCH 74/88] Formatting
 
 ---
- entries/RCS/vbox-3-rpmfusion.cocot |    6 +++---
+ entries/vbox-3-rpmfusion.cocot |    6 +++---
  1 files changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/entries/RCS/vbox-3-rpmfusion.cocot b/entries/RCS/vbox-3-rpmfusion.cocot
+diff --git a/entries/vbox-3-rpmfusion.cocot b/entries/RCS/vbox-3-rpmfusion.cocot
 index d71cbe5..a769ae4 100644
---- a/entries/RCS/vbox-3-rpmfusion.cocot
-+++ b/entries/RCS/vbox-3-rpmfusion.cocot
+--- a/entries/vbox-3-rpmfusion.cocot
++++ b/entries/vbox-3-rpmfusion.cocot
 @@ -12,10 +12,10 @@ the guest additions for Fedora were reworked (which means they
  actually should work now). To get them, install the
  {{{VirtualBox-OSE-guest}}} package in your Fedora 11 Virtual Machine.

@@ -7,10 +7,10 @@ Subject: [PATCH 17/88] Don't complain about utf8
  RCS/Makefile |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index a0d2270..7d62f33 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -4,7 +4,7 @@ BLOGPAGE?=awk -f scripts/blogpage.awk templates/page.template
  BLOGINDEX?=awk -f scripts/blogpage.awk templates/index.template
  GENRSS?=perl scripts/genrss.pl

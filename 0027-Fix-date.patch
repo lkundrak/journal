@@ -4,13 +4,13 @@ Date: Mon, 29 Dec 2008 01:44:26 +0000
 Subject: [PATCH 27/88] Fix date
 
 ---
- scripts/RCS/blogpage.awk |    2 +-
+ scripts/blogpage.awk |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+diff --git a/scripts/blogpage.awk b/scripts/RCS/blogpage.awk
 index 6a5220c..561bebc 100644
---- a/scripts/RCS/blogpage.awk
-+++ b/scripts/RCS/blogpage.awk
+--- a/scripts/blogpage.awk
++++ b/scripts/blogpage.awk
 @@ -36,7 +36,7 @@ BEGIN {
  		print "<hr>";
  

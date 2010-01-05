@@ -4,14 +4,14 @@ Date: Mon, 29 Dec 2008 11:41:57 +0000
 Subject: [PATCH 29/88] Cosmetics
 
 ---
- scripts/RCS/blogpage.awk     |    4 +++-
- templates/RCS/index.template |   15 ++++++---------
+ scripts/blogpage.awk     |    4 +++-
+ templates/index.template |   15 ++++++---------
  2 files changed, 9 insertions(+), 10 deletions(-)
 
-diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+diff --git a/scripts/blogpage.awk b/scripts/RCS/blogpage.awk
 index 561bebc..84616dc 100644
---- a/scripts/RCS/blogpage.awk
-+++ b/scripts/RCS/blogpage.awk
+--- a/scripts/blogpage.awk
++++ b/scripts/blogpage.awk
 @@ -36,13 +36,15 @@ BEGIN {
  		print "<hr>";
  
@@ -29,10 +29,10 @@ index 561bebc..84616dc 100644
  		link = ARGV[i];
  		gsub (".cocot", ".html", link);
  		gsub (".*", "<a href=\"&\">Read more...</a>", link);
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 03989bd..5379c81 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -14,16 +14,13 @@
  </head>
  

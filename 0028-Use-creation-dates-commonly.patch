@@ -5,13 +5,13 @@ Subject: [PATCH 28/88] Use creation dates commonly
 
 ---
  RCS/Makefile          |    2 +-
- scripts/RCS/genrss.pl |    2 +-
+ scripts/genrss.pl |    2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index f71369e..740788f 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -6,7 +6,7 @@ GENRSS?=perl scripts/genrss.pl
  #WIKI2HTML?=perl scripts/wiki2html.pl
  TIDY?=tidy -raw
@@ -21,10 +21,10 @@ index f71369e..740788f 100644
  BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
  
  TARGETS=${BLOGS} index.html rss.xml
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 index e2733cc..fad5545 100644
---- a/scripts/RCS/genrss.pl
-+++ b/scripts/RCS/genrss.pl
+--- a/scripts/genrss.pl
++++ b/scripts/genrss.pl
 @@ -46,7 +46,7 @@ foreach my $file (@ARGV) {
  		title		=> $title,
  		permaLink	=> $base.$html,

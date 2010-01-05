@@ -4,13 +4,13 @@ Date: Tue, 20 Jan 2009 13:21:54 +0000
 Subject: [PATCH 40/88] Fix line break
 
 ---
- entries/RCS/tunneler.cocot |    1 +
+ entries/tunneler.cocot |    1 +
  1 files changed, 1 insertions(+), 0 deletions(-)
 
-diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+diff --git a/entries/tunneler.cocot b/entries/RCS/tunneler.cocot
 index 36f02d4..ce9f50f 100644
---- a/entries/RCS/tunneler.cocot
-+++ b/entries/RCS/tunneler.cocot
+--- a/entries/tunneler.cocot
++++ b/entries/tunneler.cocot
 @@ -1,6 +1,7 @@
  = <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
  

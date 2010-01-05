@@ -4,15 +4,15 @@ Date: Thu, 13 Mar 2008 20:21:11 +0000
 Subject: [PATCH 13/88] Pictures of Fedora OpenGrok theme
 
 ---
- entries/RCS/fedora-opengrok.cocot |   27 +++++++++++++++++++++++++++
+ entries/fedora-opengrok.cocot |   27 +++++++++++++++++++++++++++
  1 files changed, 27 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/fedora-opengrok.cocot
+ create mode 100644 entries/fedora-opengrok.cocot
 
-diff --git a/entries/RCS/fedora-opengrok.cocot b/entries/RCS/fedora-opengrok.cocot
+diff --git a/entries/fedora-opengrok.cocot b/entries/RCS/fedora-opengrok.cocot
 new file mode 100644
 index 0000000..8faecfe
 --- /dev/null
-+++ b/entries/RCS/fedora-opengrok.cocot
++++ b/entries/fedora-opengrok.cocot
 @@ -0,0 +1,27 @@
 += <!-- rss:title -->OpenGrok for Fedora<!-- /rss:title --> =
 +

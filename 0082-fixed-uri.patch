@@ -4,13 +4,13 @@ Date: Mon, 9 Nov 2009 14:16:38 +0000
 Subject: [PATCH 82/88] Fixed uri
 
 ---
- scripts/RCS/genrss.pl |    2 +-
+ scripts/genrss.pl |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 index fad5545..a3bf917 100644
---- a/scripts/RCS/genrss.pl
-+++ b/scripts/RCS/genrss.pl
+--- a/scripts/genrss.pl
++++ b/scripts/genrss.pl
 @@ -13,7 +13,7 @@ my $rss = new XML::RSS (version => '2.0');
  
  $rss->channel(

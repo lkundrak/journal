@@ -7,10 +7,10 @@ Subject: [PATCH 08/88] Blog on opengrok
  RCS/Makefile |   35 +++++++++++++++++++++++++++++++++--
  1 files changed, 33 insertions(+), 2 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index a20e45c..3c1e01b 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -39,13 +39,44 @@ index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
  	${TIDY} -qim $@ || rm -f $@
  

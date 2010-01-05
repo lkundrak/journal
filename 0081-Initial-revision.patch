@@ -4,15 +4,15 @@ Date: Wed, 4 Nov 2009 13:34:24 +0000
 Subject: [PATCH 81/88] Linuxalt
 
 ---
- entries/RCS/linuxalt2009.cocot |   14 ++++++++++++++
+ entries/linuxalt2009.cocot |   14 ++++++++++++++
  1 files changed, 14 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/linuxalt2009.cocot
+ create mode 100644 entries/linuxalt2009.cocot
 
-diff --git a/entries/RCS/linuxalt2009.cocot b/entries/RCS/linuxalt2009.cocot
+diff --git a/entries/linuxalt2009.cocot b/entries/RCS/linuxalt2009.cocot
 new file mode 100644
 index 0000000..1099464
 --- /dev/null
-+++ b/entries/RCS/linuxalt2009.cocot
++++ b/entries/linuxalt2009.cocot
 @@ -0,0 +1,14 @@
 += <!-- rss:title -->See you at LinuxAlt 2009<!-- /rss:title --> =
 +

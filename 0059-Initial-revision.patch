@@ -4,15 +4,15 @@ Date: Thu, 23 Apr 2009 12:34:28 +0000
 Subject: [PATCH 59/88] Devicekit disks
 
 ---
- entries/RCS/devicekit-disks.cocot |    7 +++++++
+ entries/devicekit-disks.cocot |    7 +++++++
  1 files changed, 7 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/devicekit-disks.cocot
+ create mode 100644 entries/devicekit-disks.cocot
 
-diff --git a/entries/RCS/devicekit-disks.cocot b/entries/RCS/devicekit-disks.cocot
+diff --git a/entries/devicekit-disks.cocot b/entries/RCS/devicekit-disks.cocot
 new file mode 100644
 index 0000000..3faaabe
 --- /dev/null
-+++ b/entries/RCS/devicekit-disks.cocot
++++ b/entries/devicekit-disks.cocot
 @@ -0,0 +1,7 @@
 += <!-- rss:title -->Good user interface<!-- /rss:title --> =
 +

@@ -4,15 +4,15 @@ Date: Wed, 31 Dec 2008 11:13:26 +0000
 Subject: [PATCH 35/88] Mosaic blog
 
 ---
- entries/RCS/mosaic.cocot |   15 +++++++++++++++
+ entries/mosaic.cocot |   15 +++++++++++++++
  1 files changed, 15 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/mosaic.cocot
+ create mode 100644 entries/mosaic.cocot
 
-diff --git a/entries/RCS/mosaic.cocot b/entries/RCS/mosaic.cocot
+diff --git a/entries/mosaic.cocot b/entries/RCS/mosaic.cocot
 new file mode 100644
 index 0000000..a1ae14f
 --- /dev/null
-+++ b/entries/RCS/mosaic.cocot
++++ b/entries/mosaic.cocot
 @@ -0,0 +1,15 @@
 += <!-- rss:title -->Run Mosaic on your Fedora!<!-- /rss:title --> =
 +

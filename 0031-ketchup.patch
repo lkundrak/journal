@@ -7,10 +7,10 @@ Subject: [PATCH 31/88] Ketchup
  RCS/Makefile |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index 740788f..af19b66 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -122,4 +122,4 @@ clean:
  	rm -f ${TARGETS} ${JUNK} ?
  

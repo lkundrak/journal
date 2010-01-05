@@ -4,13 +4,13 @@ Date: Mon, 9 Nov 2009 19:28:51 +0000
 Subject: [PATCH 87/88] Update1
 
 ---
- entries/RCS/inspiron-12-opensuse.cocot |   11 +++++++++++
+ entries/inspiron-12-opensuse.cocot |   11 +++++++++++
  1 files changed, 11 insertions(+), 0 deletions(-)
 
-diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+diff --git a/entries/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
 index a69a8be..62e0534 100644
---- a/entries/RCS/inspiron-12-opensuse.cocot
-+++ b/entries/RCS/inspiron-12-opensuse.cocot
+--- a/entries/inspiron-12-opensuse.cocot
++++ b/entries/inspiron-12-opensuse.cocot
 @@ -161,5 +161,16 @@ don't feel welcome. They feel that your tooling is a medieval torture device.
  Overally -- not bad. I'm going to use this for my desktop work and will attempt
  to do some Fedora development from it ;)

@@ -4,13 +4,13 @@ Date: Tue, 3 Nov 2009 11:50:44 +0000
 Subject: [PATCH 80/88] Fix url
 
 ---
- entries/RCS/review-swappies-2.cocot |    2 +-
+ entries/review-swappies-2.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
+diff --git a/entries/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
 index 99125a0..c524fb5 100644
---- a/entries/RCS/review-swappies-2.cocot
-+++ b/entries/RCS/review-swappies-2.cocot
+--- a/entries/review-swappies-2.cocot
++++ b/entries/review-swappies-2.cocot
 @@ -5,7 +5,7 @@ Need someone to review your package?
  
  As my need-to-have-reviewed queue grows, I'm willing to swap

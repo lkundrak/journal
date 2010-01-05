@@ -4,15 +4,15 @@ Date: Tue, 17 Mar 2009 08:36:55 +0000
 Subject: [PATCH 57/88] Crop marks
 
 ---
- entries/RCS/crop-marks.cocot |   12 ++++++++++++
+ entries/crop-marks.cocot |   12 ++++++++++++
  1 files changed, 12 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/crop-marks.cocot
+ create mode 100644 entries/crop-marks.cocot
 
-diff --git a/entries/RCS/crop-marks.cocot b/entries/RCS/crop-marks.cocot
+diff --git a/entries/crop-marks.cocot b/entries/RCS/crop-marks.cocot
 new file mode 100644
 index 0000000..2313a64
 --- /dev/null
-+++ b/entries/RCS/crop-marks.cocot
++++ b/entries/crop-marks.cocot
 @@ -0,0 +1,12 @@
 += <!-- rss:title -->Getting rid of crop marks<!-- /rss:title --> =
 +

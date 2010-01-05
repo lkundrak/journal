@@ -4,15 +4,15 @@ Date: Tue, 11 Mar 2008 20:43:51 +0000
 Subject: [PATCH 09/88] Galery blog
 
 ---
- entries/RCS/galleries.cocot |   16 ++++++++++++++++
+ entries/galleries.cocot |   16 ++++++++++++++++
  1 files changed, 16 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/galleries.cocot
+ create mode 100644 entries/galleries.cocot
 
-diff --git a/entries/RCS/galleries.cocot b/entries/RCS/galleries.cocot
+diff --git a/entries/galleries.cocot b/entries/RCS/galleries.cocot
 new file mode 100644
 index 0000000..b970d1a
 --- /dev/null
-+++ b/entries/RCS/galleries.cocot
++++ b/entries/galleries.cocot
 @@ -0,0 +1,16 @@
 += <!-- rss:title -->New Galleries<!-- /rss:title --> =
 +

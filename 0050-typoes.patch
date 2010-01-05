@@ -4,13 +4,13 @@ Date: Wed, 11 Feb 2009 22:09:20 +0000
 Subject: [PATCH 50/88] Typoes
 
 ---
- entries/RCS/autoreconnect.cocot |    8 ++++++--
+ entries/autoreconnect.cocot |    8 ++++++--
  1 files changed, 6 insertions(+), 2 deletions(-)
 
-diff --git a/entries/RCS/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
+diff --git a/entries/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
 index 97dc3ba..962157e 100644
---- a/entries/RCS/autoreconnect.cocot
-+++ b/entries/RCS/autoreconnect.cocot
+--- a/entries/autoreconnect.cocot
++++ b/entries/autoreconnect.cocot
 @@ -1,7 +1,11 @@
  = <!-- rss:title -->Getting rid of autoreconnect<!-- /rss:title --> =
  

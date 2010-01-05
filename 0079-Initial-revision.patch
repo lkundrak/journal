@@ -4,15 +4,15 @@ Date: Tue, 3 Nov 2009 11:48:46 +0000
 Subject: [PATCH 79/88] Review swappies 2
 
 ---
- entries/RCS/review-swappies-2.cocot |   16 ++++++++++++++++
+ entries/review-swappies-2.cocot |   16 ++++++++++++++++
  1 files changed, 16 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/review-swappies-2.cocot
+ create mode 100644 entries/review-swappies-2.cocot
 
-diff --git a/entries/RCS/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
+diff --git a/entries/review-swappies-2.cocot b/entries/RCS/review-swappies-2.cocot
 new file mode 100644
 index 0000000..99125a0
 --- /dev/null
-+++ b/entries/RCS/review-swappies-2.cocot
++++ b/entries/review-swappies-2.cocot
 @@ -0,0 +1,16 @@
 += <!-- rss:title -->Review Swappies<!-- /rss:title --> =
 +

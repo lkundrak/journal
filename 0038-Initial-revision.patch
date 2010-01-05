@@ -4,15 +4,15 @@ Date: Tue, 6 Jan 2009 08:40:00 +0000
 Subject: [PATCH 38/88] Prejudice blog
 
 ---
- entries/RCS/prejudice.cocot |   32 ++++++++++++++++++++++++++++++++
+ entries/prejudice.cocot |   32 ++++++++++++++++++++++++++++++++
  1 files changed, 32 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/prejudice.cocot
+ create mode 100644 entries/prejudice.cocot
 
-diff --git a/entries/RCS/prejudice.cocot b/entries/RCS/prejudice.cocot
+diff --git a/entries/prejudice.cocot b/entries/RCS/prejudice.cocot
 new file mode 100644
 index 0000000..db9df67
 --- /dev/null
-+++ b/entries/RCS/prejudice.cocot
++++ b/entries/prejudice.cocot
 @@ -0,0 +1,32 @@
 += <!-- rss:title -->We're not racists...<!-- /rss:title --> =
 +

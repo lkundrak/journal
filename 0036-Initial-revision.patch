@@ -4,15 +4,15 @@ Date: Thu, 1 Jan 2009 15:49:58 +0000
 Subject: [PATCH 36/88] Acceleration blog
 
 ---
- entries/RCS/accel.cocot |   12 ++++++++++++
+ entries/accel.cocot |   12 ++++++++++++
  1 files changed, 12 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/accel.cocot
+ create mode 100644 entries/accel.cocot
 
-diff --git a/entries/RCS/accel.cocot b/entries/RCS/accel.cocot
+diff --git a/entries/accel.cocot b/entries/RCS/accel.cocot
 new file mode 100644
 index 0000000..5e6633a
 --- /dev/null
-+++ b/entries/RCS/accel.cocot
++++ b/entries/accel.cocot
 @@ -0,0 +1,12 @@
 += <!-- rss:title -->Finally -- A competition to Fedora webcomic<!-- /rss:title --> =
 +

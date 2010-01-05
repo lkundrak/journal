@@ -7,10 +7,10 @@ Subject: [PATCH 06/88] Do not delete godzilla
  RCS/Makefile |    4 ++--
  1 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index 249c05b..a20e45c 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -9,7 +9,7 @@ TIDY?=tidy
  SOURCES=$(shell ls -t */*.cocot)
  BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')

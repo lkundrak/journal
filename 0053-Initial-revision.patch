@@ -4,15 +4,15 @@ Date: Tue, 3 Mar 2009 18:32:50 +0000
 Subject: [PATCH 53/88] Inkscape 0.47
 
 ---
- entries/RCS/inkscape-snapshot-rawhide.cocot |   26 ++++++++++++++++++++++++++
+ entries/inkscape-snapshot-rawhide.cocot |   26 ++++++++++++++++++++++++++
  1 files changed, 26 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/inkscape-snapshot-rawhide.cocot
+ create mode 100644 entries/inkscape-snapshot-rawhide.cocot
 
-diff --git a/entries/RCS/inkscape-snapshot-rawhide.cocot b/entries/RCS/inkscape-snapshot-rawhide.cocot
+diff --git a/entries/inkscape-snapshot-rawhide.cocot b/entries/RCS/inkscape-snapshot-rawhide.cocot
 new file mode 100644
 index 0000000..75fb066
 --- /dev/null
-+++ b/entries/RCS/inkscape-snapshot-rawhide.cocot
++++ b/entries/inkscape-snapshot-rawhide.cocot
 @@ -0,0 +1,26 @@
 += <!-- rss:title -->Inkscape snapshot in Rawhide<!-- /rss:title --> =
 +

@@ -5,13 +5,13 @@ Subject: [PATCH 86/88] OpenSUSE
  ^---
 
 ---
- entries/RCS/inspiron-12-opensuse.cocot |   24 ++++++++++++------------
+ entries/inspiron-12-opensuse.cocot |   24 ++++++++++++------------
  1 files changed, 12 insertions(+), 12 deletions(-)
 
-diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+diff --git a/entries/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
 index 92fbea7..a69a8be 100644
---- a/entries/RCS/inspiron-12-opensuse.cocot
-+++ b/entries/RCS/inspiron-12-opensuse.cocot
+--- a/entries/inspiron-12-opensuse.cocot
++++ b/entries/inspiron-12-opensuse.cocot
 @@ -1,10 +1,10 @@
 -= <!-- rss:title -->OpenSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =
 += <!-- rss:title -->openSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =

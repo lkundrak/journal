@@ -4,15 +4,15 @@ Date: Tue, 20 Jan 2009 13:20:47 +0000
 Subject: [PATCH 39/88] Tunneler blog
 
 ---
- entries/RCS/tunneler.cocot |    8 ++++++++
+ entries/tunneler.cocot |    8 ++++++++
  1 files changed, 8 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/tunneler.cocot
+ create mode 100644 entries/tunneler.cocot
 
-diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+diff --git a/entries/tunneler.cocot b/entries/RCS/tunneler.cocot
 new file mode 100644
 index 0000000..36f02d4
 --- /dev/null
-+++ b/entries/RCS/tunneler.cocot
++++ b/entries/tunneler.cocot
 @@ -0,0 +1,8 @@
 += <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
 +

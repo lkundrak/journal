@@ -4,15 +4,15 @@ Date: Mon, 9 Feb 2009 20:43:37 +0000
 Subject: [PATCH 47/88] Leonidas
 
 ---
- entries/RCS/f11-alpha.cocot |    9 +++++++++
+ entries/f11-alpha.cocot |    9 +++++++++
  1 files changed, 9 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/f11-alpha.cocot
+ create mode 100644 entries/f11-alpha.cocot
 
-diff --git a/entries/RCS/f11-alpha.cocot b/entries/RCS/f11-alpha.cocot
+diff --git a/entries/f11-alpha.cocot b/entries/RCS/f11-alpha.cocot
 new file mode 100644
 index 0000000..2d28cb4
 --- /dev/null
-+++ b/entries/RCS/f11-alpha.cocot
++++ b/entries/f11-alpha.cocot
 @@ -0,0 +1,9 @@
 += <!-- rss:title -->Fedora 11 Alpha<!-- /rss:title --> =
 +

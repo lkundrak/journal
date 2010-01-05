@@ -4,15 +4,15 @@ Date: Fri, 24 Apr 2009 09:46:37 +0000
 Subject: [PATCH 60/88] Bashrc blog
 
 ---
- entries/RCS/bashrc.cocot |   37 +++++++++++++++++++++++++++++++++++++
+ entries/bashrc.cocot |   37 +++++++++++++++++++++++++++++++++++++
  1 files changed, 37 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/bashrc.cocot
+ create mode 100644 entries/bashrc.cocot
 
-diff --git a/entries/RCS/bashrc.cocot b/entries/RCS/bashrc.cocot
+diff --git a/entries/bashrc.cocot b/entries/RCS/bashrc.cocot
 new file mode 100644
 index 0000000..81b0923
 --- /dev/null
-+++ b/entries/RCS/bashrc.cocot
++++ b/entries/bashrc.cocot
 @@ -0,0 +1,37 @@
 += <!-- rss:title -->Taking advantage of tab titles<!-- /rss:title --> =
 +

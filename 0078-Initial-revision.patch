@@ -4,15 +4,15 @@ Date: Wed, 26 Aug 2009 12:44:49 +0000
 Subject: [PATCH 78/88] New logo
 
 ---
- entries/RCS/fedora-new-logo.cocot |    5 +++++
+ entries/fedora-new-logo.cocot |    5 +++++
  1 files changed, 5 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/fedora-new-logo.cocot
+ create mode 100644 entries/fedora-new-logo.cocot
 
-diff --git a/entries/RCS/fedora-new-logo.cocot b/entries/RCS/fedora-new-logo.cocot
+diff --git a/entries/fedora-new-logo.cocot b/entries/RCS/fedora-new-logo.cocot
 new file mode 100644
 index 0000000..a739ba8
 --- /dev/null
-+++ b/entries/RCS/fedora-new-logo.cocot
++++ b/entries/fedora-new-logo.cocot
 @@ -0,0 +1,5 @@
 += <!-- rss:title -->Announcing Fedora Project Logo<!-- /rss:title --> =
 +

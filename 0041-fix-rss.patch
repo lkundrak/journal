@@ -4,13 +4,13 @@ Date: Tue, 20 Jan 2009 13:31:08 +0000
 Subject: [PATCH 41/88] Fix rss
 
 ---
- entries/RCS/tunneler.cocot |    2 ++
+ entries/tunneler.cocot |    2 ++
  1 files changed, 2 insertions(+), 0 deletions(-)
 
-diff --git a/entries/RCS/tunneler.cocot b/entries/RCS/tunneler.cocot
+diff --git a/entries/tunneler.cocot b/entries/RCS/tunneler.cocot
 index ce9f50f..0a074c2 100644
---- a/entries/RCS/tunneler.cocot
-+++ b/entries/RCS/tunneler.cocot
+--- a/entries/tunneler.cocot
++++ b/entries/tunneler.cocot
 @@ -1,9 +1,11 @@
  = <!-- rss:title -->Tunneler for Linux<!-- /rss:title --> =
  

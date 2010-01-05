@@ -4,15 +4,15 @@ Date: Sun, 29 Mar 2009 17:20:07 +0000
 Subject: [PATCH 58/88] Crash blog
 
 ---
- entries/RCS/crash.cocot |   26 ++++++++++++++++++++++++++
+ entries/crash.cocot |   26 ++++++++++++++++++++++++++
  1 files changed, 26 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/crash.cocot
+ create mode 100644 entries/crash.cocot
 
-diff --git a/entries/RCS/crash.cocot b/entries/RCS/crash.cocot
+diff --git a/entries/crash.cocot b/entries/RCS/crash.cocot
 new file mode 100644
 index 0000000..8eb6945
 --- /dev/null
-+++ b/entries/RCS/crash.cocot
++++ b/entries/crash.cocot
 @@ -0,0 +1,26 @@
 += <!-- rss:title -->Trouble running crash against live system?<!-- /rss:title --> =
 +

@@ -4,15 +4,15 @@ Date: Sun, 7 Jun 2009 12:40:36 +0000
 Subject: [PATCH 68/88] Ruby swappies
 
 ---
- entries/RCS/review-swappies.cocot |   15 +++++++++++++++
+ entries/review-swappies.cocot |   15 +++++++++++++++
  1 files changed, 15 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/review-swappies.cocot
+ create mode 100644 entries/review-swappies.cocot
 
-diff --git a/entries/RCS/review-swappies.cocot b/entries/RCS/review-swappies.cocot
+diff --git a/entries/review-swappies.cocot b/entries/RCS/review-swappies.cocot
 new file mode 100644
 index 0000000..a937de0
 --- /dev/null
-+++ b/entries/RCS/review-swappies.cocot
++++ b/entries/review-swappies.cocot
 @@ -0,0 +1,15 @@
 += <!-- rss:title -->Review Swappies<!-- /rss:title --> =
 +

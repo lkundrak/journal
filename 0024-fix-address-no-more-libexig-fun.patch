@@ -4,14 +4,14 @@ Date: Mon, 29 Dec 2008 01:39:04 +0000
 Subject: [PATCH 24/88] Fix address, no more libexig fun
 
 ---
- templates/RCS/index.template |    6 +-----
- templates/RCS/page.template  |    6 +-----
+ templates/index.template |    6 +-----
+ templates/page.template  |    6 +-----
  2 files changed, 2 insertions(+), 10 deletions(-)
 
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 19f095b..03989bd 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -29,11 +29,7 @@
  
  	<hr>
@@ -25,10 +25,10 @@ index 19f095b..03989bd 100644
  </body>
  
  </html>
-diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+diff --git a/templates/page.template b/templates/RCS/page.template
 index 89a2fae..ec13b6b 100644
---- a/templates/RCS/page.template
-+++ b/templates/RCS/page.template
+--- a/templates/page.template
++++ b/templates/page.template
 @@ -22,11 +22,7 @@
  
          <hr>

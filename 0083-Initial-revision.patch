@@ -4,15 +4,15 @@ Date: Mon, 9 Nov 2009 16:14:40 +0000
 Subject: [PATCH 83/88] OpenSuse/Inspiron
 
 ---
- entries/RCS/inspiron-12-opensuse.cocot |  163 ++++++++++++++++++++++++++++++++
+ entries/inspiron-12-opensuse.cocot |  163 ++++++++++++++++++++++++++++++++
  1 files changed, 163 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/inspiron-12-opensuse.cocot
+ create mode 100644 entries/inspiron-12-opensuse.cocot
 
-diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+diff --git a/entries/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
 new file mode 100644
 index 0000000..dfd1dec
 --- /dev/null
-+++ b/entries/RCS/inspiron-12-opensuse.cocot
++++ b/entries/inspiron-12-opensuse.cocot
 @@ -0,0 +1,163 @@
 += <!-- rss:title -->OpenSUSE 11.2 on Dell Inspiron Mini 12<!-- /rss:title --> =
 +

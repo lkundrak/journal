@@ -4,15 +4,15 @@ Date: Wed, 11 Feb 2009 22:05:30 +0000
 Subject: [PATCH 49/88] Reconnect
 
 ---
- entries/RCS/autoreconnect.cocot |   58 +++++++++++++++++++++++++++++++++++++++
+ entries/autoreconnect.cocot |   58 +++++++++++++++++++++++++++++++++++++++
  1 files changed, 58 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/autoreconnect.cocot
+ create mode 100644 entries/autoreconnect.cocot
 
-diff --git a/entries/RCS/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
+diff --git a/entries/autoreconnect.cocot b/entries/RCS/autoreconnect.cocot
 new file mode 100644
 index 0000000..97dc3ba
 --- /dev/null
-+++ b/entries/RCS/autoreconnect.cocot
++++ b/entries/autoreconnect.cocot
 @@ -0,0 +1,58 @@
 += <!-- rss:title -->Getting rid of autoreconnect<!-- /rss:title --> =
 +

@@ -5,16 +5,16 @@ Subject: [PATCH 23/88] Get rid of broken URLs, remove unsuccessful attempts to c
 
 ---
  RCS/Makefile                         |    8 ++++----
- entries/RCS/fedora-on-netvista.cocot |    2 +-
- entries/RCS/fedora-opengrok.cocot    |   10 +++++-----
- entries/RCS/galleries.cocot          |    4 ++--
- entries/RCS/opengrok-on-rhel5.cocot  |    4 ++--
+ entries/fedora-on-netvista.cocot |    2 +-
+ entries/fedora-opengrok.cocot    |   10 +++++-----
+ entries/galleries.cocot          |    4 ++--
+ entries/opengrok-on-rhel5.cocot  |    4 ++--
  5 files changed, 14 insertions(+), 14 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index b53a420..f71369e 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -19,7 +19,7 @@ all: build
  
  .SUFFIXES: .cocot .html
@@ -48,10 +48,10 @@ index b53a420..f71369e 100644
  upload: build
 -	tar cf - ${TARGETS} images/mozchomp.gif |ssh ovecka.be "tar xf - -C public_html/blog"
 +	tar cf - ${TARGETS} images/mozchomp.gif |ssh v3.sk "tar xf - -C public_html/blog"
-diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+diff --git a/entries/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
 index ebf1d1a..e3a59bf 100644
---- a/entries/RCS/fedora-on-netvista.cocot
-+++ b/entries/RCS/fedora-on-netvista.cocot
+--- a/entries/fedora-on-netvista.cocot
++++ b/entries/fedora-on-netvista.cocot
 @@ -77,7 +77,7 @@ and swap (generally a better idea if you have NAS -- extensive writes to a Flash
  media was never a good idea).
  
@@ -61,10 +61,10 @@ index ebf1d1a..e3a59bf 100644
  
  Remember to keep {{{/nwrlinux/bzImage}}} and {{{/nwrlinux/initrd}}} up to date
  with your kernel and initrd. Possibly write a script.
-diff --git a/entries/RCS/fedora-opengrok.cocot b/entries/RCS/fedora-opengrok.cocot
+diff --git a/entries/fedora-opengrok.cocot b/entries/RCS/fedora-opengrok.cocot
 index 8faecfe..5d31eda 100644
---- a/entries/RCS/fedora-opengrok.cocot
-+++ b/entries/RCS/fedora-opengrok.cocot
+--- a/entries/fedora-opengrok.cocot
++++ b/entries/fedora-opengrok.cocot
 @@ -5,19 +5,19 @@
  I played a bit with Fedora theme for OpenGrok this evening.
  <!-- /rss:description -->
@@ -90,10 +90,10 @@ index 8faecfe..5d31eda 100644
  
  <!-- rss:description -->
  I am considering to propose a it a a f10 targeted feature --
-diff --git a/entries/RCS/galleries.cocot b/entries/RCS/galleries.cocot
+diff --git a/entries/galleries.cocot b/entries/RCS/galleries.cocot
 index 79b96ef..2a88d4d 100644
---- a/entries/RCS/galleries.cocot
-+++ b/entries/RCS/galleries.cocot
+--- a/entries/galleries.cocot
++++ b/entries/galleries.cocot
 @@ -4,9 +4,9 @@
  So I am officially owner of the coolest web gallery.
  The package that generated it was approved for Fedora today,
@@ -106,10 +106,10 @@ index 79b96ef..2a88d4d 100644
  <!-- /rss:description -->
  
  <!-- break -->
-diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+diff --git a/entries/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
 index 05b20b3..0a3784f 100644
---- a/entries/RCS/opengrok-on-rhel5.cocot
-+++ b/entries/RCS/opengrok-on-rhel5.cocot
+--- a/entries/opengrok-on-rhel5.cocot
++++ b/entries/opengrok-on-rhel5.cocot
 @@ -17,6 +17,6 @@ http://people.redhat.com/lkundrak/opengrok/.
  
  Pictures!

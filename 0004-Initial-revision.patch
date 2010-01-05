@@ -4,15 +4,15 @@ Date: Fri, 29 Feb 2008 21:42:49 +0000
 Subject: [PATCH 04/88] Blog on netvista
 
 ---
- entries/RCS/fedora-on-netvista.cocot |   89 ++++++++++++++++++++++++++++++++++
+ entries/fedora-on-netvista.cocot |   89 ++++++++++++++++++++++++++++++++++
  1 files changed, 89 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/fedora-on-netvista.cocot
+ create mode 100644 entries/fedora-on-netvista.cocot
 
-diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+diff --git a/entries/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
 new file mode 100644
 index 0000000..ebf1d1a
 --- /dev/null
-+++ b/entries/RCS/fedora-on-netvista.cocot
++++ b/entries/fedora-on-netvista.cocot
 @@ -0,0 +1,89 @@
 += <!-- rss:title -->Running Fedora on IBM NetVista Thin Client<!-- /rss:title --> =
 +

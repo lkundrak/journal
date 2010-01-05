@@ -4,15 +4,15 @@ Date: Wed, 11 Mar 2009 12:32:32 +0000
 Subject: [PATCH 56/88] Frank.
 
 ---
- entries/RCS/frankie-fedora.cocot |   27 +++++++++++++++++++++++++++
+ entries/frankie-fedora.cocot |   27 +++++++++++++++++++++++++++
  1 files changed, 27 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/frankie-fedora.cocot
+ create mode 100644 entries/frankie-fedora.cocot
 
-diff --git a/entries/RCS/frankie-fedora.cocot b/entries/RCS/frankie-fedora.cocot
+diff --git a/entries/frankie-fedora.cocot b/entries/RCS/frankie-fedora.cocot
 new file mode 100644
 index 0000000..bb10208
 --- /dev/null
-+++ b/entries/RCS/frankie-fedora.cocot
++++ b/entries/frankie-fedora.cocot
 @@ -0,0 +1,27 @@
 += <!-- rss:title -->Anyone to review Yo Frankie (BGE) package?<!-- /rss:title --> =
 +

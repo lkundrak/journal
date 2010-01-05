@@ -4,15 +4,15 @@ Date: Sun, 3 May 2009 15:53:48 +0000
 Subject: [PATCH 64/88] Vbox blog
 
 ---
- entries/RCS/vbox-rpmfusion.cocot |   22 ++++++++++++++++++++++
+ entries/vbox-rpmfusion.cocot |   22 ++++++++++++++++++++++
  1 files changed, 22 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/vbox-rpmfusion.cocot
+ create mode 100644 entries/vbox-rpmfusion.cocot
 
-diff --git a/entries/RCS/vbox-rpmfusion.cocot b/entries/RCS/vbox-rpmfusion.cocot
+diff --git a/entries/vbox-rpmfusion.cocot b/entries/RCS/vbox-rpmfusion.cocot
 new file mode 100644
 index 0000000..ffa459b
 --- /dev/null
-+++ b/entries/RCS/vbox-rpmfusion.cocot
++++ b/entries/vbox-rpmfusion.cocot
 @@ -0,0 +1,22 @@
 += <!-- rss:title -->VirtualBox OSE in RPM Fusion<!-- /rss:title --> =
 +

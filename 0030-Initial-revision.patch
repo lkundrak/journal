@@ -4,15 +4,15 @@ Date: Mon, 29 Dec 2008 11:52:52 +0000
 Subject: [PATCH 30/88] Mcdonalds entry
 
 ---
- entries/RCS/widelife.cocot |   19 +++++++++++++++++++
+ entries/widelife.cocot |   19 +++++++++++++++++++
  1 files changed, 19 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/widelife.cocot
+ create mode 100644 entries/widelife.cocot
 
-diff --git a/entries/RCS/widelife.cocot b/entries/RCS/widelife.cocot
+diff --git a/entries/widelife.cocot b/entries/RCS/widelife.cocot
 new file mode 100644
 index 0000000..6dfdb21
 --- /dev/null
-+++ b/entries/RCS/widelife.cocot
++++ b/entries/widelife.cocot
 @@ -0,0 +1,19 @@
 += <!-- rss:title -->Widelife<!-- /rss:title --> =
 +

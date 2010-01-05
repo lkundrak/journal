@@ -4,15 +4,15 @@ Date: Thu, 29 Jan 2009 15:20:17 +0000
 Subject: [PATCH 42/88] Large tables blog
 
 ---
- entries/RCS/largest-tables.cocot |   19 +++++++++++++++++++
+ entries/largest-tables.cocot |   19 +++++++++++++++++++
  1 files changed, 19 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/largest-tables.cocot
+ create mode 100644 entries/largest-tables.cocot
 
-diff --git a/entries/RCS/largest-tables.cocot b/entries/RCS/largest-tables.cocot
+diff --git a/entries/largest-tables.cocot b/entries/RCS/largest-tables.cocot
 new file mode 100644
 index 0000000..6eac6fe
 --- /dev/null
-+++ b/entries/RCS/largest-tables.cocot
++++ b/entries/largest-tables.cocot
 @@ -0,0 +1,19 @@
 += <!-- rss:title -->Find largest tables in a SQL dump<!-- /rss:title --> =
 +

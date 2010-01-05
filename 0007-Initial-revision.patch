@@ -4,15 +4,15 @@ Date: Mon, 3 Mar 2008 18:41:49 +0000
 Subject: [PATCH 07/88] Blog on opengrok
 
 ---
- entries/RCS/opengrok-on-rhel5.cocot |   22 ++++++++++++++++++++++
+ entries/opengrok-on-rhel5.cocot |   22 ++++++++++++++++++++++
  1 files changed, 22 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/opengrok-on-rhel5.cocot
+ create mode 100644 entries/opengrok-on-rhel5.cocot
 
-diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+diff --git a/entries/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
 new file mode 100644
 index 0000000..05b20b3
 --- /dev/null
-+++ b/entries/RCS/opengrok-on-rhel5.cocot
++++ b/entries/opengrok-on-rhel5.cocot
 @@ -0,0 +1,22 @@
 += <!-- rss:title -->Got OpenGrok running on RHEL5<!-- /rss:title --> =
 +

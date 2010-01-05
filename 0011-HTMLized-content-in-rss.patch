@@ -4,15 +4,15 @@ Date: Thu, 13 Mar 2008 09:53:28 +0000
 Subject: [PATCH 11/88] HTMLized content in rss
 
 ---
- entries/RCS/galleries.cocot |    6 +++++-
- scripts/RCS/genrss.pl       |    3 +++
- scripts/RCS/wiki2html.pl    |   24 ++----------------------
+ entries/galleries.cocot |    6 +++++-
+ scripts/genrss.pl       |    3 +++
+ scripts/wiki2html.pl    |   24 ++----------------------
  3 files changed, 10 insertions(+), 23 deletions(-)
 
-diff --git a/entries/RCS/galleries.cocot b/entries/RCS/galleries.cocot
+diff --git a/entries/galleries.cocot b/entries/RCS/galleries.cocot
 index b970d1a..79b96ef 100644
---- a/entries/RCS/galleries.cocot
-+++ b/entries/RCS/galleries.cocot
+--- a/entries/galleries.cocot
++++ b/entries/galleries.cocot
 @@ -5,6 +5,8 @@ So I am officially owner of the coolest web gallery.
  The package that generated it was approved for Fedora today,
  https://bugzilla.redhat.com/show_bug.cgi?id=xyz-gallery-review
@@ -30,10 +30,10 @@ index b970d1a..79b96ef 100644
 +'''Update:''' That is actually the one above. I was so excited about
 +being able to put various HTML tags into rss feeds and having it load
 +at Fedora Planet that I had to move it over there!
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 index 8e06a82..cef05d2 100644
---- a/scripts/RCS/genrss.pl
-+++ b/scripts/RCS/genrss.pl
+--- a/scripts/genrss.pl
++++ b/scripts/genrss.pl
 @@ -6,6 +6,7 @@ use strict;
  use warnings;
  
@@ -51,10 +51,10 @@ index 8e06a82..cef05d2 100644
  	$rss->add_item (
  		title		=> $title,
  		permaLink	=> $base.$html,
-diff --git a/scripts/RCS/wiki2html.pl b/scripts/RCS/wiki2html.pl
+diff --git a/scripts/wiki2html.pl b/scripts/RCS/wiki2html.pl
 index ca924fa..6ee58e4 100644
---- a/scripts/RCS/wiki2html.pl
-+++ b/scripts/RCS/wiki2html.pl
+--- a/scripts/wiki2html.pl
++++ b/scripts/wiki2html.pl
 @@ -1,25 +1,5 @@
  # Preprocess input for wikifying
  # $Id$

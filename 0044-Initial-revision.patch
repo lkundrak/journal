@@ -4,15 +4,15 @@ Date: Tue, 3 Feb 2009 16:16:40 +0000
 Subject: [PATCH 44/88] Perl eip
 
 ---
- entries/RCS/perl-line.cocot |   39 +++++++++++++++++++++++++++++++++++++++
+ entries/perl-line.cocot |   39 +++++++++++++++++++++++++++++++++++++++
  1 files changed, 39 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/perl-line.cocot
+ create mode 100644 entries/perl-line.cocot
 
-diff --git a/entries/RCS/perl-line.cocot b/entries/RCS/perl-line.cocot
+diff --git a/entries/perl-line.cocot b/entries/RCS/perl-line.cocot
 new file mode 100644
 index 0000000..aa86aaa
 --- /dev/null
-+++ b/entries/RCS/perl-line.cocot
++++ b/entries/perl-line.cocot
 @@ -0,0 +1,39 @@
 += <!-- rss:title -->Stuck in Perl?<!-- /rss:title --> =
 +

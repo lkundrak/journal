@@ -4,15 +4,15 @@ Date: Sun, 28 Jun 2009 11:25:28 +0000
 Subject: [PATCH 71/88] Fudcon patch
 
 ---
- entries/RCS/fudcon-patch.cocot |   11 +++++++++++
+ entries/fudcon-patch.cocot |   11 +++++++++++
  1 files changed, 11 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/fudcon-patch.cocot
+ create mode 100644 entries/fudcon-patch.cocot
 
-diff --git a/entries/RCS/fudcon-patch.cocot b/entries/RCS/fudcon-patch.cocot
+diff --git a/entries/fudcon-patch.cocot b/entries/RCS/fudcon-patch.cocot
 new file mode 100644
 index 0000000..7622bd6
 --- /dev/null
-+++ b/entries/RCS/fudcon-patch.cocot
++++ b/entries/fudcon-patch.cocot
 @@ -0,0 +1,11 @@
 += <!-- rss:title -->Two more FUDcon photo patches<!-- /rss:title --> =
 +

@@ -4,13 +4,13 @@ Date: Mon, 9 Feb 2009 20:45:19 +0000
 Subject: [PATCH 48/88] Typo
 
 ---
- entries/RCS/f11-alpha.cocot |    2 +-
+ entries/f11-alpha.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/f11-alpha.cocot b/entries/RCS/f11-alpha.cocot
+diff --git a/entries/f11-alpha.cocot b/entries/RCS/f11-alpha.cocot
 index 2d28cb4..b9c66d0 100644
---- a/entries/RCS/f11-alpha.cocot
-+++ b/entries/RCS/f11-alpha.cocot
+--- a/entries/f11-alpha.cocot
++++ b/entries/f11-alpha.cocot
 @@ -5,5 +5,5 @@ First alpha of Leonidas ships! Yay!
  
  http://v3.sk/~lkundrak/blog/images/floppy.jpeg

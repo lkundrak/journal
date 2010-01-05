@@ -4,13 +4,13 @@ Date: Tue, 2 Jun 2009 16:26:48 +0000
 Subject: [PATCH 67/88] Bug
 
 ---
- entries/RCS/gnome-feature.cocot |    2 +-
+ entries/gnome-feature.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/gnome-feature.cocot b/entries/RCS/gnome-feature.cocot
+diff --git a/entries/gnome-feature.cocot b/entries/RCS/gnome-feature.cocot
 index d67b162..865e21f 100644
---- a/entries/RCS/gnome-feature.cocot
-+++ b/entries/RCS/gnome-feature.cocot
+--- a/entries/gnome-feature.cocot
++++ b/entries/gnome-feature.cocot
 @@ -1,5 +1,5 @@
  = <!-- rss:title -->How to get a feature into Gnome<!-- /rss:title --> =
  

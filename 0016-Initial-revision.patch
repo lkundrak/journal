@@ -4,15 +4,15 @@ Date: Thu, 27 Mar 2008 22:13:44 +0000
 Subject: [PATCH 16/88] Secure buildroot page
 
 ---
- entries/RCS/secure-buildroot.cocot |   27 +++++++++++++++++++++++++++
+ entries/secure-buildroot.cocot |   27 +++++++++++++++++++++++++++
  1 files changed, 27 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/secure-buildroot.cocot
+ create mode 100644 entries/secure-buildroot.cocot
 
-diff --git a/entries/RCS/secure-buildroot.cocot b/entries/RCS/secure-buildroot.cocot
+diff --git a/entries/secure-buildroot.cocot b/entries/RCS/secure-buildroot.cocot
 new file mode 100644
 index 0000000..83efeae
 --- /dev/null
-+++ b/entries/RCS/secure-buildroot.cocot
++++ b/entries/secure-buildroot.cocot
 @@ -0,0 +1,27 @@
 += <!-- rss:title -->BuildRoot Race<!-- /rss:title --> =
 +

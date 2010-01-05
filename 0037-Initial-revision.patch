@@ -4,15 +4,15 @@ Date: Thu, 1 Jan 2009 20:21:31 +0000
 Subject: [PATCH 37/88] Vbox blog
 
 ---
- entries/RCS/virtualbox.cocot |   33 +++++++++++++++++++++++++++++++++
+ entries/virtualbox.cocot |   33 +++++++++++++++++++++++++++++++++
  1 files changed, 33 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/virtualbox.cocot
+ create mode 100644 entries/virtualbox.cocot
 
-diff --git a/entries/RCS/virtualbox.cocot b/entries/RCS/virtualbox.cocot
+diff --git a/entries/virtualbox.cocot b/entries/RCS/virtualbox.cocot
 new file mode 100644
 index 0000000..fe16365
 --- /dev/null
-+++ b/entries/RCS/virtualbox.cocot
++++ b/entries/virtualbox.cocot
 @@ -0,0 +1,33 @@
 += <!-- rss:title -->Rage Against the Virtual Machine<!-- /rss:title --> =
 +

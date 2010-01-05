@@ -4,14 +4,14 @@ Date: Mon, 29 Dec 2008 01:39:51 +0000
 Subject: [PATCH 26/88] Address update
 
 ---
- entries/RCS/fedora-on-netvista.cocot |    6 ++++--
- entries/RCS/opengrok-on-rhel5.cocot  |    5 ++---
+ entries/fedora-on-netvista.cocot |    6 ++++--
+ entries/opengrok-on-rhel5.cocot  |    5 ++---
  2 files changed, 6 insertions(+), 5 deletions(-)
 
-diff --git a/entries/RCS/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
+diff --git a/entries/fedora-on-netvista.cocot b/entries/RCS/fedora-on-netvista.cocot
 index e3a59bf..509be69 100644
---- a/entries/RCS/fedora-on-netvista.cocot
-+++ b/entries/RCS/fedora-on-netvista.cocot
+--- a/entries/fedora-on-netvista.cocot
++++ b/entries/fedora-on-netvista.cocot
 @@ -60,7 +60,8 @@ it on a network server, or on CF as well.
  === Kernel Trouble ===
  
@@ -36,10 +36,10 @@ index e3a59bf..509be69 100644
  ''See it (and the Ficus) here:'' http://skosi.org/~lkundrak/gallery/2008-02-29-NetVista/
 +
 +'''Update 2008-12-29:''' Removed {{{redhat.com}}} links.
-diff --git a/entries/RCS/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
+diff --git a/entries/opengrok-on-rhel5.cocot b/entries/RCS/opengrok-on-rhel5.cocot
 index 0a3784f..cc7647d 100644
---- a/entries/RCS/opengrok-on-rhel5.cocot
-+++ b/entries/RCS/opengrok-on-rhel5.cocot
+--- a/entries/opengrok-on-rhel5.cocot
++++ b/entries/opengrok-on-rhel5.cocot
 @@ -11,9 +11,8 @@ that were shipped in some preview update I believe.
  
  <!-- break -->

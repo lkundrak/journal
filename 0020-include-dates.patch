@@ -4,15 +4,15 @@ Date: Thu, 27 Mar 2008 22:40:54 +0000
 Subject: [PATCH 20/88] Include dates
 
 ---
- scripts/RCS/blogpage.awk    |   27 +++++++++++++++++++++++----
- scripts/RCS/genrss.pl       |    1 +
- templates/RCS/page.template |    6 +++++-
+ scripts/blogpage.awk    |   27 +++++++++++++++++++++++----
+ scripts/genrss.pl       |    1 +
+ templates/page.template |    6 +++++-
  3 files changed, 29 insertions(+), 5 deletions(-)
 
-diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+diff --git a/scripts/blogpage.awk b/scripts/RCS/blogpage.awk
 index aad4027..6a5220c 100644
---- a/scripts/RCS/blogpage.awk
-+++ b/scripts/RCS/blogpage.awk
+--- a/scripts/blogpage.awk
++++ b/scripts/blogpage.awk
 @@ -1,4 +1,13 @@
  BEGIN {
 +	cmd = "rlog "ARGV[2];
@@ -67,10 +67,10 @@ index aad4027..6a5220c 100644
 +
  	print $0;
  }
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 index cef05d2..15dfbf3 100644
---- a/scripts/RCS/genrss.pl
-+++ b/scripts/RCS/genrss.pl
+--- a/scripts/genrss.pl
++++ b/scripts/genrss.pl
 @@ -46,6 +46,7 @@ foreach my $file (@ARGV) {
  		title		=> $title,
  		permaLink	=> $base.$html,
@@ -79,10 +79,10 @@ index cef05d2..15dfbf3 100644
  	);
  
  	close (BLOG);
-diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+diff --git a/templates/page.template b/templates/RCS/page.template
 index fb07c9d..89a2fae 100644
---- a/templates/RCS/page.template
-+++ b/templates/RCS/page.template
+--- a/templates/page.template
++++ b/templates/page.template
 @@ -11,7 +11,11 @@
  <body>
  	<h1>lkundrak's web log</h1>

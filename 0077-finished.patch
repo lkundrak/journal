@@ -4,13 +4,13 @@ Date: Fri, 14 Aug 2009 14:47:38 +0000
 Subject: [PATCH 77/88] Finished
 
 ---
- entries/RCS/metapixel.cocot |   22 ++++++++++++----------
+ entries/metapixel.cocot |   22 ++++++++++++----------
  1 files changed, 12 insertions(+), 10 deletions(-)
 
-diff --git a/entries/RCS/metapixel.cocot b/entries/RCS/metapixel.cocot
+diff --git a/entries/metapixel.cocot b/entries/RCS/metapixel.cocot
 index fc3731e..58b88d3 100644
---- a/entries/RCS/metapixel.cocot
-+++ b/entries/RCS/metapixel.cocot
+--- a/entries/metapixel.cocot
++++ b/entries/metapixel.cocot
 @@ -1,22 +1,24 @@
 -= <!-- rss:title -->Title of the blog<!-- /rss:title --> =
 += <!-- rss:title -->Logo-shaped collage of Fedora users<!-- /rss:title --> =

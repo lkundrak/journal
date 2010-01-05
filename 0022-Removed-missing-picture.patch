@@ -4,13 +4,13 @@ Date: Mon, 29 Dec 2008 01:04:46 +0000
 Subject: [PATCH 22/88] Removed missing picture
 
 ---
- entries/RCS/openjdk-el5.cocot |    2 --
+ entries/openjdk-el5.cocot |    2 --
  1 files changed, 0 insertions(+), 2 deletions(-)
 
-diff --git a/entries/RCS/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
+diff --git a/entries/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
 index 34caaf0..ba8b0f7 100644
---- a/entries/RCS/openjdk-el5.cocot
-+++ b/entries/RCS/openjdk-el5.cocot
+--- a/entries/openjdk-el5.cocot
++++ b/entries/openjdk-el5.cocot
 @@ -1,7 +1,5 @@
  = <!-- rss:title -->Nearly stable OpenJDK for RHEL<!-- /rss:title --> =
  

@@ -4,15 +4,15 @@ Date: Sat, 7 Mar 2009 13:07:19 +0000
 Subject: [PATCH 55/88] Dos games
 
 ---
- entries/RCS/dos-games-linux.cocot |   10 ++++++++++
+ entries/dos-games-linux.cocot |   10 ++++++++++
  1 files changed, 10 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/dos-games-linux.cocot
+ create mode 100644 entries/dos-games-linux.cocot
 
-diff --git a/entries/RCS/dos-games-linux.cocot b/entries/RCS/dos-games-linux.cocot
+diff --git a/entries/dos-games-linux.cocot b/entries/RCS/dos-games-linux.cocot
 new file mode 100644
 index 0000000..a4affd3
 --- /dev/null
-+++ b/entries/RCS/dos-games-linux.cocot
++++ b/entries/dos-games-linux.cocot
 @@ -0,0 +1,10 @@
 += <!-- rss:title -->DOS Games in Linux<!-- /rss:title --> =
 +

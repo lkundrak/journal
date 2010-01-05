@@ -4,13 +4,13 @@ Date: Wed, 29 Apr 2009 10:54:46 +0000
 Subject: [PATCH 63/88] Fix title formatting
 
 ---
- entries/RCS/shortrpm.cocot |    2 +-
+ entries/shortrpm.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/shortrpm.cocot b/entries/RCS/shortrpm.cocot
+diff --git a/entries/shortrpm.cocot b/entries/RCS/shortrpm.cocot
 index 1823712..0e73482 100644
---- a/entries/RCS/shortrpm.cocot
-+++ b/entries/RCS/shortrpm.cocot
+--- a/entries/shortrpm.cocot
++++ b/entries/shortrpm.cocot
 @@ -1,4 +1,4 @@
 -= <!-- rss:title -->{{{shortrpm}}} - Short circuitting binary RPM builds<!-- /rss:title --> =
 += <!-- rss:title -->Short circuitting binary RPM builds with shortrpm<!-- /rss:title --> =

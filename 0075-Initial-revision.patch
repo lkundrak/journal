@@ -4,15 +4,15 @@ Date: Thu, 16 Jul 2009 15:04:13 +0000
 Subject: [PATCH 75/88] Pulse flaw blog
 
 ---
- entries/RCS/pulse-suid.cocot |    9 +++++++++
+ entries/pulse-suid.cocot |    9 +++++++++
  1 files changed, 9 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/pulse-suid.cocot
+ create mode 100644 entries/pulse-suid.cocot
 
-diff --git a/entries/RCS/pulse-suid.cocot b/entries/RCS/pulse-suid.cocot
+diff --git a/entries/pulse-suid.cocot b/entries/RCS/pulse-suid.cocot
 new file mode 100644
 index 0000000..1b1cb03
 --- /dev/null
-+++ b/entries/RCS/pulse-suid.cocot
++++ b/entries/pulse-suid.cocot
 @@ -0,0 +1,9 @@
 += <!-- rss:title -->Still wondering why File System Capabilities are just Awesome?<!-- /rss:title --> =
 +

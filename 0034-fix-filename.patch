@@ -4,13 +4,13 @@ Date: Mon, 29 Dec 2008 20:25:41 +0000
 Subject: [PATCH 34/88] Fix filename
 
 ---
- entries/RCS/good-one.cocot |    2 +-
+ entries/good-one.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/good-one.cocot b/entries/RCS/good-one.cocot
+diff --git a/entries/good-one.cocot b/entries/RCS/good-one.cocot
 index 9777e29..f84d3c9 100644
---- a/entries/RCS/good-one.cocot
-+++ b/entries/RCS/good-one.cocot
+--- a/entries/good-one.cocot
++++ b/entries/good-one.cocot
 @@ -5,7 +5,7 @@
  Found this while cleaning up my {{{~}}}. It is from Brno FUDCon and
  it would indeed be a real pity if it got lost.

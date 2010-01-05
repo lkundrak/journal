@@ -4,13 +4,13 @@ Date: Thu, 27 Mar 2008 22:37:38 +0000
 Subject: [PATCH 18/88] Actualy write the entry
 
 ---
- entries/RCS/fedora-diskless-iscsi.cocot |  126 +++++++++++++++++++++++++------
+ entries/fedora-diskless-iscsi.cocot |  126 +++++++++++++++++++++++++------
  1 files changed, 104 insertions(+), 22 deletions(-)
 
-diff --git a/entries/RCS/fedora-diskless-iscsi.cocot b/entries/RCS/fedora-diskless-iscsi.cocot
+diff --git a/entries/fedora-diskless-iscsi.cocot b/entries/RCS/fedora-diskless-iscsi.cocot
 index f2718cd..648b6ef 100644
---- a/entries/RCS/fedora-diskless-iscsi.cocot
-+++ b/entries/RCS/fedora-diskless-iscsi.cocot
+--- a/entries/fedora-diskless-iscsi.cocot
++++ b/entries/fedora-diskless-iscsi.cocot
 @@ -1,35 +1,117 @@
  = <!-- rss:title -->Running diskless Fedora via iSCSI<!-- /rss:title --> =
  

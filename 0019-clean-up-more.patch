@@ -7,10 +7,10 @@ Subject: [PATCH 19/88] Clean up more
  RCS/Makefile |    4 ++--
  1 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index 7d62f33..b53a420 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -49,7 +49,7 @@ BLOG3+=images/opengrok-shot2.png
  BLOG3+=images/opengrok-shot1-tn.png
  BLOG3+=images/opengrok-shot2-tn.png

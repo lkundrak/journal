@@ -4,15 +4,15 @@ Date: Mon, 7 Apr 2008 09:56:07 +0000
 Subject: [PATCH 21/88] Openjdk-in-epel
 
 ---
- entries/RCS/openjdk-in-epel.cocot |   16 ++++++++++++++++
+ entries/openjdk-in-epel.cocot |   16 ++++++++++++++++
  1 files changed, 16 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/openjdk-in-epel.cocot
+ create mode 100644 entries/openjdk-in-epel.cocot
 
-diff --git a/entries/RCS/openjdk-in-epel.cocot b/entries/RCS/openjdk-in-epel.cocot
+diff --git a/entries/openjdk-in-epel.cocot b/entries/RCS/openjdk-in-epel.cocot
 new file mode 100644
 index 0000000..877b6cb
 --- /dev/null
-+++ b/entries/RCS/openjdk-in-epel.cocot
++++ b/entries/openjdk-in-epel.cocot
 @@ -0,0 +1,16 @@
 += <!-- rss:title -->OpenJDK in EPEL<!-- /rss:title --> =
 +

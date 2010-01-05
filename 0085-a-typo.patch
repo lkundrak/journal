@@ -4,13 +4,13 @@ Date: Mon, 9 Nov 2009 16:33:14 +0000
 Subject: [PATCH 85/88] A typo
 
 ---
- entries/RCS/inspiron-12-opensuse.cocot |    2 +-
+ entries/inspiron-12-opensuse.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+diff --git a/entries/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
 index 980f363..92fbea7 100644
---- a/entries/RCS/inspiron-12-opensuse.cocot
-+++ b/entries/RCS/inspiron-12-opensuse.cocot
+--- a/entries/inspiron-12-opensuse.cocot
++++ b/entries/inspiron-12-opensuse.cocot
 @@ -39,7 +39,7 @@ http://www.blogcdn.com/www.engadget.com/media/2009/02/2-1-09-dell-mini-12-splaye
  == Software ==
  

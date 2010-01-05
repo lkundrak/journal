@@ -4,17 +4,17 @@ Date: Thu, 13 Mar 2008 10:13:30 +0000
 Subject: [PATCH 12/88] Openjdk blog
 
 ---
- entries/RCS/openjdk-el5.cocot |   28 ++++++++++++++++++++++++++++
- scripts/RCS/wikize.pm         |   30 ++++++++++++++++++++++++++++++
+ entries/openjdk-el5.cocot |   28 ++++++++++++++++++++++++++++
+ scripts/wikize.pm         |   30 ++++++++++++++++++++++++++++++
  2 files changed, 58 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/openjdk-el5.cocot
- create mode 100644 scripts/RCS/wikize.pm
+ create mode 100644 entries/openjdk-el5.cocot
+ create mode 100644 scripts/wikize.pm
 
-diff --git a/entries/RCS/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
+diff --git a/entries/openjdk-el5.cocot b/entries/RCS/openjdk-el5.cocot
 new file mode 100644
 index 0000000..34caaf0
 --- /dev/null
-+++ b/entries/RCS/openjdk-el5.cocot
++++ b/entries/openjdk-el5.cocot
 @@ -0,0 +1,28 @@
 += <!-- rss:title -->Nearly stable OpenJDK for RHEL<!-- /rss:title --> =
 +
@@ -44,11 +44,11 @@ index 0000000..34caaf0
 +Líštička
 +
 +http://www.alicecooper.com/photos/res/PleaseUpdateFlashPlayer.gif
-diff --git a/scripts/RCS/wikize.pm b/scripts/RCS/wikize.pm
+diff --git a/scripts/wikize.pm b/scripts/RCS/wikize.pm
 new file mode 100644
 index 0000000..dba61d0
 --- /dev/null
-+++ b/scripts/RCS/wikize.pm
++++ b/scripts/wikize.pm
 @@ -0,0 +1,30 @@
 +# Preprocess input for wikifying
 +# $Id$

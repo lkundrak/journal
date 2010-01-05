@@ -4,14 +4,14 @@ Date: Thu, 28 Feb 2008 14:52:45 +0000
 Subject: [PATCH 02/88] Footer update
 
 ---
- templates/RCS/index.template |    4 ++--
- templates/RCS/page.template  |    4 ++--
+ templates/index.template |    4 ++--
+ templates/page.template  |    4 ++--
  2 files changed, 4 insertions(+), 4 deletions(-)
 
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 98259e0..233df61 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -26,8 +26,8 @@
  	@HEADLINES@
  
@@ -23,10 +23,10 @@ index 98259e0..233df61 100644
  
          <div style="display: none;">
          <a href="http://skosi.org/~lkundrak/">libexig</a>
-diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+diff --git a/templates/page.template b/templates/RCS/page.template
 index f005b86..06160e0 100644
---- a/templates/RCS/page.template
-+++ b/templates/RCS/page.template
+--- a/templates/page.template
++++ b/templates/page.template
 @@ -14,8 +14,8 @@
  	@BODY@
  

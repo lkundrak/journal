@@ -4,15 +4,15 @@ Date: Tue, 2 Jun 2009 16:20:45 +0000
 Subject: [PATCH 66/88] Gnome feature blog
 
 ---
- entries/RCS/gnome-feature.cocot |    5 +++++
+ entries/gnome-feature.cocot |    5 +++++
  1 files changed, 5 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/gnome-feature.cocot
+ create mode 100644 entries/gnome-feature.cocot
 
-diff --git a/entries/RCS/gnome-feature.cocot b/entries/RCS/gnome-feature.cocot
+diff --git a/entries/gnome-feature.cocot b/entries/RCS/gnome-feature.cocot
 new file mode 100644
 index 0000000..d67b162
 --- /dev/null
-+++ b/entries/RCS/gnome-feature.cocot
++++ b/entries/gnome-feature.cocot
 @@ -0,0 +1,5 @@
 += <!-- rss:title -->How to get a feature into Gnome<!-- /rss:title --> =
 +

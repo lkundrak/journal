@@ -4,15 +4,15 @@ Date: Tue, 3 Feb 2009 18:17:29 +0000
 Subject: [PATCH 45/88] Perl carp
 
 ---
- entries/RCS/perl-carp.cocot |   30 ++++++++++++++++++++++++++++++
+ entries/perl-carp.cocot |   30 ++++++++++++++++++++++++++++++
  1 files changed, 30 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/perl-carp.cocot
+ create mode 100644 entries/perl-carp.cocot
 
-diff --git a/entries/RCS/perl-carp.cocot b/entries/RCS/perl-carp.cocot
+diff --git a/entries/perl-carp.cocot b/entries/RCS/perl-carp.cocot
 new file mode 100644
 index 0000000..5e73c85
 --- /dev/null
-+++ b/entries/RCS/perl-carp.cocot
++++ b/entries/perl-carp.cocot
 @@ -0,0 +1,30 @@
 += <!-- rss:title -->Stuck in Perl? (Part 2)<!-- /rss:title --> =
 +

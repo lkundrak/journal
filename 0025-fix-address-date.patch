@@ -4,13 +4,13 @@ Date: Mon, 29 Dec 2008 01:39:30 +0000
 Subject: [PATCH 25/88] Fix address, date
 
 ---
- scripts/RCS/genrss.pl |   10 +++++-----
+ scripts/genrss.pl |   10 +++++-----
  1 files changed, 5 insertions(+), 5 deletions(-)
 
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 index 15dfbf3..e2733cc 100644
---- a/scripts/RCS/genrss.pl
-+++ b/scripts/RCS/genrss.pl
+--- a/scripts/genrss.pl
++++ b/scripts/genrss.pl
 @@ -8,7 +8,7 @@ use warnings;
  use XML::RSS;
  use scripts::wikize;

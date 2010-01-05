@@ -4,15 +4,15 @@ Date: Sat, 27 Jun 2009 07:01:33 +0000
 Subject: [PATCH 69/88] Berliner
 
 ---
- entries/RCS/berlin.cocot |   13 +++++++++++++
+ entries/berlin.cocot |   13 +++++++++++++
  1 files changed, 13 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/berlin.cocot
+ create mode 100644 entries/berlin.cocot
 
-diff --git a/entries/RCS/berlin.cocot b/entries/RCS/berlin.cocot
+diff --git a/entries/berlin.cocot b/entries/RCS/berlin.cocot
 new file mode 100644
 index 0000000..62fdbcf
 --- /dev/null
-+++ b/entries/RCS/berlin.cocot
++++ b/entries/berlin.cocot
 @@ -0,0 +1,13 @@
 += <!-- rss:title -->A few observations about Berlin<!-- /rss:title --> =
 +

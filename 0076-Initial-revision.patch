@@ -4,15 +4,15 @@ Date: Fri, 14 Aug 2009 14:36:35 +0000
 Subject: [PATCH 76/88] Metapixel
 
 ---
- entries/RCS/metapixel.cocot |   22 ++++++++++++++++++++++
+ entries/metapixel.cocot |   22 ++++++++++++++++++++++
  1 files changed, 22 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/metapixel.cocot
+ create mode 100644 entries/metapixel.cocot
 
-diff --git a/entries/RCS/metapixel.cocot b/entries/RCS/metapixel.cocot
+diff --git a/entries/metapixel.cocot b/entries/RCS/metapixel.cocot
 new file mode 100644
 index 0000000..fc3731e
 --- /dev/null
-+++ b/entries/RCS/metapixel.cocot
++++ b/entries/metapixel.cocot
 @@ -0,0 +1,22 @@
 += <!-- rss:title -->Title of the blog<!-- /rss:title --> =
 +

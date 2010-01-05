@@ -4,13 +4,13 @@ Date: Tue, 3 Feb 2009 18:23:17 +0000
 Subject: [PATCH 46/88] Fix typoes
 
 ---
- entries/RCS/perl-carp.cocot |    4 ++--
+ entries/perl-carp.cocot |    4 ++--
  1 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/entries/RCS/perl-carp.cocot b/entries/RCS/perl-carp.cocot
+diff --git a/entries/perl-carp.cocot b/entries/RCS/perl-carp.cocot
 index 5e73c85..21b0918 100644
---- a/entries/RCS/perl-carp.cocot
-+++ b/entries/RCS/perl-carp.cocot
+--- a/entries/perl-carp.cocot
++++ b/entries/perl-carp.cocot
 @@ -1,7 +1,7 @@
  = <!-- rss:title -->Stuck in Perl? (Part 2)<!-- /rss:title --> =
  

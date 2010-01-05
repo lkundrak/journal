@@ -5,13 +5,13 @@ Subject: [PATCH 03/88] Godzilla
 
 ---
  RCS/Makefile                 |    2 +-
- templates/RCS/index.template |    2 ++
+ templates/index.template |    2 ++
  2 files changed, 3 insertions(+), 1 deletions(-)
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 index b681f8d..249c05b 100644
---- a/RCS/Makefile
-+++ b/RCS/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -9,7 +9,7 @@ TIDY?=tidy
  SOURCES=$(shell ls -t */*.cocot)
  BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
@@ -21,10 +21,10 @@ index b681f8d..249c05b 100644
  
  all: build
  
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 233df61..19f095b 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -16,6 +16,8 @@
  <body>
  	<h1>lkundrak's web log</h1>

@@ -4,13 +4,13 @@ Date: Fri, 29 Feb 2008 21:47:16 +0000
 Subject: [PATCH 05/88] Back link
 
 ---
- templates/RCS/page.template |    3 +++
+ templates/page.template |    3 +++
  1 files changed, 3 insertions(+), 0 deletions(-)
 
-diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+diff --git a/templates/page.template b/templates/RCS/page.template
 index 06160e0..fb07c9d 100644
---- a/templates/RCS/page.template
-+++ b/templates/RCS/page.template
+--- a/templates/page.template
++++ b/templates/page.template
 @@ -11,6 +11,9 @@
  <body>
  	<h1>lkundrak's web log</h1>

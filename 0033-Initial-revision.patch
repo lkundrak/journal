@@ -4,15 +4,15 @@ Date: Mon, 29 Dec 2008 20:24:19 +0000
 Subject: [PATCH 33/88] New fedora webcomic
 
 ---
- entries/RCS/good-one.cocot |   16 ++++++++++++++++
+ entries/good-one.cocot |   16 ++++++++++++++++
  1 files changed, 16 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/good-one.cocot
+ create mode 100644 entries/good-one.cocot
 
-diff --git a/entries/RCS/good-one.cocot b/entries/RCS/good-one.cocot
+diff --git a/entries/good-one.cocot b/entries/RCS/good-one.cocot
 new file mode 100644
 index 0000000..9777e29
 --- /dev/null
-+++ b/entries/RCS/good-one.cocot
++++ b/entries/good-one.cocot
 @@ -0,0 +1,16 @@
 += <!-- rss:title -->New Fedora Webcomic<!-- /rss:title --> =
 +

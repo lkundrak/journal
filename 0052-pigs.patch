@@ -4,13 +4,13 @@ Date: Wed, 25 Feb 2009 11:29:08 +0000
 Subject: [PATCH 52/88] Pigs.
 
 ---
- templates/RCS/index.template |    2 +-
+ templates/index.template |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 358084f..f9b090e 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -15,7 +15,7 @@
  
  <body>

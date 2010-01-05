@@ -6,31 +6,31 @@ Subject: [PATCH 01/88] Initial import
 ---
  RCS/Makefile                            |   51 +++++++++++++++++++++++++++++++
  RCS/config                              |    1 +
- entries/RCS/fedora-diskless-iscsi.cocot |   35 +++++++++++++++++++++
- entries/RCS/gifts.cocot                 |   13 ++++++++
- entries/RCS/template                    |   36 ++++++++++++++++++++++
- scripts/RCS/blogpage.awk                |   44 ++++++++++++++++++++++++++
- scripts/RCS/genrss.pl                   |   51 +++++++++++++++++++++++++++++++
- scripts/RCS/wiki2html.pl                |   25 +++++++++++++++
- templates/RCS/index.template            |   37 ++++++++++++++++++++++
- templates/RCS/page.template             |   25 +++++++++++++++
+ entries/fedora-diskless-iscsi.cocot |   35 +++++++++++++++++++++
+ entries/gifts.cocot                 |   13 ++++++++
+ entries/template                    |   36 ++++++++++++++++++++++
+ scripts/blogpage.awk                |   44 ++++++++++++++++++++++++++
+ scripts/genrss.pl                   |   51 +++++++++++++++++++++++++++++++
+ scripts/wiki2html.pl                |   25 +++++++++++++++
+ templates/index.template            |   37 ++++++++++++++++++++++
+ templates/page.template             |   25 +++++++++++++++
  10 files changed, 318 insertions(+), 0 deletions(-)
  create mode 100644 RCS/Makefile
  create mode 100644 RCS/config
- create mode 100644 entries/RCS/fedora-diskless-iscsi.cocot
- create mode 100644 entries/RCS/gifts.cocot
- create mode 100644 entries/RCS/template
- create mode 100644 scripts/RCS/blogpage.awk
- create mode 100644 scripts/RCS/genrss.pl
- create mode 100644 scripts/RCS/wiki2html.pl
- create mode 100644 templates/RCS/index.template
- create mode 100644 templates/RCS/page.template
+ create mode 100644 entries/fedora-diskless-iscsi.cocot
+ create mode 100644 entries/gifts.cocot
+ create mode 100644 entries/template
+ create mode 100644 scripts/blogpage.awk
+ create mode 100644 scripts/genrss.pl
+ create mode 100644 scripts/wiki2html.pl
+ create mode 100644 templates/index.template
+ create mode 100644 templates/page.template
 
-diff --git a/RCS/Makefile b/RCS/Makefile
+diff --git a/Makefile b/RCS/Makefile
 new file mode 100644
 index 0000000..b681f8d
 --- /dev/null
-+++ b/RCS/Makefile
++++ b/Makefile
 @@ -0,0 +1,51 @@
 +# $Id$
 +
@@ -83,18 +83,18 @@ index 0000000..b681f8d
 +
 +upload: build
 +	tar cf - ${TARGETS} |ssh ovecka.be "tar xf - -C public_html/blog"
-diff --git a/RCS/config b/RCS/config
+diff --git a/config b/RCS/config
 new file mode 100644
 index 0000000..51e798e
 --- /dev/null
-+++ b/RCS/config
++++ b/config
 @@ -0,0 +1 @@
 +# lame duck config for PurpleWiki
-diff --git a/entries/RCS/fedora-diskless-iscsi.cocot b/entries/RCS/fedora-diskless-iscsi.cocot
+diff --git a/entries/fedora-diskless-iscsi.cocot b/entries/RCS/fedora-diskless-iscsi.cocot
 new file mode 100644
 index 0000000..f2718cd
 --- /dev/null
-+++ b/entries/RCS/fedora-diskless-iscsi.cocot
++++ b/entries/fedora-diskless-iscsi.cocot
 @@ -0,0 +1,35 @@
 += <!-- rss:title -->Running diskless Fedora via iSCSI<!-- /rss:title --> =
 +
@@ -131,11 +131,11 @@ index 0000000..f2718cd
 +  $ su -c 'rm -rf /' >/dev/null 2>&1 &
 +  [8]
 +  $ watch 'cat /dev/urandom |hexdump -Cv |head'
-diff --git a/entries/RCS/gifts.cocot b/entries/RCS/gifts.cocot
+diff --git a/entries/gifts.cocot b/entries/RCS/gifts.cocot
 new file mode 100644
 index 0000000..587136a
 --- /dev/null
-+++ b/entries/RCS/gifts.cocot
++++ b/entries/gifts.cocot
 @@ -0,0 +1,13 @@
 += <!-- rss:title -->Gifts from FOSDEM<!-- /rss:title --> =
 +
@@ -150,11 +150,11 @@ index 0000000..587136a
 +Some might think that it's not so special.
 +It's that just my cool scripts would wait for input
 +on {{{stdin}}} if there were no blog entry.
-diff --git a/entries/RCS/template b/entries/RCS/template
+diff --git a/entries/template b/entries/RCS/template
 new file mode 100644
 index 0000000..6c06a38
 --- /dev/null
-+++ b/entries/RCS/template
++++ b/entries/template
 @@ -0,0 +1,36 @@
 += <!-- rss:title -->Title of the blog<!-- /rss:title --> =
 +
@@ -192,11 +192,11 @@ index 0000000..6c06a38
 +  [8]
 +  $ watch 'cat /dev/urandom |hexdump -Cv |head'
 +
-diff --git a/scripts/RCS/blogpage.awk b/scripts/RCS/blogpage.awk
+diff --git a/scripts/blogpage.awk b/scripts/RCS/blogpage.awk
 new file mode 100644
 index 0000000..aad4027
 --- /dev/null
-+++ b/scripts/RCS/blogpage.awk
++++ b/scripts/blogpage.awk
 @@ -0,0 +1,44 @@
 +BEGIN {
 +	if (!ARGV[2]) {
@@ -242,11 +242,11 @@ index 0000000..aad4027
 +{
 +	print $0;
 +}
-diff --git a/scripts/RCS/genrss.pl b/scripts/RCS/genrss.pl
+diff --git a/scripts/genrss.pl b/scripts/RCS/genrss.pl
 new file mode 100644
 index 0000000..8e06a82
 --- /dev/null
-+++ b/scripts/RCS/genrss.pl
++++ b/scripts/genrss.pl
 @@ -0,0 +1,51 @@
 +#!/usr/bin/env perl
 +
@@ -299,11 +299,11 @@ index 0000000..8e06a82
 +}
 +
 +print $rss->as_string;
-diff --git a/scripts/RCS/wiki2html.pl b/scripts/RCS/wiki2html.pl
+diff --git a/scripts/wiki2html.pl b/scripts/RCS/wiki2html.pl
 new file mode 100644
 index 0000000..ca924fa
 --- /dev/null
-+++ b/scripts/RCS/wiki2html.pl
++++ b/scripts/wiki2html.pl
 @@ -0,0 +1,25 @@
 +# Preprocess input for wikifying
 +# $Id$
@@ -330,11 +330,11 @@ index 0000000..ca924fa
 +
 +my $view = new PurpleWiki::View::wikihtml;
 +print $view->view ($tree);
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 new file mode 100644
 index 0000000..98259e0
 --- /dev/null
-+++ b/templates/RCS/index.template
++++ b/templates/index.template
 @@ -0,0 +1,37 @@
 +<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 +
@@ -373,11 +373,11 @@ index 0000000..98259e0
 +</body>
 +
 +</html>
-diff --git a/templates/RCS/page.template b/templates/RCS/page.template
+diff --git a/templates/page.template b/templates/RCS/page.template
 new file mode 100644
 index 0000000..f005b86
 --- /dev/null
-+++ b/templates/RCS/page.template
++++ b/templates/page.template
 @@ -0,0 +1,25 @@
 +<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 +

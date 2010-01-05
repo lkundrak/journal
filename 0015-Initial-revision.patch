@@ -4,15 +4,15 @@ Date: Mon, 17 Mar 2008 08:18:23 +0000
 Subject: [PATCH 15/88] Fortify source blog
 
 ---
- entries/RCS/fortify-check.cocot |   67 +++++++++++++++++++++++++++++++++++++++
+ entries/fortify-check.cocot |   67 +++++++++++++++++++++++++++++++++++++++
  1 files changed, 67 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/fortify-check.cocot
+ create mode 100644 entries/fortify-check.cocot
 
-diff --git a/entries/RCS/fortify-check.cocot b/entries/RCS/fortify-check.cocot
+diff --git a/entries/fortify-check.cocot b/entries/RCS/fortify-check.cocot
 new file mode 100644
 index 0000000..5eee868
 --- /dev/null
-+++ b/entries/RCS/fortify-check.cocot
++++ b/entries/fortify-check.cocot
 @@ -0,0 +1,67 @@
 += <!-- rss:title -->Correct use of FORTIFY_SOURCE<!-- /rss:title --> =
 +

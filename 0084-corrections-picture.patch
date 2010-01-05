@@ -4,13 +4,13 @@ Date: Mon, 9 Nov 2009 16:20:06 +0000
 Subject: [PATCH 84/88] Corrections, picture
 
 ---
- entries/RCS/inspiron-12-opensuse.cocot |    8 +++++---
+ entries/inspiron-12-opensuse.cocot |    8 +++++---
  1 files changed, 5 insertions(+), 3 deletions(-)
 
-diff --git a/entries/RCS/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
+diff --git a/entries/inspiron-12-opensuse.cocot b/entries/RCS/inspiron-12-opensuse.cocot
 index dfd1dec..980f363 100644
---- a/entries/RCS/inspiron-12-opensuse.cocot
-+++ b/entries/RCS/inspiron-12-opensuse.cocot
+--- a/entries/inspiron-12-opensuse.cocot
++++ b/entries/inspiron-12-opensuse.cocot
 @@ -34,6 +34,8 @@ is 1280x800 and there's a VGA port for external display.
  You can have a look at the innards here:
  http://ravicblog.blogspot.com/2009/01/dell-mini-12-dissected.html

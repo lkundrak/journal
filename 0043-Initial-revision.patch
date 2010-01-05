@@ -4,15 +4,15 @@ Date: Thu, 29 Jan 2009 20:50:06 +0000
 Subject: [PATCH 43/88] Rms webcomic
 
 ---
- entries/RCS/rms.cocot |   11 +++++++++++
+ entries/rms.cocot |   11 +++++++++++
  1 files changed, 11 insertions(+), 0 deletions(-)
- create mode 100644 entries/RCS/rms.cocot
+ create mode 100644 entries/rms.cocot
 
-diff --git a/entries/RCS/rms.cocot b/entries/RCS/rms.cocot
+diff --git a/entries/rms.cocot b/entries/RCS/rms.cocot
 new file mode 100644
 index 0000000..bf5daaa
 --- /dev/null
-+++ b/entries/RCS/rms.cocot
++++ b/entries/rms.cocot
 @@ -0,0 +1,11 @@
 += <!-- rss:title -->Webcomic<!-- /rss:title --> =
 +

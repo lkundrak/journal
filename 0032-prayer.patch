@@ -4,13 +4,13 @@ Date: Mon, 29 Dec 2008 11:58:19 +0000
 Subject: [PATCH 32/88] Prayer
 
 ---
- templates/RCS/index.template |    3 ++-
+ templates/index.template |    3 ++-
  1 files changed, 2 insertions(+), 1 deletions(-)
 
-diff --git a/templates/RCS/index.template b/templates/RCS/index.template
+diff --git a/templates/index.template b/templates/RCS/index.template
 index 5379c81..358084f 100644
---- a/templates/RCS/index.template
-+++ b/templates/RCS/index.template
+--- a/templates/index.template
++++ b/templates/index.template
 @@ -20,7 +20,8 @@
  
  	<p>So I have a journal again. Please pardon me if I don't update it regularly -- I decided

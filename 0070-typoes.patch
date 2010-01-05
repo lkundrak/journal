@@ -4,13 +4,13 @@ Date: Sat, 27 Jun 2009 07:02:54 +0000
 Subject: [PATCH 70/88] Typoes
 
 ---
- entries/RCS/berlin.cocot |    2 +-
+ entries/berlin.cocot |    2 +-
  1 files changed, 1 insertions(+), 1 deletions(-)
 
-diff --git a/entries/RCS/berlin.cocot b/entries/RCS/berlin.cocot
+diff --git a/entries/berlin.cocot b/entries/RCS/berlin.cocot
 index 62fdbcf..8f83589 100644
---- a/entries/RCS/berlin.cocot
-+++ b/entries/RCS/berlin.cocot
+--- a/entries/berlin.cocot
++++ b/entries/berlin.cocot
 @@ -6,7 +6,7 @@
  * If you like beer, visit Czech instead
  * Quite good public transportation, S-Bahn train lines running through the city

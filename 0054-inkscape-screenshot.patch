@@ -4,13 +4,13 @@ Date: Tue, 3 Mar 2009 20:44:35 +0000
 Subject: [PATCH 54/88] Inkscape screenshot
 
 ---
- entries/RCS/inkscape-snapshot-rawhide.cocot |    2 ++
+ entries/inkscape-snapshot-rawhide.cocot |    2 ++
  1 files changed, 2 insertions(+), 0 deletions(-)
 
-diff --git a/entries/RCS/inkscape-snapshot-rawhide.cocot b/entries/RCS/inkscape-snapshot-rawhide.cocot
+diff --git a/entries/inkscape-snapshot-rawhide.cocot b/entries/RCS/inkscape-snapshot-rawhide.cocot
 index 75fb066..21f64b0 100644
---- a/entries/RCS/inkscape-snapshot-rawhide.cocot
-+++ b/entries/RCS/inkscape-snapshot-rawhide.cocot
+--- a/entries/inkscape-snapshot-rawhide.cocot
++++ b/entries/inkscape-snapshot-rawhide.cocot
 @@ -6,6 +6,8 @@ It took some time to get it compile with GCC 4.4, and even more to get it run.
  Now that it runs, I'm sure you know that (like everything in Rawhide), it
  can burn your house, kill your cat and make the whole world implode.
