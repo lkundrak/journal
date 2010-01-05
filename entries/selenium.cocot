@@ -1,0 +1,180 @@
+= <!-- rss:title -->Testing your web application programmatically<!-- /rss:title --> =
+
+<!-- rss:description -->
+For every application whose code base grows beyond what can be maintained
+by a single person a good test suite can save a lot of time and pain. It
+can even be a lot of fun; and web applications are no exception.
+
+This journal entry describes the tools and basics of automation of user
+actions. Enough to construct a synthetic test for a simple calculator
+application:
+
+http://v3.sk/~lkundrak/blog/images/jsapp.png
+
+== Ingredients ==
+
+* [http://fedoraproject.org/ Fedora]
+* [http://seleniumhq.org/projects/remote-control/ Selenium Remote Control Server]
+* [http://search.cpan.org/dist/Test-WWW-Selenium/ Perl Selenium Client bindings]
+
+<!-- /rss:description -->
+
+<!-- break -->
+
+== The Application ==
+
+Find it here: http://v3.sk/~lkundrak/qa-test.html
+
+Consists of a result accumulator, an input box and two buttons, for addition
+and multiplication respectively. Laid out like this:
+
+  <span id="counter">1337</span>
+  <input id="number" type="text" value="666">
+  <input id="add" type="button" onclick="do_add ()" value="+=">
+  <input id="multiply" type="button" onclick="do_multiply ()" value="*=">
+
+== Starting the server ==
+
+The [http://seleniumhq.org/projects/remote-control/ Selenium Remote
+Control] is available in Fedora 12 repository, package
+named {{{selenium-server}}}. This is the piece that launches
+the web browser with remote control run in it upon demand and proxies
+your requests to it.
+
+Install it, and launch:
+
+  $ pkcon install selenium-server
+  $ # In F-12 requirements were incorrectly specified. Drag them in manually
+  $ pkcon install jpackage-utils selenium-core ant commons-logging servlet
+  $ selenium-server
+
+It, by default listens on TCP port 4444. It offers a plenty of options,
+to optimize, lock down or modify its behavior, just pass it {{{-h}}} option
+to see. It opens the browser windows in your current session. If you find it
+annoying, you can run it inside {{{Xnest}}} or {{{Xephyr}}} X11 servers,
+or if you wish it were headless, use {{{Xvfb}}}. It's basically done like
+this:
+
+  $ pkcon install xorg-x11-server-Xephyr
+  $ xinit $(which selenium-server) -- $(which Xephyr) :3
+
+== Connecting the client ==
+
+Wanting to see the server in action now? Pick your favourite language (which
+is Perl), install the bindings ({{{perl-Test-WWW-Selenium}}} package) and try
+to connect to it and open a browser window:
+
+  use WWW::Selenium;
+
+  my $selenium = new WWW::Selenium (
+          host => "localhost",
+          port => 4444,
+          browser => "*firefox",
+          browser_url => "http://v3.sk/",
+  );
+  
+  $selenium->start ();
+  $selenium->open ("http://v3.sk/~lkundrak/qa-test.html");
+
+  <>; # Wait for line feed
+
+Browser window open, everything good? Fine, quit the client with a new line
+and add some more stuff to it:
+
+  foreach my $i (0..10) {
+          $selenium->type ("id=number", $i);
+          $selenium->click ("id=add");
+          $selenium->pause ();
+  }
+  print $selenium->get_text ("id=counter");
+
+  <>; # Wait for line feed
+
+Run it all again.
+See? We've filled in numbers from 0 to 10 into the input box and clicked
+the {{{+=}}} button ten times. Finally, we've got the result from the div
+box. Impressive.
+
+== Putting the test together ==
+
+There's more to a test then just clicking around. We need to add test
+asserts that will check the application behaves according to specification.
+(Wait, what specification?) Also, we'd like the test result to be present
+in a machine-readable format that can be processed by a test runner.
+
+Format of usual result from a Perl test (called
+[http://en.wikipedia.org/wiki/Test_Anything_Protocol TAP protocol])
+looks like this:
+
+  1..3
+  ok 1 Word spins in right direction
+  not ok 2 Temperature within acceptable limits
+  ok 3 No supernatural creatures around
+
+Pretty self-explaining. First line says we're expecting three asserts,
+the middle one failed while the other ones returned success. The test that
+produced this could be produced by {{{Test::More}} module and look like this:
+
+  use Test::More tests => 3;
+
+  my $direction = "right";
+  my $temperature_acceptable = 0;
+  my @gods = ();
+
+  is ($direction, "right", "Word spins in right direction");
+  ok ($temperature_acceptable, "Temperature within acceptable limits");
+  is (scalar @gods, 0, "No supernatural creatures around");
+
+We would typically pass the TAP output to a consumer tool called Harness.
+Perl provides a library {{{TAP::Harness}}} that runs TAP-producing tests
+and a tool {{{prove}}} built around it.
+
+We're not going to use {{{Test::More}}} directly though, since
+{{{WWW::Selenium}}} has a subclass called {{{Test::WWW::Selenium}}}
+that glues Selenium requests together with asserts making the test mode
+a bit more readable. This is what we would do to our Selenium client
+code to make a test:
+
+  use Test::More tests => 7;
+  # We specify number of assertions in advance, in case
+  # we would terminate prematurely
+  use Test::WWW::Selenium;
+  
+  my $selenium = new Test::WWW::Selenium (
+          host => "localhost",
+          port => 4444,
+          browser => "*firefox",
+          browser_url => "http://v3.sk/",
+  );
+  
+  $selenium->open_ok ("http://v3.sk/~lkundrak/qa-test.html");
+  
+  $selenium->type_ok ("id=number", 1234);
+  $selenium->click_ok ("id=add");
+  $selenium->text_is ("id=counter", 2571, "Addition works");
+  
+  $selenium->type_ok ("id=number", -2);
+  $selenium->click_ok ("id=multiply");
+  $selenium->text_is ("id=counter", -5142, "Multiplication works");
+
+You could run the script directly to get raw TAP output, but we'll
+runn ith with {{{prove}}} instead:
+
+  $ prove client.t
+  client.t .. ok   
+  All tests successful.
+  Files=1, Tests=7,  7 wallclock secs ( 0.03 usr  0.01 sys +  0.19 cusr  0.02 csys =  0.25 CPU)
+  Result: PASS
+  $
+
+== What's next ==
+
+Once you have your application covered with test suite, you probably want
+to run it. A number of so called Continuous Integration servers are available
+to watch your code for changes, run the test suites, process the results
+and eventually forward them to developers. They often consume
+[http://www.junit.org/ JUnit] XML output,
+which can be produced when using {{{TAP::Harness::Junit}}} instead of ordinary
+{{{TAP::Harnes}}}. An excellent example of such is tool is
+[http://www.hudson-ci.org/ Hudson].
+But that's a different story, and probably a subject of a different blog entry!
