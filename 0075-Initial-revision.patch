@@ -1,7 +1,7 @@
 From 2b1666fa431ad4e84a6e99c5cce0b93ceba5651d Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 16 Jul 2009 15:04:13 +0000
-Subject: [PATCH 75/88] pulse flaw blog
+Subject: [PATCH 75/88] Pulse flaw blog
 
 ---
  entries/RCS/pulse-suid.cocot |    9 +++++++++

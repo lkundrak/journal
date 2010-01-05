@@ -1,7 +1,7 @@
 From 18b111635a0f4daf977b3f90072be5a3c0ffc368 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Fri, 14 Aug 2009 14:47:38 +0000
-Subject: [PATCH 77/88] finished
+Subject: [PATCH 77/88] Finished
 
 ---
  entries/RCS/metapixel.cocot |   22 ++++++++++++----------

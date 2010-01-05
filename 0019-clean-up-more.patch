@@ -1,7 +1,7 @@
 From c51e8b45ef69518ad661f21a8cba80b00d5f9676 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 27 Mar 2008 22:40:08 +0000
-Subject: [PATCH 19/88] clean up more
+Subject: [PATCH 19/88] Clean up more
 
 ---
  RCS/Makefile |    4 ++--

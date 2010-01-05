@@ -1,7 +1,7 @@
 From 142f524e66c2d1527bbe6d8bf16df2d487778660 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Wed, 25 Feb 2009 11:27:45 +0000
-Subject: [PATCH 51/88] congrats
+Subject: [PATCH 51/88] Congrats
 
 ---
  entries/RCS/congrats.cocot |    7 +++++++

@@ -1,7 +1,7 @@
 From a9263cba47d04e3b99f33a3d39b459cc292ca5e5 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 29 Dec 2008 01:39:51 +0000
-Subject: [PATCH 26/88] address update
+Subject: [PATCH 26/88] Address update
 
 ---
  entries/RCS/fedora-on-netvista.cocot |    6 ++++--

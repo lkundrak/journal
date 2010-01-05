@@ -1,7 +1,7 @@
 From f395dc40a1ff6e489fb2502e7953b05f991f8892 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 9 Nov 2009 14:16:38 +0000
-Subject: [PATCH 82/88] fixed uri
+Subject: [PATCH 82/88] Fixed uri
 
 ---
  scripts/RCS/genrss.pl |    2 +-

@@ -1,7 +1,7 @@
 From 543d0107e70fe4eaf1eb61abfcdc2bf0c49c7d6e Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 3 Nov 2009 11:50:44 +0000
-Subject: [PATCH 80/88] fix url
+Subject: [PATCH 80/88] Fix url
 
 ---
  entries/RCS/review-swappies-2.cocot |    2 +-

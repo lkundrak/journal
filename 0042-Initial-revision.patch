@@ -1,7 +1,7 @@
 From f81680d75508d004f5103602b8a93febd5f756f2 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 29 Jan 2009 15:20:17 +0000
-Subject: [PATCH 42/88] large tables blog
+Subject: [PATCH 42/88] Large tables blog
 
 ---
  entries/RCS/largest-tables.cocot |   19 +++++++++++++++++++

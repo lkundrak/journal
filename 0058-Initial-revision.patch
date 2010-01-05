@@ -1,7 +1,7 @@
 From b03ca94153351e036ea2593a7fd06f888148e568 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Sun, 29 Mar 2009 17:20:07 +0000
-Subject: [PATCH 58/88] crash blog
+Subject: [PATCH 58/88] Crash blog
 
 ---
  entries/RCS/crash.cocot |   26 ++++++++++++++++++++++++++

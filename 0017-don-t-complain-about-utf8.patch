@@ -1,7 +1,7 @@
 From a229c531ffff52bace28420da5281050634d1dc6 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 27 Mar 2008 22:36:57 +0000
-Subject: [PATCH 17/88] don't complain about utf8
+Subject: [PATCH 17/88] Don't complain about utf8
 
 ---
  RCS/Makefile |    2 +-

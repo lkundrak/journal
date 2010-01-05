@@ -1,7 +1,7 @@
 From 3d927bc54140a6478badf5db0ee210e3d4671c44 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 9 Feb 2009 20:43:37 +0000
-Subject: [PATCH 47/88] leonidas
+Subject: [PATCH 47/88] Leonidas
 
 ---
  entries/RCS/f11-alpha.cocot |    9 +++++++++

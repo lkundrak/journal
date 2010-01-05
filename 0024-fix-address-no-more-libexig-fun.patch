@@ -1,7 +1,7 @@
 From eeb98fe5ae85c57cd3112a063c52ba29dc137b3a Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 29 Dec 2008 01:39:04 +0000
-Subject: [PATCH 24/88] fix address, no more libexig fun
+Subject: [PATCH 24/88] Fix address, no more libexig fun
 
 ---
  templates/RCS/index.template |    6 +-----

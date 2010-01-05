@@ -1,7 +1,7 @@
 From 8482aade4ac71faa7a4b1b902a100605fd8f0dd7 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Thu, 13 Mar 2008 10:13:30 +0000
-Subject: [PATCH 12/88] openjdk blog
+Subject: [PATCH 12/88] Openjdk blog
 
 ---
  entries/RCS/openjdk-el5.cocot |   28 ++++++++++++++++++++++++++++

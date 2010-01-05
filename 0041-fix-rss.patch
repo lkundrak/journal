@@ -1,7 +1,7 @@
 From 5e753b6d4db7b2cf64b4f99fbc0d02839f603568 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 20 Jan 2009 13:31:08 +0000
-Subject: [PATCH 41/88] fix rss
+Subject: [PATCH 41/88] Fix rss
 
 ---
  entries/RCS/tunneler.cocot |    2 ++

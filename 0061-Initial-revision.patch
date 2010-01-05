@@ -1,7 +1,7 @@
 From a4da0b0b5608d82927324af4ece55b629eebfd98 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Wed, 29 Apr 2009 10:24:47 +0000
-Subject: [PATCH 61/88] shortrpm
+Subject: [PATCH 61/88] Shortrpm
 
 ---
  entries/RCS/shortrpm.cocot |   50 ++++++++++++++++++++++++++++++++++++++++++++

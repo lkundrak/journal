@@ -1,7 +1,7 @@
 From 9b92271d53337a2185efa5ceb1ecbfc052023ea4 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Tue, 2 Jun 2009 16:26:48 +0000
-Subject: [PATCH 67/88] bug
+Subject: [PATCH 67/88] Bug
 
 ---
  entries/RCS/gnome-feature.cocot |    2 +-

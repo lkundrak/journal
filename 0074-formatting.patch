@@ -1,7 +1,7 @@
 From a01086dc6b9878f924278a815e5022a682689660 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Fri, 10 Jul 2009 15:50:29 +0000
-Subject: [PATCH 74/88] formatting
+Subject: [PATCH 74/88] Formatting
 
 ---
  entries/RCS/vbox-3-rpmfusion.cocot |    6 +++---

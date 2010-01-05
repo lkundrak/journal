@@ -1,7 +1,7 @@
 From 7dd96070350c8cc6eb1f77cbaaee81550332c071 Mon Sep 17 00:00:00 2001
 From: lkundrak <lkundrak>
 Date: Mon, 9 Nov 2009 16:20:06 +0000
-Subject: [PATCH 84/88] corrections, picture
+Subject: [PATCH 84/88] Corrections, picture
 
 ---
  entries/RCS/inspiron-12-opensuse.cocot |    8 +++++---
