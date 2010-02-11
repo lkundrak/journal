@@ -36,9 +36,7 @@ BEGIN {
 		print "<hr>";
 
 		# Last modification date
-		print "<i>";
-		system ("LANG=C date -d \"$(git log $FILE |awk '/Date:/ {gsub (\"Date: *\", \"\"); gsub (\"+.*\",\"\"); d=$0} END {print d}')\"");
-		print "</i>";
+		system ("scripts/creationdate.sh '<i>%c</i>' "ARGV[i]);
 
 		# Caption and text
 		system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[i]\
