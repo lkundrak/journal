@@ -1,0 +1,115 @@
+= <!-- rss:title -->Making sense of GIT commit data<!-- /rss:title --> =
+
+<!-- rss:description -->
+
+== Upload ==
+
+Perl has a rather stable and active developer community, and its source code is publicly available, therefore
+therefore its commit history will server our purpose perfectly.  Let's obtain the code from the GIT repository
+first.  Git is a distributed version control system, which means it stores the whole repository along with
+the working copy. That is good, because inspecting the history is much faster than with traditional version
+control systems, such as Subversion and CVS.
+
+  $ git clone git://perl5.git.perl.org/perl.git
+  $ cd perl
+
+For illustrational purposes we'll just use the tail of the development history,
+since 5.10.0 release which was tagged in December 2007.
+
+  $ git log --date=short --format="format:%h:%aN:%aE:%cd:%ct" --shortstat perl-5.10.0 |
+          awk 'BEGIN {print "Commit SHA1 Hash:" \
+                  "Author Name:" "Author e-mail:" "Date:" "Timestamp:" \
+                  "Files touched:" "Lines added:" "Lines deleted"}
+                  /^ / {n=0; print ":"$1":"$4":"$6; next}
+                  /^[^ ]/ {if (n) {print ":0:0:0"}; n=1; printf $0}' &gt;history.csv
+
+There may be a better way of obtaining the line changes than piping a <tt>shortstat</tt>
+through awk, but this is the fastest one I could come up with. Also, we stick a header
+line there. That's not strictly required -- we could add it in the UI instead as well.
+
+<!-- html -->
+(Available in
+<a href="/~lkundrak/blog/video/git-commits/1_upload.ogg">theora</a>,
+<a href="/~lkundrak/blog/video/git-commits/1_upload.avi">h264</a>,
+<a href="http://www.youtube.com/watch?v=fivpikzDJTI">youtube</a>)<br>
+<video src="/~lkundrak/blog/video/git-commits/1_upload.ogg" controls="true" width="425" height="344">
+        <video src="/~lkundrak/blog/video/git-commits/1_upload.avi" controls="true" width="425" height="344">
+                <object width="425" height="344">
+                        <param name="movie" value="http://www.youtube.com/v/fivpikzDJTI&amp;hl=en_US&amp;fs=1&amp;"></param>
+                        <param name="allowFullScreen" value="true"></param>
+                        <param name="allowscriptaccess" value="always"></param>
+                        <embed width="425" height="344"
+                                src="http://www.youtube.com/v/fivpikzDJTI&amp;hl=en_US&amp;fs=1&amp;"
+                                type="application/x-shockwave-flash"
+                                allowscriptaccess="always"
+                                allowfullscreen="true">
+                        </embed>
+                </object>
+        </video>
+</video>
+<!-- /html -->
+
+During the upload, we mapped the dates to date dimension.
+
+<!-- break -->
+<!-- /rss:description -->
+
+== Lines report ==
+
+The first report visualizes changes in number of lines added and removed in time.
+Given the Perl code is currently frozed for 5.12.0 release the peaks probably aren't
+merges of big features, not big refactoring, probably just some scripted bulk changes.
+
+<!-- html -->
+(Available in
+<a href="/~lkundrak/blog/video/git-commits/2_lines.ogg">theora</a>,
+<a href="/~lkundrak/blog/video/git-commits/2_lines.avi">h264</a>,
+<a href="http://www.youtube.com/watch?v=8fAEExhJWtM">youtube</a>)<br>
+<video src="/~lkundrak/blog/video/git-commits/2_lines.ogg" controls="true" width="425" height="344">
+        <video src="/~lkundrak/blog/video/git-commits/2_lines.avi" controls="true" width="425" height="344">
+                <object width="425" height="344">
+                        <param name="movie" value="http://www.youtube.com/v/8fAEExhJWtM&amp;hl=en_US&amp;fs=1&amp;"></param>
+                        <param name="allowFullScreen" value="true"></param>
+                        <param name="allowscriptaccess" value="always"></param>
+                        <embed width="425" height="344"
+                                src="http://www.youtube.com/v/8fAEExhJWtM&amp;hl=en_US&amp;fs=1&amp;"
+                                type="application/x-shockwave-flash"
+                                allowscriptaccess="always"
+                                allowfullscreen="true">
+                        </embed>
+                </object>
+        </video>
+</video>
+<!-- /html -->
+
+== Commits report ==
+
+I found this one report a bit more interesting. It shows the commiter activity
+in the number of commits done. It's a rather simple way to see which developers
+are most active -- which, of course, are the culprits when the code breaks :)
+
+<!-- html -->
+(Available in
+<a href="/~lkundrak/blog/video/git-commits/3_commits.ogg">theora</a>,
+<a href="/~lkundrak/blog/video/git-commits/3_commits.avi">h264</a>,
+<a href="http://www.youtube.com/watch?v=0ow7BNlKvvk">youtube</a>)<br>
+<video src="/~lkundrak/blog/video/git-commits/3_commits.ogg" controls="true" width="425" height="344">
+        <video src="/~lkundrak/blog/video/git-commits/3_commits.avi" controls="true" width="425" height="344">
+                <object width="425" height="344">
+                        <param name="movie" value="http://www.youtube.com/v/0ow7BNlKvvk&amp;hl=en_US&amp;fs=1&amp;"></param>
+                        <param name="allowFullScreen" value="true"></param>
+                        <param name="allowscriptaccess" value="always"></param>
+                        <embed width="425" height="344"
+                                src="http://www.youtube.com/v/0ow7BNlKvvk&amp;hl=en_US&amp;fs=1&amp;"
+                                type="application/x-shockwave-flash"
+                                allowscriptaccess="always"
+                                allowfullscreen="true">
+                        </embed>
+                </object>
+        </video>
+</video>
+<!-- /html -->
+
+
+
+
