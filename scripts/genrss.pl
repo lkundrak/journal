@@ -32,15 +32,18 @@ foreach my $file (@ARGV) {
 	my $title;
 	my $desc;
 	my $indesc = 0;
+	my $broken = 0;
 
 	foreach (<BLOG>) {
 		/<!-- rss:title -->(.*)<!-- \/rss:title -->/ and $title = $1;
 		/<!-- \/rss:description -->/ and $indesc--;
 		$indesc and $desc .= $_;
+		/<!-- break -->/ and $broken = 1;
 		/<!-- rss:description -->/ and $indesc++;
 	}
 
 	$desc = wikize ($desc);
+	$desc .= "<div><i><a href=\"$html\">Read more...</a></i></div>" if $broken;
 
 	$rss->add_item (
 		title		=> $title,
