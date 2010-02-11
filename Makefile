@@ -4,7 +4,7 @@ BLOGPAGE?=awk -f scripts/blogpage.awk templates/page.template
 BLOGINDEX?=awk -f scripts/blogpage.awk templates/index.template
 GENRSS?=perl scripts/genrss.pl
 #WIKI2HTML?=perl scripts/wiki2html.pl
-TIDY?=tidy -raw
+TIDY?=tidy -raw --new-blocklevel-tags 'video embed'
 
 SOURCES=$(shell scripts/creationdate.sh %s entries/*.cocot |sort -rn |awk '{print $$2}')
 BLOGS=$(shell echo ${SOURCES} |sed 's|.cocot|.html|g')
@@ -19,24 +19,24 @@ all: build
 
 .SUFFIXES: .cocot .html
 .cocot.html: templates/page.template scripts/blogpage.awk
-	${BLOGPAGE} $< >$@ || rm -f $@
-	${TIDY} -qim $@ || rm -f $@
+	${BLOGPAGE} $< >$@ || (rm -f $@; false)
+	${TIDY} -qim $@ || ([ $$? = 1 ] && true || (rm -f $@ && false))
 
 ###
 ### RSS feed
 ###
 
 rss.xml: ${SOURCES} scripts/genrss.pl
-	${GENRSS} ${SOURCES} >$@ || rm -f $@
-	${TIDY} -qim -xml -raw $@ || rm -f $@
+	${GENRSS} ${SOURCES} >$@ || (rm -f $@; false)
+	${TIDY} -xml -qim $@ || ([ $$? = 2 ] && rm -f $@ && false)
 
 ###
 ### Index
 ###
 
 index.html: ${SOURCES} templates/index.template scripts/blogpage.awk
-	${BLOGINDEX} ${SOURCES} >$@ || rm -f $@
-	${TIDY} -qim $@ || rm -f $@
+	${BLOGINDEX} ${SOURCES} >$@ || (rm -f $@; false)
+	${TIDY} -qim $@ || ([ $$? = 1 ] && true || (rm -f $@ && false))
 
 ###
 ### OpenGrok blog
@@ -122,6 +122,7 @@ clean:
 	rm -f ${TARGETS} ${JUNK} ?
 
 upload: build
+	git branch |grep '\* master'
 	tar cf - ${TARGETS} images/mozchomp.gif images/ketchup.jpeg |ssh v3.sk "tar xf - -C public_html/blog"
 
 stage: build
