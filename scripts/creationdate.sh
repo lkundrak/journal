@@ -8,7 +8,9 @@ shift
 
 for FILE in $*
 do
-	echo -n $(date "+$FORMAT" -d "$(git log $FILE |
-		awk '/Date:/ {gsub ("Date: *", ""); gsub ("+.*",""); d=$0} END {print d}')")
+	DATE="$(sed -n 's/<!-- date:\(.*\) -->/\1/p' $FILE)"
+	[ "$DATE" ] || DATE="$(git log $FILE | awk '/Date:/ {gsub ("Date: *", ""); gsub ("+.*",""); d=$0} END {print d}')"
+	DATE="$(date "+$FORMAT" -d "$DATE")"
+	echo -n $DATE
 	echo "$(echo $* |grep -q ' ' && echo -e "\t$FILE")"
 done

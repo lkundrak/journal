@@ -41,7 +41,7 @@ sub wikize
 		if ($html) {
 			$body .= $_;
 		} else {
-			s/<!-- \S+ -->//g;
+			s/<!-- .*? -->//g;
 			$text .= $_;
 		}
 	}
