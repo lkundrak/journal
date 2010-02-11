@@ -113,7 +113,7 @@ looks like this:
 
 Pretty self-explaining. First line says we're expecting three asserts,
 the middle one failed while the other ones returned success. The test that
-produced this could be produced by {{{Test::More}} module and look like this:
+produced this could be produced by {{{Test::More}}} module and look like this:
 
   use Test::More tests => 3;
 
