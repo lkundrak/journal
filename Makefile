@@ -123,3 +123,11 @@ clean:
 
 upload: build
 	tar cf - ${TARGETS} images/mozchomp.gif images/ketchup.jpeg |ssh v3.sk "tar xf - -C public_html/blog"
+
+stage: build
+	tar cf - images |ssh v3.sk "tar xf - -C public_html/blog"
+	tar cf - ${TARGETS} |ssh v3.sk "tar xf - -C public_html/blog-staging"
+
+new:
+	cp -i entries/template entries/$(E).cocot
+	vim entries/$(E).cocot
