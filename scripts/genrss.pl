@@ -16,7 +16,7 @@ $rss->channel(
 	link		=> 'http://v3.sk/~lkundrak/',
 	language	=> 'en',
 	description	=> 'Personal web log of lkundrak',
-	copyright	=> 'Copyright (C) 2007,2008 Lubomir Rintel',
+	copyright	=> 'Copyright (C) 2007,2008,2009,2010 Lubomir Rintel',
 #	pubDate		=> 'Thu, 23 Aug 1999 07:00:00 GMT',
 #	lastBuildDate	=> 'Thu, 23 Aug 1999 07:00:00 GMT',
 	managingEditor	=> 'lkundrak@v3.sk',
