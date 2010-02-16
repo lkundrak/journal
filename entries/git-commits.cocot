@@ -1,14 +1,27 @@
-= <!-- rss:title -->Making sense of GIT commit data<!-- /rss:title --> =
+= <!-- rss:title -->Analyzing GIT commit data<!-- /rss:title --> =
+<!-- date:Tue Feb 16 21:24:21 CET 2010 -->
 
 <!-- rss:description -->
 
+Given distributed version control systems store all the history in a local storage an access to
+commit metadata as well as commits themselves is usually a lot faster compared to conventional
+version control systems. Additionally, [http://git-scm.com/ GIT]
+provides clever tooling that exposes information about
+the commits, that can be nicely visualized via the means of {{{diffstat}}} and such, or exported
+for further analysis with other tools.
+
+I'll describe the process of getting the data into
+[http://www.gooddata.com/ GoodData], a web-based data analysis tool with collaboration features
+somewhat resembling those of social networking web sites. What can you do with your GIT commit data
+is to create reports similar to LWN's [http://lwn.net/Articles/363456/ Who wrote...] articles
+for [http://kernel.org Linux] kernel releases, or maybe employ analysis similar to what
+[https://www.ohloh.net/ Ohloh] does for your project.
+
 == Upload ==
 
-Perl has a rather stable and active developer community, and its source code is publicly available, therefore
-therefore its commit history will server our purpose perfectly.  Let's obtain the code from the GIT repository
-first.  Git is a distributed version control system, which means it stores the whole repository along with
-the working copy. That is good, because inspecting the history is much faster than with traditional version
-control systems, such as Subversion and CVS.
+[http://www.perl.org Perl] has a rather stable and active developer community and its source code is
+publicly available, therefore its commit history will serve our purpose perfectly.  Let's obtain the
+code from the GIT repository first.
 
   $ git clone git://perl5.git.perl.org/perl.git
   $ cd perl
@@ -23,9 +36,12 @@ since 5.10.0 release which was tagged in December 2007.
                   /^ / {n=0; print ":"$1":"$4":"$6; next}
                   /^[^ ]/ {if (n) {print ":0:0:0"}; n=1; printf $0}' &gt;history.csv
 
-There may be a better way of obtaining the line changes than piping a <tt>shortstat</tt>
-through awk, but this is the fastest one I could come up with. Also, we stick a header
-line there. That's not strictly required -- we could add it in the UI instead as well.
+Most likely there is a better way of obtaining the line changes than piping a {{{shortstat}}}
+through {{{awk}}}, but this is the fastest one I could come up with. It would probably have been
+a better idea to use a {{{--numstat}}} flag and preserve the per-file change information.
+
+Note that we stick a header line there. That's not strictly required -- we could add it
+in the UI instead as well.
 
 <!-- html -->
 (Available in
@@ -50,6 +66,8 @@ line there. That's not strictly required -- we could add it in the UI instead as
 <!-- /html -->
 
 During the upload, we mapped the dates to date dimension.
+
+Now let's see create some reports.
 
 <!-- break -->
 <!-- /rss:description -->
@@ -110,6 +128,5 @@ are most active -- which, of course, are the culprits when the code breaks :)
 </video>
 <!-- /html -->
 
-
-
-
+I hope you liked it, though if you're a bit familiar with BI, which I'm not, you could
+certainly create nicer examples :) Have fun!
