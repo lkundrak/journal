@@ -1,0 +1,34 @@
+= <!-- rss:title -->New fedora color theme<!-- /rss:title --> =
+<!-- date:Thu Apr  1 18:05:23 CEST 2010 -->
+
+<!-- rss:description -->
+Following the Fedora's [http://nicubunu.blogspot.com/2010/04/magenta-is-new-blue-rebranding-fedora.html
+recent] [http://wordshack.wordpress.com/2010/04/01/blue-and-magenta-bff/ re-branding],
+I decide to mockup an eye-pleasing GNOME color theme which based on the new colors,
+hope you'll like it.
+
+http://v3.sk/~lkundrak/blog/images/pink1.png
+
+Here's how do you set it:
+
+<!-- html -->
+<pre>$ gconftool-2 --type string --set /desktop/gnome/interface/gtk_color_scheme "fg_color:#737314147373
+bg_color:#d8d8c0fed8d8
+text_color:#737314147373
+base_color:#d8d8b1d0d8d8
+selected_fg_color:#ffffffffffff
+selected_bg_color:#737314147373
+tooltip_fg_color:#737314147373
+tooltip_bg_color:#d8d8c0fed8d8"</pre>
+<!-- /html -->
+
+Beautiful, isn't it?
+
+http://v3.sk/~lkundrak/blog/images/pink2.png
+
+''PS:'' If you (god forbid) ever decide the defaults were
+better, here's how do you set them:
+
+  gconftool-2 --unset /desktop/gnome/interface/gtk_color_scheme
+
+<!-- /rss:description -->
