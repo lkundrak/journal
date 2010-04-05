@@ -52,6 +52,52 @@ BEGIN {
 	next;
 }
 
+/@LATEST@/ {
+	print "<hr>";
+
+	# Last modification date
+	system ("scripts/creationdate.sh '<i>%c</i>' "ARGV[2]);
+
+	# Caption and text
+	system ("awk '/<!-- break -->/ {exit} {print $0}' "ARGV[2]\
+		"| perl scripts/wiki2html.pl");
+
+	# "Read more" link
+	link = ARGV[2];
+	gsub (".cocot", ".html", link);
+	if (system ("grep -q '<!-- break -->' "ARGV[2])) {
+		gsub (".*", "<a href=\"&\">Read more...</a>", link);
+	} else {
+		gsub (".*", "<a href=\"&\">Link to the article alone</a>", link);
+	}
+	print "<div><i>"link"</i></div>";
+	ARGV[2] = "";
+
+	print "<hr>";
+	next;
+}
+/@OLDER@/ {
+	print "<h2>Older shit</h2>";
+
+	print "<ul>";
+	for (i = 3; ARGV[i]; i++) {
+		print "<li>";
+
+		link = ARGV[i];
+		gsub (".cocot", ".html", link);
+		printf ("<a href=\"%s\">", link);
+		system ("sed -n 's/.*<!-- rss:title -->\\(.*\\)<!-- \\/rss:title -->.*/\\1<\\/a>/p' "ARGV[i]);
+
+		# Last modification date
+		system ("scripts/creationdate.sh '<i>(%D)</i>' "ARGV[i]);
+
+		ARGV[i] = ""
+		print "</li>";
+	}
+	print "</ul>";
+	next;
+}
+
 {
 	# Inline replacements
 
