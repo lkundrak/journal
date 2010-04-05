@@ -12,6 +12,27 @@
 </head>
 
 <body>
+
+	<center>
+	<form method="get" action="../htdig/search.cgi" style="
+		background: url('../img/grass.png');
+		background-repeat: repeat-x;
+		background-position: bottom;
+		border-bottom: 1px solid black;
+		padding: .3em;
+	">
+	<img src="../img/ovka.gif" alt="Ovca"><br>
+	<input type="hidden" name="config" value="htdig">
+
+	<input type="hidden" name="method" value="and">
+	<input type="hidden" name="format" value="builtin-long">
+	<input type="hidden" name="sort" value="score">
+	<input type="text" name="words">
+	<input type="submit" value="Search site">
+	<a href="htdig" style="color: white"><b>advanced search</b></a>
+	</form>
+	</center>
+
 	<img src="images/ketchup.jpeg" alt="" align="left">
 	<h1>Diary of the beer bottle fairy</h1>
 	<i>Web 2.0 blog of Spirituality, Romance, National values, Apple computers, Pop music and Python programming.</i>
