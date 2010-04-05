@@ -1,0 +1,14 @@
+= <!-- rss:title -->IntelliJ IDEA CE in Fedora 13<!-- /rss:title --> =
+
+<!-- rss:description -->
+Just in case anyone cares, [http://www.jetbrains.com/idea/free_java_ide.html
+Community Edition] of Intellij IDEA is in Fedora 13. Should you encounter
+any problems, please report them via https://bugzilla.redhat.com/.
+
+Also, when testing it, please use the [http://koji.fedoraproject.org/koji/packageinfo?packageID=10116
+latest build].
+
+http://v3.sk/~lkundrak/blog/images/idea-f13-small.png
+
+Not that it would be anything interesting, it's just to grab your attention.
+<!-- /rss:description -->
