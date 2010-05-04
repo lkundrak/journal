@@ -1,0 +1,33 @@
+= <!-- rss:title -->Live images of RHEL 6 (Beta)<!-- /rss:title --> =
+<!-- date:Tue May  4 18:00:00 CEST 2010 -->
+
+<!-- rss:description -->
+
+First public Beta of RHEL 6 was released, everyone's testing it out and you
+also want to, but won't devote a partition on your hard drive to it? (And
+also VirtualBox and KVM don't work for you... :). Using a live media seems
+a natural choice.  But wait, there are not any! Oh noes!
+
+Fortunatelly, with a few tiny changes to Fedora's livecd creation tooling
+you can roll your own. Obviously, I can't post complete live media images,
+but here's what I did to generate my ones (and what can you do as well):
+
+# Install {{{python-imgcreate}}} patched for proper {{{dracut}}} support ([https://bugzilla.redhat.com/show_bug.cgi?id=588622 bug 588622])
+** On a 32-bit x86, you can use [http://fedorapeople.org/~lkundrak/livecd/ my prebuilt packages]
+# Get the kickstart files modified for el6
+([http://fedorapeople.org/gitweb?p=lkundrak/public_git/spin-kickstarts.git;a=shortlog;h=refs/heads/el6 available from GIT])
+# Generate the iso (as root) and eventually transfer it to a Flash stick
+
+This is what would it look like:
+
+  # rpm -Uvh http://fedorapeople.org/~lkundrak/livecd/python-imgcreate-031-1.fc13.bz588622.i686.rpm
+  # git clone git://fedorapeople.org/~lkundrak/spin-kickstarts.git
+  # cd spin-kickstarts
+  # livecd-creator -c fedora-live-desktop.ks -f rhel6-beta
+  # livecd-iso-to-disk --format --reset-mbr --noverify --overlay-size-mb 666 rhel6-beta.iso /dev/<flash-stick>
+
+Please note that package selection in my kickstart files only loosely
+correspond to the Fedora, so there might be an extra package or a package
+missing. I recommend you to adjust them to your needs.
+
+<!-- /rss:description -->
