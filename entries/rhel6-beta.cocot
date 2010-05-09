@@ -1,0 +1,45 @@
+= <!-- rss:title -->Enterprise Linux 6: worth your support<!-- /rss:title --> =
+<!-- date:Sun May  9 19:51:13 EDT 2010 -->
+
+<!-- rss:description -->
+Around a week ago a first beta of Red Hat Enterprise Linux 6 has been
+released.  If you can, please [http://ftp.redhat.com/pub/redhat/rhel/beta/6/
+download the install mediai], or maybe
+[http://v3.sk/~lkundrak/blog/entries/rhel6-live.html create a live CD] or a
+flash stick, run it, and report bugs you find.  Wondering why would you do
+that work for a commercial Linux distro, especially if you're not going buy
+a subscription?  Apart from the fact, that you're going to get the code anyway
+via [http://www.centos.org/ CentOS project], there's one more reason:
+
+'''It's going to be awesome.'''
+
+Simply put, Enterprise Linux 6 is going to be the distro, that will be wise to
+put on your grandmother's workstation (provided she doesn't hack on
+Fedora). As an enterprise Linux offering, it's going to get security
+updates for [http://www.redhat.com/security/updates/errata/ seven years],
+without a risk of randomly breaking every now and then.
+
+'''Linux desktop has never been this good.'''
+
+Remember Enterprise Linux 5? Since those times,
+the distro gained multiple monitor support by means of xrandr 1.2,
+out of box support for most graphics adapters on the market without
+messing with binary drivers of questionable quality. Audio playback
+got much more usable with inclusion of pulseaudio. With kernel mode
+setting and plymouth the boot process does no longer seem like a quick
+hack, and with the optimization done it even takes much less time.
+In nearly every aspect of desktop use not excluding printing, web
+camera support, or power management big improvements has been made.
+
+While the package selection (though probably sufficient for most uses)
+still seems modest compared to community distributions, remember that
+there's [https://fedoraproject.org/wiki/EPEL Fedora EPEL], a collection
+of "backports" of Fedora packages for Enterprise Linux. Moreover, the
+[http://rpmfusion.org/ RPM Fusion] repository contains additional
+packages that Fedora does not want to ship. In case you don't need to
+pay for a license to play DVDs or MP3 files in your country, you will
+be able to get the necessary decoders there.
+
+So please do grab your copy now and participate in Beta.
+It's going to pay off.
+<!-- /rss:description -->
