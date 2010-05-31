@@ -1,0 +1,32 @@
+= <!-- rss:title -->Visualizing Java package dependencies<!-- /rss:title --> =
+
+<!-- rss:description -->
+
+Lately I've been dealing with packaging of rather larger Java applications
+with rather long list of dependenies. To ease the work and help me decide
+what to package first I've created a rather
+quick and dirty, yet somewhat useful Perl script to visualize the dependency
+chain.
+
+<!-- html -->
+<object data="http://v3.sk/~lkundrak/blog/images/jargraph.svg">
+	<img src="http://v3.sk/~lkundrak/blog/images/jargraph.png" />
+</object>
+<!-- /html -->
+
+There are probably better tools to do this, yet you may find using a simple
+script useful, here it is:
+
+http://fedorapeople.org/~lkundrak/jargraph.pl
+
+And here's how it's used (you'll need GraphViz installed):
+
+  $ wget -q http://gerrit.googlecode.com/files/gerrit-2.1.2.4.war
+  $ jar xf gerrit-2.1.2.4.war 
+  $ perl jargraph.pl WEB-INF/lib/*jar >gerrit.dot
+  $ dot -Tsvg gerrit.dot >gerrit.svg
+  $ 
+
+<!-- /rss:description -->
+
+<!-- break -->
