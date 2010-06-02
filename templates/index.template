@@ -39,15 +39,14 @@
 	<h1>Kicking the little puppies</h1>
 	<i>Web 2.0 blog of Spirituality, Romance, National values, Apple computers, Pop music and Python programming.</i>
 
-	<p>So I have a journal again. Please pardon me if I don't update it regularly -- I decided
+	<p>
+	<small>
+	So I have a journal again. Please pardon me if I don't update it regularly -- I decided
 	not to go with wordpress or bloxspot and did a really bad job replacing them, so it's
 	a big pain to write journal entries for me. I prayed for help, no answer so far. Maybe my
-	prayer got stuck in spam filter.</p>
-
-	<p>Source code to the entries and scripts that format this site are available on
-	<a href="http://github.com/lkundrak/journal">github</a>. Text of journal entries
-	is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
-	license.</p>
+	prayer got stuck in spam filter.
+	</small>
+	</p>
 
 	@LATEST@
 	@LIKE@
@@ -57,6 +56,11 @@
 	@OLDER@
 
 	<hr>
+
+	<p>Source code to the entries and scripts that format this site are available on
+	<a href="http://github.com/lkundrak/journal">github</a>. Text of journal entries
+	is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
+	license.</p>
 
 	Mail questions, comments and pizza to
 	<a href="mailto:lkundrak@v3.sk"><tt>lkundrak@v3.sk</tt></a>
