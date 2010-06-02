@@ -27,6 +27,7 @@ BEGIN {
 
 /@BODY@/ {
 	system ("perl scripts/wiki2html.pl <"ARGV[2]);
+	file=ARGV[2];
 	ARGV[2]="";
 	next;
 }
@@ -71,11 +72,12 @@ BEGIN {
 		gsub (".*", "<a href=\"&\">Link to the article alone</a>", link);
 	}
 	print "<div><i>"link"</i></div>";
+	file=ARGV[2];
 	ARGV[2] = "";
 
-	print "<hr>";
 	next;
 }
+
 /@OLDER@/ {
 	print "<h2>Older shit</h2>";
 
@@ -95,6 +97,18 @@ BEGIN {
 		print "</li>";
 	}
 	print "</ul>";
+	next;
+}
+
+/@LIKE@/ {
+	link = ARGV[2];
+	if (!link) link = file;
+	gsub (".cocot", ".html", link);
+	printf ("<iframe src='http://www.facebook.com/widgets/like.php?href=" \
+		"http://v3.sk/~lkundrak/blog/%s' " \
+		"scrolling='no' frameborder='0' " \
+		"style='border:none; margin-top: 1em; width:450px; height:80px'>" \
+		"</iframe>", link);
 	next;
 }
 

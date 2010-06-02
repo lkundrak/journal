@@ -13,6 +13,7 @@
 
 <body>
 
+	<!--
 	<center>
 	<form method="get" action="../htdig/search.cgi" style="
 		background: url('../img/grass.png');
@@ -32,6 +33,7 @@
 	<a href="htdig" style="color: white"><b>advanced search</b></a>
 	</form>
 	</center>
+	-->
 
 	<img src="images/ketchup.jpeg" alt="" align="left">
 	<h1>Kicking the little puppies</h1>
@@ -42,12 +44,15 @@
 	a big pain to write journal entries for me. I prayed for help, no answer so far. Maybe my
 	prayer got stuck in spam filter.</p>
 
-	<p>Source code of the entries and scripts that format this site are available on
+	<p>Source code to the entries and scripts that format this site are available on
 	<a href="http://github.com/lkundrak/journal">github</a>. Text of journal entries
 	is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
 	license.</p>
 
 	@LATEST@
+	@LIKE@
+
+	<hr>
 
 	@OLDER@
 

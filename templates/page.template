@@ -17,10 +17,11 @@
 	<hr>
 
 	@BODY@
+	@LIKE@
 
         <hr>
 
-	<p>Source code of the entries and scripts that format this site are available on
+	<p>Source code to the entries and scripts that format this site are available on
 	<a href="http://github.com/lkundrak/journal">github</a>. Text of journal entries
 	is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
 	license.</p>
