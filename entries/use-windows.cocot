@@ -1,0 +1,35 @@
+= <!-- rss:title -->On Windows usability<!-- /rss:title --> =
+
+Just sent this,
+
+<!-- rss:description -->
+  Subject: On Windows usability
+  From: Lubomir Rintel <lkundrak@v3.sk>
+  To: billg@microsoft.com
+  Date: Mon, 06 Sep 2010 19:11:58 +0200
+  Message-id: <1283793118.8355.359.camel@localhost.localdomain>
+  
+  Hi Bill,
+  
+  I just read a mail where you were complaining about Windows usability
+  <http://blog.seattlepi.com/microsoft/archives/141821.asp>. Needless to
+  say, I find most of your complains and expectations valid. Let me
+  suggest you an alternative software stack to you. It's called Fedora, is
+  built with usability in mind and contains only entirely free components.
+  
+  Just pick the live media at <http://fedoraproject.org/get-fedora> and
+  you'll get it running in minutes. I'm sure you'll love the GNOME desktop
+  the default live media ships with; but in case you won't, it takes
+  virtually no effort to give KDE or maybe XFCE a try.
+  
+  In case you'll ever find yourself in trouble with your new desktop,
+  encounter a bug or just want to share your ideas to make Fedora better,
+  feel free to meet friendly people at mailing lists, or IRC
+  <http://fedoraproject.org/wiki/Communicate>.
+  
+  Best Regards,
+  -- 
+  Lubomir Rintel <http://v3.sk/~lkundrak>
+<!-- /rss:description -->
+
+<!-- break -->
