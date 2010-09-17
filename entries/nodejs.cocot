@@ -1,0 +1,12 @@
+= <!-- rss:title -->Node.js submitted for Fedora<!-- /rss:title --> =
+
+If you'd like to see [http://nodejs.org/ node.js] in Fedora,
+feel free to help with any of these reviews. Read [http://fedoraproject.org/wiki/Package_Review_Process this]
+if you are not sure how.
+
+<!-- rss:description -->
+* [https://bugzilla.redhat.com/show_bug.cgi?id=634906 http-parser - HTTP request/response parser for C]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=634908 libeio - Event-based fully asynchronous I/O library]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=634909 v8 - JavaScript Engine]
+* [https://bugzilla.redhat.com/show_bug.cgi?id=634911 node - Evented I/O for v8 JavaScript]
+<!-- /rss:description -->
