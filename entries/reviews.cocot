@@ -1,0 +1,16 @@
+= <!-- rss:title -->Of Node.js and reviews<!-- /rss:title --> =
+
+<!-- rss:description -->
+You may have noticed me filing a [https://bugzilla.redhat.com/buglist.cgi?query_format=advanced&emailreporter1=1&bug_status=NEW&bug_status=ASSIGNED&email1=lkundrak&component=Package%20Review&emailtype1=substring
+pile of review request] these days. I have created a
+[http://gist.github.com/586655 script to do the job], mostly
+to get familiar with the framework (thus probably is not a particularly
+good example of a good style and taste).
+To run it, you need the [https://bugzilla.redhat.com/showdependencytree.cgi?id=635363 node.js] stack.
+
+Needless to say, I will be overly thankful for anyone to review
+my packages. If you are willing to swap reviews, just drop me a mail
+with link to your review.
+<!-- /rss:description -->
+
+<!-- break -->
