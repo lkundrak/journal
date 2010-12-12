@@ -1,0 +1,15 @@
+= <!-- rss:title -->A command-line Splunk client<!-- /rss:title --> =
+
+<!-- rss:description -->
+I just uploaded a new version 1.10 of {{{WWW::Splunk}}} to
+[http://search.cpan.org/~lkundrak/WWW-Splunk-1.10/ CPAN]
+(with major feature enhancement being "this time it really works").
+
+Splunk is a log search engine that comes with a heavy-weight web
+based frontend (which even uses Flash for graphs) that does not
+necessarily please an UNIX geek, who would possibly do a better
+job with just {{{awk}}} or {{{perl}}}.
+
+Fortunately, it also provdes a public API (which is supposed to be
+REST-ful, but really is not) which is what this module uses.
+<!-- /rss:description -->
