@@ -7,7 +7,10 @@
 </head>
 
 <body>
-	<h1>Kicking the little puppies</h1>
+	@BODY@
+	@LIKE@
+
+        <hr>
 
 	<a href="../index.html">Back to index...</a>
 	<dl>
@@ -15,11 +18,6 @@
 		<dt>Last changed</dt><dd>@LAST@</dd>
 	</dl>
 	<hr>
-
-	@BODY@
-	@LIKE@
-
-        <hr>
 
 	<p>Source code to the entries and scripts that format this site are available on
 	<a href="http://github.com/lkundrak/journal">github</a>. Text of journal entries
