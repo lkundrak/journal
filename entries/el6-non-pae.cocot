@@ -1,0 +1,23 @@
+= <!-- rss:title -->Non-PAE kernel for RHEL 6<!-- /rss:title --> =
+
+<!-- rss:description -->
+In case you intend to run el6 on an older hardware, you are not
+alone; you can avoid the labor of rebuilding the kernel on your own
+using the one I did. Get it here: http://repos.fedorapeople.org/repos/lkundrak/kernel-nonpae/
+
+Most likely you're probably not going to use it with a paid RHEL
+subscription, since it will post likely not be supported anyway.
+You can get mostly complete rebuild from Scientific Linux at this
+point; or choose to wait for CentOS (which is likely to provide
+a non-PAE kernel as well once updated, rendering this obsolete).
+
+I've updated the kickstart for the live media for Scientific Linux
+repository, if you intend to try it out without installing:
+http://v3.sk/~lkundrak/blog/entries/rhel6-live.html
+<!-- /rss:description -->
+
+<!-- break -->
+
+NB: Note that the repostory lacks debug kernels and debuginfo
+since I would run out of disk quota. Just let me know if you
+need those.
